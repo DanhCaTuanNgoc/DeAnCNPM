@@ -1,5 +1,5 @@
 <div
-    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-header" id="header">
+    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-header">
     <div
         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background60">
         <div
@@ -8,7 +8,7 @@
                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container311">
                 <div
                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-list23">
-                    <div
+                    <div id="header"
                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item37">
                         <a
                             href="https://shopee.vn/shopnhen"
@@ -145,14 +145,11 @@
                         <a
                             class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container330"
                             style="cursor : pointer"
-                            href="index.php?quanly=account"
-                            >
+                            href="index.php?quanly=account">
                             <div
-                                class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-link78"
-                                >
+                                class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-link78">
                                 <span
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text429"
-                                    >
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text429">
                                     <span>Tài khoản</span>
                                 </span>
                             </div>
@@ -197,7 +194,7 @@
             <div
                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-nav2">
                 <div
-                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container335">
+                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container335" id="chontheodoi" style="cursor : pointer">
                     <div
                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background-shadow1"
                         style="cursor : pointer">
@@ -226,6 +223,51 @@
                                 src="images/horizontaldivider1776-kb5-200h.png"
                                 alt="HorizontalDivider1776"
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-horizontal-divider3" />
+                        </div>
+                        <div class="menu__sub-menu" id="menu__club-sub-menu">
+                            <div class="container_menu-club" id="club-sub-menu__MCI-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div>
+                                    <a class="club_name">Asernal FC</a>
+                                </div>
+                            </div>
+                            <div class="container_menu-club" id="club-sub-menu__MNU-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div><a class="club_name">Manchester United </a>
+                                </div>
+                            </div>
+                            <div class="container_menu-club" id="club-sub-menu__LIV-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div><a class="club_name">Liverpool FC </a>
+                                </div>
+                            </div>
+                            <div class="container_menu-club" id="club-sub-menu__REA-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div><a class="club_name">Manchester City </a>
+                                </div>
+                            </div>
+                            <div class="container_menu-club" id="club-sub-menu__BAR-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div><a class="club_name">Juventus </a>
+                                </div>
+                            </div>
+                            <div class="container_menu-club" id="club-sub-menu__ARS-button">
+                                <div class="menu_club-btn">
+                                    <div class="futbol_image">
+                                        <img src="images/futbol-solid.svg" alt="" />
+                                    </div><a class="club_name">Barcelona </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,4 +384,56 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <!-- code Viet  -->
+    <!-- <div id="menu">
+    <div class="menu__button" id="menu__club-button">
+        <h1>chọn theo CLB</h1>
+        <div class="menu__sub-menu" id="menu__club-sub-menu">
+            <div class="" id="club-sub-menu__MCI-button"></div>
+            <div class="" id="club-sub-menu__MNU-button"></div>
+            <div class="" id="club-sub-menu__LIV-button"></div>
+            <div class="" id="club-sub-menu__REA-button"></div>
+            <div class="" id="club-sub-menu__BAR-button"></div>
+            <div class="" id="club-sub-menu__ARS-button"></div>
+        </div>
+    </div>
+    <div class="menu__button" id="menu__main-menu-button">
+        <h1>Trang chủ</h1>
+    </div> 
+    <div class="menu__button" id="menu__shop-button">
+        <h1>SHOP</h1>
+        <div class="menu__sub-menu" id="menu__shop-sub-menu">
+            <div class="shop-sub-menu__button" id="shop-sub-menu__club-button">
+                <h2>Áo đấu CLB</h2>
+            </div>
+            <div class="shop-sub-menu__button" id="shop-sub-menu__nation-button">
+                <h2>Áo đấu ĐTQG</h2>
+            </div>
+            <div class="shop-sub-menu__button" id="shop-sub-menu__etc-button">
+                <h2>Áo Khác</h2>
+            </div>
+            <div class="shop-sub-menu__button" id="shop-sub-menu__accessories-button">
+                <h2>Phụ Kiện</h2>
+            </div>
+        </div>
+    </div>
+    <div class="menu__button" id="menu__print-button">
+        <h2>In Ấn</h2>
+    </div>
+    <div class="menu__button" id="menu__retro-kit-button">
+        <h2>Retro Kit</h2>
+    </div>
+    <div class="menu__button" id="menu__service-button">
+        <h2>Liên Hệ</h2>
+    </div> 
+</div> -->
 </div>
