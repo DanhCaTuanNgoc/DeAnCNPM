@@ -152,6 +152,7 @@
 </head>
 
 <body>
+    <link href="css/home.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
     <link href="css/account-CLB.css" rel="stylesheet" />
