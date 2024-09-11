@@ -4934,9 +4934,14 @@
   font-weight: 400;
   line-height: 24px;
   font-stretch: normal;
+  cursor: pointer;
 }
-.nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text374:hover {
-  color: red;
+.hover-text-red {
+  cursor: pointer;
+  user-select: none;
+}
+.hover-text-red:hover {
+  color : #dc0021;
 }
 .nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link21 {
   display: flex;
@@ -6338,17 +6343,18 @@
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: column;
+  position: relative;
 }
 .nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background-shadow1 {
   width: 287.5px;
   height: 43.79999923706055px;
   display: flex;
-  position: relative;
   align-self: stretch;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.20000000298023224) ;
   align-items: flex-start;
   background-color: rgba(255, 255, 255, 1);
 }
+
 .nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background64 {
   gap: 38px;
   top: 0px;
@@ -6358,6 +6364,7 @@
   padding: 10px 98.44999694824219px 10px 35px;
   position: absolute;
   align-items: center;
+  box-sizing: border-box;
   flex-shrink: 0;
   background-color: rgba(220, 0, 33, 1);
 }
@@ -7141,13 +7148,13 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 156px;
   margin-bottom: 374px;
   padding: 20px 135px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(245, 239, 239);
   height: auto;
 }
 .maincontent {
@@ -7161,3 +7168,42 @@
   width: 100%;
   outline: none;
 } 
+
+
+/* MENU */
+.menu__sub-menu{
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  position:absolute;
+  top: 100%;
+  display: none;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+}
+.container_menu-club {
+  padding: 8px 10px;
+  width: 100%;
+  height: auto;
+}
+.menu_club-btn {
+  display: flex;
+  justify-items: flex-start;
+  font-size: 14px;
+}
+.menu_club-btn:hover {
+  color : #dc0021;
+}
+.futbol_image {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-right: 7px;
+}
+#chontheodoi:hover #menu__club-sub-menu {
+  display: flex;
+}
