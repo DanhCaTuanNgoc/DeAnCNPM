@@ -152,10 +152,12 @@
 </head>
 
 <body>
-    <link href="css/home.css" rel="stylesheet" />
+    <link href="css/main/Thongtinchung/DQstyle.css" rel="stylesheet" />
+    <link href="css/main/Thongtinchung/PTstyle.css" rel="stylesheet" />
+    <link href="css/main/home.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <link href="css/account-CLB.css" rel="stylesheet" />
+    <link href="css/main/account-CLB.css" rel="stylesheet" />
     <div class="wrapper">
         <?php
         include("pages/header.php");
