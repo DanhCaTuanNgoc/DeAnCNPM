@@ -124,50 +124,45 @@
                             <div
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-list19">
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link20" style="cursor : pointer">
-                                    <a
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link20">
+                                    <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text374">
-                                        Chính sách và quy định chung
-                                    </a>
+                                        <a href="index.php?quanly=CSQDC" class="hover-text-red">Chính sách và quy định chung</a>
+                                    </span>
                                 </div>
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link21 hover_text"
-                                    style="cursor : pointer">
-                                    <a
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link21">
+                                    <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text376">
-                                        Quy định và hình thức thanh toán
-                                    </a>
+                                        <a href="index.php?quanly=QDHTTT" class="hover-text-red">Quy định và hình thức thanh toán</a>
+                                    </span>
                                 </div>
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link22"
-                                    style="cursor : pointer">
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link22">
                                     <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text378">
-                                        <span>Chính sách vận chuyển, giao nhận</span>
+                                        <a href="index.php?quanly=CSVC" class="hover-text-red">Chính sách vận chuyển, giao nhận</a>
                                     </span>
                                 </div>
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link23"
-                                    style="cursor : pointer">
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link23">
                                     <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text380">
-                                        <span>Chính sách bảo hành</span>
+                                        <a href="index.php?quanly=CSBH"  class="hover-text-red">Chính sách bảo hành</a>
                                     </span>
                                 </div>
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link24"
-                                    style="cursor : pointer">
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link24">
                                     <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text382">
-                                        <span>Chính sách đổi trả sản phẩm</span>
+                                        <a href="index.php?quanly=CSDT" class="hover-text-red">Chính sách đổi trả sản phẩm</a>
                                     </span>
                                 </div>
                                 <div
-                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link25"
-                                    style="cursor : pointer">
+                                    class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item-link25">
                                     <span
                                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text384">
-                                        <span>Chính sách bảo mật</span>
+                                        <a href="index.php?quanly=CSBM" class="hover-text-red">Chính sách bảo mật</a>
                                     </span>
                                 </div>
                             </div>
@@ -249,23 +244,31 @@
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-list21">
                                 <div
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item27">
-                                    <div
-                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment25bea0ed6e4414e18919f0177d3b7036bpng"></div>
+                                    <img
+                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment25bea0ed6e4414e18919f0177d3b7036bpng"
+                                        src="images/tq_b8ak1hnr2p-umq-200h.png"
+                                        />
                                 </div>
                                 <div
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item28">
-                                    <div
-                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment47585831c98ca49c8bb3a83362dc32cd1png"></div>
+                                    <img
+                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment47585831c98ca49c8bb3a83362dc32cd1png"
+                                        src="images/tq_9x62ryqgog-tgit-200h.png";
+                                        />
                                 </div>
                                 <div
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item29">
-                                    <div
-                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment69329d067d930404c8a0b1ce4196b8955png"></div>
+                                    <img
+                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment69329d067d930404c8a0b1ce4196b8955png"
+                                        src="images/tq_bsy14v3kki-gg0k-200h.png"
+                                        />
                                 </div>
                                 <div
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-item30">
-                                    <div
-                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment72c90ad5ae3d8452080b0145247cfa704png"></div>
+                                    <img
+                                        class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-payment72c90ad5ae3d8452080b0145247cfa704png"
+                                        src="images/tq_yyf4ws8ob3-mru-200h.png"
+                                        />
                                 </div>
                             </div>
                         </div>
@@ -446,7 +449,7 @@
                                             class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container303">
                                             <span
                                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text408">
-                                                <span>Email của bạn</span>
+                                                <span>Chưa làm tới</span>
                                             </span>
                                         </div>
                                     </div>
