@@ -1,42 +1,58 @@
-.container_Info{
+.container_Info {
     display: flex;
     flex-direction: column;
     height: auto;
     max-width: 1170px;
 }
+
 .infor {
     padding: 20px 15px;
     line-height: 2rem;
-  }
-.Demuc{
-    font-size: 24px;
-    font-weight: bold ;
 }
-.Chamnho{
+
+.Demuc {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Chamnho {
     font-size: 12px;
 }
-.Space_top{
+
+.Space_top {
     margin-top: 100px;
 }
-.More{
+
+.More {
     font-size: 14px;
     font-weight: bold;
 }
-.ChinhsachQuydinh{
+
+.ChinhsachQuydinh {
     font-size: 20px;
 }
-.Muclon{
+
+.Muclon {
     font-size: 24px;
     font-weight: bold;
 }
-.Buoc{
+
+.Buoc {
     font-size: 14px;
     font-style: italic;
     font-weight: bold;
 }
+
 /* slidepic*/
-* {box-sizing: border-box;}
-body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
 .slideshow-container {
     max-width: 400px;
@@ -74,8 +90,9 @@ img {
     border-radius: 3px 0 0 3px;
 } */
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
@@ -89,7 +106,8 @@ img {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -99,6 +117,41 @@ img {
 }
 
 @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.product_container {
+    flex-direction: row;
+    display: flexbox;
+    justify-content: space-between;
+    padding: 102px;
+}
+.product_img{
+    width: 535px;
+}
+.btn_right{
+    margin-top: 200px;
+    height: 50px;
+    width: 30px;
+}
+.btn_left{
+    margin-top: 200px;
+    height: 50px;
+    width: 30px;
+}
+.L_img {
+    width: 463px;
+    height: 463px;
+}
+
+.S_img {
+    width: 72px;
+    height: 72px;
+    margin: 26.5px;
 }
