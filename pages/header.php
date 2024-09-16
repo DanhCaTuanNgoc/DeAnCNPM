@@ -142,16 +142,20 @@
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-icon24" />
                             </div>
                         </div>
-                        <a
+                        <div
                             class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container330"
-                            style="cursor : pointer"
-                            href="index.php?quanly=account">
+                            style="cursor : pointer">
                             <div
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-link78">
                                 <span
                                     class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text429">
                                     <span>Tài khoản</span>
+                                    <div class="menu_account" id="menu_account">
+                                        <div class="menu_account-content"><a href="index.php?quanly=account_login">Đăng nhập</a></div>
+                                        <div class="menu_account-content"><a href="index.php?quanly=account_register">Đăng ký</a></div>
+                                    </div>
                                 </span>
+
                             </div>
                             <div
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container331">
@@ -160,13 +164,13 @@
                                     <span>Xin chào</span>
                                 </span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div
                         class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container332"
                         style="cursor : pointer">
                         <div
-                            class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-link79">
+                            class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-link79" id="cartButton">
                             <div
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container333">
                                 <img
@@ -225,7 +229,7 @@
                                 class="nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-horizontal-divider3" />
                         </div>
                         <div class="menu__sub-menu" id="menu__club-sub-menu">
-                            <div class="container_menu-club" id="club-sub-menu__MCI-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
@@ -233,35 +237,35 @@
                                     <a class="club_name">Asernal FC</a>
                                 </div>
                             </div>
-                            <div class="container_menu-club" id="club-sub-menu__MNU-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
                                     </div><a class="club_name">Manchester United </a>
                                 </div>
                             </div>
-                            <div class="container_menu-club" id="club-sub-menu__LIV-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
                                     </div><a class="club_name">Liverpool FC </a>
                                 </div>
                             </div>
-                            <div class="container_menu-club" id="club-sub-menu__REA-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
                                     </div><a class="club_name">Manchester City </a>
                                 </div>
                             </div>
-                            <div class="container_menu-club" id="club-sub-menu__BAR-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
                                     </div><a class="club_name">Juventus </a>
                                 </div>
                             </div>
-                            <div class="container_menu-club" id="club-sub-menu__ARS-button">
+                            <div class="container_menu-club">
                                 <div class="menu_club-btn">
                                     <div class="futbol_image">
                                         <img src="images/futbol-solid.svg" alt="" />
@@ -385,55 +389,29 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-    <!-- code Viet  -->
-    <!-- <div id="menu">
-    <div class="menu__button" id="menu__club-button">
-        <h1>chọn theo CLB</h1>
-        <div class="menu__sub-menu" id="menu__club-sub-menu">
-            <div class="" id="club-sub-menu__MCI-button"></div>
-            <div class="" id="club-sub-menu__MNU-button"></div>
-            <div class="" id="club-sub-menu__LIV-button"></div>
-            <div class="" id="club-sub-menu__REA-button"></div>
-            <div class="" id="club-sub-menu__BAR-button"></div>
-            <div class="" id="club-sub-menu__ARS-button"></div>
-        </div>
-    </div>
-    <div class="menu__button" id="menu__main-menu-button">
-        <h1>Trang chủ</h1>
-    </div> 
-    <div class="menu__button" id="menu__shop-button">
-        <h1>SHOP</h1>
-        <div class="menu__sub-menu" id="menu__shop-sub-menu">
-            <div class="shop-sub-menu__button" id="shop-sub-menu__club-button">
-                <h2>Áo đấu CLB</h2>
+    <!-- GIO HANG -->
+    <?php
+    $cart = [];
+    if (empty($cart)) {
+        echo '
+            <div id="cartOverlay" class="cart-overlay" style="display: none">
+                <div class="cart-overlay-content">
+                    <span class="close-cart-btn" id="closeCart">&times;</span>
+                    <h2>Giỏ hàng</h2>
+                    <p>Giỏ hàng hiện đang trống.</p>
+                    <img src="images/emptycart.jpg" alt="Cart Image" class="cart-image" />
+                </div>
             </div>
-            <div class="shop-sub-menu__button" id="shop-sub-menu__nation-button">
-                <h2>Áo đấu ĐTQG</h2>
+            ';
+    } else {
+        echo '<div id="cartOverlay" class="cart-overlay" style="display: none">
+                <div class="cart-overlay-content">
+                    <span class="close-cart-btn" id="closeCart">&times;</span>
+                    <h2>Giỏ hàng</h2>
+                    <p>Giỏ hàng hiện đang khong trong.</p>
+                </div>
             </div>
-            <div class="shop-sub-menu__button" id="shop-sub-menu__etc-button">
-                <h2>Áo Khác</h2>
-            </div>
-            <div class="shop-sub-menu__button" id="shop-sub-menu__accessories-button">
-                <h2>Phụ Kiện</h2>
-            </div>
-        </div>
-    </div>
-    <div class="menu__button" id="menu__print-button">
-        <h2>In Ấn</h2>
-    </div>
-    <div class="menu__button" id="menu__retro-kit-button">
-        <h2>Retro Kit</h2>
-    </div>
-    <div class="menu__button" id="menu__service-button">
-        <h2>Liên Hệ</h2>
-    </div> 
-</div> -->
+            ';
+    }
+    ?>
 </div>
