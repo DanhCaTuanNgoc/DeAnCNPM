@@ -1,10 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
     <div class="product_container" style="flex: auto;">
         <div class="product_img">
             <img id="l_img" src="D://PHP/htdocs/DeAnCNPM-main/images/slidepic1.jpg" alt="Áo khoác" class="L_img">
             <div>
                 <!-- <div class="edit_simg"> -->
-                <button class="btn_left" style="font-size: 18px;"><strong>
-                        << /strong></button>
+                <button class="btn_left" style="font-size: 18px;"><strong><</strong></button>
                 <img src="D://PHP/htdocs/DeAnCNPM-main/images/slidepic2.jpg" alt="Mặt trước" class="S_img">
                 <img src="D://PHP/htdocs/DeAnCNPM-main/images/slidepic3.jpg" alt="Mặt sau" class="S_img">
                 <img src="D://PHP/htdocs/DeAnCNPM-main/images/slidepic4.jpg" alt="Mặt trái" class="S_img">
@@ -171,3 +180,344 @@
     </div>
     </div>
     </div>
+</body>
+<style>
+    .product_container {
+        padding: 102px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .product_img {
+        width: 500px;
+        margin-right: 20px;
+    }
+
+    .product_info {
+        flex: 1;
+
+    }
+
+    .inventory_quantity {
+        margin-bottom: 20px;
+    }
+
+    .price {
+        color: red;
+        font-size: 22px;
+    }
+
+    .price_box {
+        color: red;
+        font-size: 16px;
+    }
+
+    .msgbtn {
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        width: 220px;
+        height: 38px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .msgimg {
+        width: 25px;
+    }
+
+    .size {
+        margin-top: 20px;
+        height: 50px;
+    }
+
+    .amount_btn {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .minus_btn {
+        cursor: pointer;
+        width: 50px;
+        height: 33px;
+    }
+
+    .amount_input {
+        height: 33px;
+        align-items: center;
+        padding: 5px;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .plus_btn {
+        cursor: pointer;
+        width: 50px;
+        height: 33px;
+    }
+
+    .buybtn_hotlinebtn {
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .buy_btn {
+        color: white;
+        border-radius: 10px;
+        border: solid red;
+        background-color: red;
+        height: 88px;
+        width: 219px;
+        margin-right: 20px;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hotline_btn {
+        color: black;
+        border-radius: 10px;
+        border: 5px solid yellow;
+        background-color: yellow;
+        height: 88px;
+        width: 219px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .btn_right {
+        margin-top: 30px;
+        background-color: grey;
+        cursor: pointer;
+        height: 50px;
+        width: 30px;
+        right: 0;
+    }
+
+    .btn_left {
+        margin-top: 30px;
+        background-color: grey;
+        cursor: pointer;
+        height: 50px;
+        width: 30px;
+        left: 0;
+    }
+
+    .L_img {
+        width: 482px;
+        height: 482px;
+    }
+
+    .editsmig {
+        margin-top: 30px;
+        align-items: center;
+        display: flex;
+        position: relative;
+    }
+
+    .img_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .M_img {
+        width: 179px;
+        height: 179px;
+        margin: 13px;
+    }
+
+    .S_img {
+        width: 72px;
+        height: 72px;
+        margin: 11.483px;
+    }
+
+    .info_container {
+        padding: 102px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        background-color: rgb(48, 42, 42);
+        height: 45px;
+        width: 1127px;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .info {
+        height: 41px;
+        width: 200px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .info_btn {
+        background-color: rgb(48, 42, 42);
+        border: none;
+        color: white;
+        cursor: pointer;
+        height: auto;
+    }
+
+    .stat_btn {
+        background-color: rgb(48, 42, 42);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .stat {
+        height: 41px;
+        width: 200px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .size_body {
+        height: 452px;
+        width: 600px;
+        align-items: center;
+    }
+
+    .related_product {
+        margin-top: 100px;
+    }
+
+    .product_showmore {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product_box {
+        cursor: pointer;
+        height: 280px;
+        width: 200px;
+        margin-right: 25px;
+    }
+
+    .Demuc {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .Chamnho {
+        font-size: 12px;
+    }
+
+    .Space_top {
+        margin-top: 100px;
+    }
+
+    .More {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .ChinhsachQuydinh {
+        font-size: 20px;
+    }
+
+    .Muclon {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .Buoc {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    /* slidepic*/
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slideshow-container {
+        max-width: 400px;
+        position: relative;
+        margin: auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        vertical-align: middle;
+        width: 100%;
+        height: auto;
+    }
+
+    /* .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+} */
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+
+</html>
