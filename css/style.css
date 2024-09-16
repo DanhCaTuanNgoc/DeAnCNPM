@@ -7,11 +7,11 @@
   --dl-space-space-unit: 16px;
   --dl-size-size-xxlarge: 288px;
   --dl-size-size-maxwidth: 1400px;
-  --dl-color-theme-accent1: #FFFFFF;
-  --dl-color-theme-accent2: #F5D1B0;
+  --dl-color-theme-accent1: #ffffff;
+  --dl-color-theme-accent2: #f5d1b0;
   --dl-radius-radius-round: 50%;
-  --dl-color-theme-primary1: #BF4408;
-  --dl-color-theme-primary2: #E65103;
+  --dl-color-theme-primary1: #bf4408;
+  --dl-color-theme-primary2: #e65103;
   --dl-space-space-halfunit: 8px;
   --dl-space-space-sixunits: 96px;
   --dl-space-space-twounits: 32px;
@@ -20,12 +20,12 @@
   --dl-radius-radius-radius8: 8px;
   --dl-space-space-fiveunits: 80px;
   --dl-space-space-fourunits: 64px;
-  --dl-color-theme-secondary1: #FFFFFF;
-  --dl-color-theme-secondary2: #FBF1EB;
+  --dl-color-theme-secondary1: #ffffff;
+  --dl-color-theme-secondary2: #fbf1eb;
   --dl-space-space-threeunits: 48px;
   --dl-color-theme-neutral-dark: #191818;
   --dl-radius-radius-cardradius: 8px;
-  --dl-color-theme-neutral-light: #FBFAF9;
+  --dl-color-theme-neutral-light: #fbfaf9;
   --dl-radius-radius-imageradius: 8px;
   --dl-radius-radius-inputradius: 24px;
   --dl-radius-radius-buttonradius: 24px;
@@ -133,6 +133,119 @@
   padding-bottom: var(--dl-space-space-halfunit);
   justify-content: center;
 }
+
+/* Style for the cart container to match the account container */
+.nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-container332 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* Style for the cart icon */
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#cartButton {
+  cursor: pointer;
+  z-index: 1000; /* Ensures it's on top of other elements */
+  position: relative; /* Required for z-index to work properly */
+}
+
+.cart-btn img {
+  width: 17px; /* Adjust the size to your preference */
+  height: 17px; /* Adjust the size to your preference */
+  object-fit: contain; /* Ensure the icon keeps its aspect ratio */
+}
+
+.cart-count {
+  position: absolute;
+  top: 1px; /* Move the number upwards */
+  right: 10px; /* Move the number leftwards to be closer to the cart icon */
+  background-color: #f00; /* Red background for visibility */
+  color: #fff; /* White text color */
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px; /* Adjust size of the count */
+}
+
+/* Cart Overlay Styles */
+.cart-overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensure it's above other content */
+  justify-content: flex-end; /* Push content to the right */
+}
+
+.cart-overlay.active {
+  display: flex; /* Show overlay as flex */
+}
+
+.cart-overlay-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  height: 100%; /* Full height to match overlay */
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.cart-image {
+  max-width: 100%;
+  height: auto; /* Keep image aspect ratio */
+  margin: 20px auto; /* Space around the image */
+  display: block; /* Make sure image is a block element for centering */
+  user-select: none;
+}
+
+/* Style for the cart count circle */
+.nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background63 {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 247, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the cart count text */
+.nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-text433 {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Adjust for Chọn theo CLB button */
+.nhenvnbyhtmltodesign-fre-eversion09092024212646gmt7-background64 {
+  z-index: 500;
+  position: relative;
+}
+
+.close-cart-btn {
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
 .thq-button-outline:hover {
   fill: var(--dl-color-theme-secondary2);
   color: var(--dl-color-theme-secondary2);
@@ -303,7 +416,7 @@
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-theme-neutral-light);
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg width%3D%2220%22 height%3D%2220%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M4.293 7.293a1 1 0 011.414 0L10 11.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z%22/%3E%3C/svg%3E');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width%3D%2220%22 height%3D%2220%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M4.293 7.293a1 1 0 011.414 0L10 11.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z%22/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 8px center;
 }
@@ -337,7 +450,11 @@
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
-  background: linear-gradient(to right, var(--dl-color-theme-primary1) 50%, var(--dl-color-theme-neutral-dark) 50%);
+  background: linear-gradient(
+    to right,
+    var(--dl-color-theme-primary1) 50%,
+    var(--dl-color-theme-neutral-dark) 50%
+  );
   transition: background-position 300ms ease;
   font-weight: 600;
   background-clip: text;
@@ -403,10 +520,22 @@
   overflow: hidden;
 }
 .thq-mask-image-vertical {
-  mask-image: linear-gradient(to bottom, transparent, black 1%, black 99%, transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 1%,
+    black 99%,
+    transparent
+  );
 }
 .thq-mask-image-horizontal {
-  mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 1%,
+    black 99%,
+    transparent
+  );
 }
 .thq-img-scale {
   transition: 0.3s;
@@ -444,10 +573,12 @@
   animation-play-state: paused;
 }
 .thq-animated-card-bg-2:has([data-animated="true"]:hover) {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(3deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(3deg) skew(0deg, 0deg);
 }
 .thq-animated-card-bg-1:has([data-animated="true"]:hover) {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-6deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(-6deg) skew(0deg, 0deg);
 }
 .thq-button-animated:before {
   top: 0;
@@ -478,12 +609,12 @@
   text-transform: none;
   text-decoration: none;
 }
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .thq-grid-4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .thq-section-padding {
     padding: var(--dl-space-space-threeunits);
   }
@@ -521,7 +652,7 @@
     width: 100%;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .thq-section-padding {
     padding: var(--dl-space-space-oneandhalfunits);
   }
@@ -557,4 +688,3 @@
     grid-template-columns: 1fr;
   }
 }
-
