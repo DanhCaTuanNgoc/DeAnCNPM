@@ -25,14 +25,22 @@
                     <p style="margin : 0; font-size : 10px;">Tổng đài miễn phí</p>
                 </div>
             </div>
-            <a href="#" class="login_button">
-               Đăng nhập
+            <a href="index.php?quanly=dangnhap" class="login_button">
+                Đăng nhập
             </a>
-            <a class="shopping_cart">
+            <a href="index.php?quanly=giohang" class="shopping_cart">
                 <div class="cart_icon_container">
                     <img style="margin-top: 8px;" src="../images/shopping-bag.svg" alt="">
                 </div>
-                <span class="number_item_cart">0</span>
+                <?php
+                if (isset($_SESSION['cart'])) {
+                    $count = count($_SESSION['cart']);
+                ?>
+                    <span class="number_item_cart"><?php echo $count ?></span>
+
+                <?php } else { ?>
+                    <span class="number_item_cart">0</span>
+                <?php } ?>
             </a>
         </div>
     </div>
