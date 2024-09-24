@@ -16,6 +16,24 @@
                     <img src="/WebBanHang/images/search-icon.svg" alt="arrow">
                 </div>
             </div>
+            <div class="hotline">
+                <div class="phone">
+                    <img style="margin-top: 8px;" src="../images/phone.svg" alt="">
+                </div>
+                <div class="hotline_info">
+                    <p style="margin : 0; font-size : 13px;">0988888888</p>
+                    <p style="margin : 0; font-size : 10px;">Tổng đài miễn phí</p>
+                </div>
+            </div>
+            <a href="#" class="login_button">
+               Đăng nhập
+            </a>
+            <a class="shopping_cart">
+                <div class="cart_icon_container">
+                    <img style="margin-top: 8px;" src="../images/shopping-bag.svg" alt="">
+                </div>
+                <span class="number_item_cart">0</span>
+            </a>
         </div>
     </div>
 </div>
