@@ -9,18 +9,18 @@ if (isset($_POST['themgiohang'])) {
     // }
     // session_destroy();
     $id = $_GET['idsanpham'];
-    $soluong = 1;
-    $sql = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.idSanPham = '" . $id . "' LIMIT 1 ";
+    $so_luong = 1;
+    $sql = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.id_sp = '" . $id . "' LIMIT 1 ";
     $query = mysqli_query($mysqli, $sql);
     $row = mysqli_fetch_array($query);
     if ($row) {
         $new_product = array(array(
-            'tenSanPham' => $row['tenSanPham'],
+            'ten_sp' => $row['ten_sp'],
             'id' => $id,
-            'soLuong' => $soluong,
-            'giaSanPham' => $row['giaSanPham'],
-            'hinhAnh' => $row['hinhAnh'],
-            'maSanPham' => $row['maSanPham']
+            'so_luong' => $so_luong,
+            'gia_sp' => $row['gia_sp'],
+            'hinh_anh' => $row['hinh_anh'],
+            'ma_sp' => $row['ma_sp']
         ));
         if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
             $found = false;
@@ -29,22 +29,22 @@ if (isset($_POST['themgiohang'])) {
                 // nếu trùng sản phẩm
                 if ($cart_item['id'] == $id) {
                     $product[] = array(
-                        'tenSanPham' => $cart_item['tenSanPham'],
+                        'ten_sp' => $cart_item['ten_sp'],
                         'id' => $cart_item['id'],
-                        'soLuong' => $cart_item['soLuong'] + 1,
-                        'giaSanPham' => $cart_item['giaSanPham'],
-                        'hinhAnh' => $cart_item['hinhAnh'],
-                        'maSanPham' => $cart_item['maSanPham']
+                        'so_luong' => $cart_item['so_luong'] + 1,
+                        'gia_sp' => $cart_item['gia_sp'],
+                        'hinh_anh' => $cart_item['hinh_anh'],
+                        'ma_sp' => $cart_item['ma_sp']
                     );
                     $found = true;
                 } else {
                     $product[] = array(
-                        'tenSanPham' => $cart_item['tenSanPham'],
+                        'ten_sp' => $cart_item['ten_sp'],
                         'id' => $cart_item['id'],
-                        'soLuong' => $soluong,
-                        'giaSanPham' => $cart_item['giaSanPham'],
-                        'hinhAnh' => $cart_item['hinhAnh'],
-                        'maSanPham' => $cart_item['maSanPham']
+                        'so_luong' => $so_luong,
+                        'gia_sp' => $cart_item['gia_sp'],
+                        'hinh_anh' => $cart_item['hinh_anh'],
+                        'ma_sp' => $cart_item['ma_sp']
 
                     );
                 }
@@ -78,12 +78,12 @@ if (isset($_GET['xoa']) && isset($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $cart_item) {
         if ($cart_item['id'] != $id) {
             $product[] = array(
-                'tenSanPham' => $cart_item['tenSanPham'],
+                'ten_sp' => $cart_item['ten_sp'],
                 'id' => $cart_item['id'],
-                'soLuong' => $cart_item['soLuong'],
-                'giaSanPham' => $cart_item['giaSanPham'],
-                'hinhAnh' => $cart_item['hinhAnh'],
-                'maSanPham' => $cart_item['maSanPham']
+                'so_luong' => $cart_item['so_luong'],
+                'gia_sp' => $cart_item['gia_sp'],
+                'hinh_anh' => $cart_item['hinh_anh'],
+                'ma_sp' => $cart_item['ma_sp']
             );
         }
         $_SESSION['cart'] = $product;
@@ -94,39 +94,39 @@ if (isset($_GET['xoa']) && isset($_SESSION['cart'])) {
 
 if (isset($_GET['cong'])) {
     $id = $_GET['cong'];
-    $sql_pro = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.idSanPham = '" . $id . "' LIMIT 1";
+    $sql_pro = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.id_sp = '" . $id . "' LIMIT 1";
     $pro = mysqli_query($mysqli, $sql_pro);
     $row = mysqli_fetch_array($pro);
     foreach ($_SESSION['cart'] as $cart_item) {
         if ($cart_item['id'] != $id) {
             $product[] = array(
-                'tenSanPham' => $cart_item['tenSanPham'],
+                'ten_sp' => $cart_item['ten_sp'],
                 'id' => $cart_item['id'],
-                'soLuong' => $cart_item['soLuong'],
-                'giaSanPham' => $cart_item['giaSanPham'],
-                'hinhAnh' => $cart_item['hinhAnh'],
-                'maSanPham' => $cart_item['maSanPham']
+                'so_luong' => $cart_item['so_luong'],
+                'gia_sp' => $cart_item['gia_sp'],
+                'hinh_anh' => $cart_item['hinh_anh'],
+                'ma_sp' => $cart_item['ma_sp']
             );
             $_SESSION['cart'] = $product;
         } else {
-            if ($cart_item['soLuong'] < $row['soLuong']) {
-                $tangsoluong = $cart_item['soLuong'] + 1;
+            if ($cart_item['so_luong'] < $row['so_luong']) {
+                $tangso_luong = $cart_item['so_luong'] + 1;
                 $product[] = array(
-                    'tenSanPham' => $cart_item['tenSanPham'],
+                    'ten_sp' => $cart_item['ten_sp'],
                     'id' => $cart_item['id'],
-                    'soLuong' => $tangsoluong,
-                    'giaSanPham' => $cart_item['giaSanPham'],
-                    'hinhAnh' => $cart_item['hinhAnh'],
-                    'maSanPham' => $cart_item['maSanPham']
+                    'so_luong' => $tangso_luong,
+                    'gia_sp' => $cart_item['gia_sp'],
+                    'hinh_anh' => $cart_item['hinh_anh'],
+                    'ma_sp' => $cart_item['ma_sp']
                 );
             } else {
                 $product[] = array(
-                    'tenSanPham' => $cart_item['tenSanPham'],
+                    'ten_sp' => $cart_item['ten_sp'],
                     'id' => $cart_item['id'],
-                    'soLuong' => $cart_item['soLuong'],
-                    'giaSanPham' => $cart_item['giaSanPham'],
-                    'hinhAnh' => $cart_item['hinhAnh'],
-                    'maSanPham' => $cart_item['maSanPham']
+                    'so_luong' => $cart_item['so_luong'],
+                    'gia_sp' => $cart_item['gia_sp'],
+                    'hinh_anh' => $cart_item['hinh_anh'],
+                    'ma_sp' => $cart_item['ma_sp']
                 );
             }
             $_SESSION['cart'] = $product;
@@ -140,33 +140,33 @@ if (isset($_GET['tru'])) {
     foreach ($_SESSION['cart'] as $cart_item) {
         if ($cart_item['id'] != $id) {
             $product[] = array(
-                'tenSanPham' => $cart_item['tenSanPham'],
+                'ten_sp' => $cart_item['ten_sp'],
                 'id' => $cart_item['id'],
-                'soLuong' => $cart_item['soLuong'],
-                'giaSanPham' => $cart_item['giaSanPham'],
-                'hinhAnh' => $cart_item['hinhAnh'],
-                'maSanPham' => $cart_item['maSanPham']
+                'so_luong' => $cart_item['so_luong'],
+                'gia_sp' => $cart_item['gia_sp'],
+                'hinh_anh' => $cart_item['hinh_anh'],
+                'ma_sp' => $cart_item['ma_sp']
             );
             $_SESSION['cart'] = $product;
         } else {
-            if ($cart_item['soLuong'] >= -9) {
-                $tangsoluong = $cart_item['soLuong'] - 1;
+            if ($cart_item['so_luong'] >= -9) {
+                $tangso_luong = $cart_item['so_luong'] - 1;
                 $product[] = array(
-                    'tenSanPham' => $cart_item['tenSanPham'],
+                    'ten_sp' => $cart_item['ten_sp'],
                     'id' => $cart_item['id'],
-                    'soLuong' => $tangsoluong,
-                    'giaSanPham' => $cart_item['giaSanPham'],
-                    'hinhAnh' => $cart_item['hinhAnh'],
-                    'maSanPham' => $cart_item['maSanPham']
+                    'so_luong' => $tangso_luong,
+                    'gia_sp' => $cart_item['gia_sp'],
+                    'hinh_anh' => $cart_item['hinh_anh'],
+                    'ma_sp' => $cart_item['ma_sp']
                 );
             } else {
                 $product[] = array(
-                    'tenSanPham' => $cart_item['tenSanPham'],
+                    'ten_sp' => $cart_item['ten_sp'],
                     'id' => $cart_item['id'],
-                    'soLuong' => $cart_item['soLuong'],
-                    'giaSanPham' => $cart_item['giaSanPham'],
-                    'hinhAnh' => $cart_item['hinhAnh'],
-                    'maSanPham' => $cart_item['maSanPham']
+                    'so_luong' => $cart_item['so_luong'],
+                    'gia_sp' => $cart_item['gia_sp'],
+                    'hinh_anh' => $cart_item['hinh_anh'],
+                    'ma_sp' => $cart_item['ma_sp']
                 );
             }
             $_SESSION['cart'] = $product;

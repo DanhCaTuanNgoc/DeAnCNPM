@@ -1,5 +1,5 @@
 <?php
-	$sql_lietke= "SELECT * FROM tbl_danhmuc ORDER BY thutu ";
+	$sql_lietke= "SELECT * FROM tbl_danhmucqa ORDER BY thu_tu ";
 	$lietke= mysqli_query($mysqli,$sql_lietke);
 ?>
 <h3>Liệt Kê Danh Mục Sản Phẩm</h3>
@@ -16,12 +16,12 @@
  	?>
   	<tr>
   		<td> <?php echo $i ?></td>
-  		<td> <?php echo $row['tendanhmuc'] ?></td>
+  		<td> <?php echo $row['name_sp'] ?></td>
   		<td>
-  			<a href="modules/quanLyDanhMucSanPham/xuly.php?id_dm=<?php echo $row['id_danhmuc'] ?>">Xóa</a>
+  			<a href="modules/quanLyDanhMucSanPham/xuly.php?idsp=<?php echo $row['id_dm'] ?>">Xóa</a>
 
   			| 
-  			<a href="?action=quanLyDanhMucSanPham&query=sua&id_dm=<?php echo $row['id_danhmuc'] ?>">Sửa</a>
+  			<a href="?action=quanLyDanhMucSanPham&query=sua&idsp=<?php echo $row['id_dm'] ?>">Sửa</a>
 
   		</td>
   	</tr>

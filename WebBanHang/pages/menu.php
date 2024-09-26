@@ -1,5 +1,5 @@
 <?php
-$sql_lietke = "SELECT * FROM tbl_danhmuc ORDER BY thutu ";
+$sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
 $lietke = mysqli_query($mysqli, $sql_lietke);
 ?>
 <div class="menu">
@@ -11,7 +11,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         while ($row_danhmuc = mysqli_fetch_array($lietke)) {
         ?>
             <div class="menu_items">
-                <a class="item" href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_danhmuc'] ?>"><?php echo $row_danhmuc['tendanhmuc'] ?><span class="arrow_menu"><img src="/WebBanHang/images/arrow-icon.svg" alt="arrow"></span></a>
+                <a class="item" href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_dm'] ?>"><?php echo $row_danhmuc['name_sp'] ?><span class="arrow_menu"><img src="/WebBanHang/images/arrow-icon.svg" alt="arrow"></span></a>
             </div>
         <?php } ?>
         <div class="menu_items">
@@ -21,7 +21,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
             <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="/WebBanHang/images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
         <div class="menu_items">
-            <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="/WebBanHang/images/arrow-icon.svg" alt="arrow"></span></a>
+            <a class="item" href="index.php?quanly=QDHTTT">Liên hệ<span class="arrow_menu"><img src="/WebBanHang/images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
     </div>
 </div>

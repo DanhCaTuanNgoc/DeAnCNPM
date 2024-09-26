@@ -1,6 +1,6 @@
 <?php
-$sql_pro = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.id_danhmuc = '$_GET[id]' ORDER BY tbl_sanpham.idSanPham DESC";
-$sql_cate = "SELECT * FROM tbl_danhmuc WHERE tbl_danhmuc.id_danhmuc = '$_GET[id]' ORDER BY tbl_danhmuc.id_danhmuc DESC";
+$sql_pro = "SELECT * FROM tbl_sanpham WHERE tbl_sanpham.id_dm = '$_GET[id]' ORDER BY tbl_sanpham.id_sp DESC";
+$sql_cate = "SELECT * FROM tbl_danhmucqa WHERE tbl_danhmucqa.id_dm = '$_GET[id]' ORDER BY tbl_danhmucqa.id_dm DESC";
 $query_cate = mysqli_query($mysqli, $sql_cate);
 $query_pro = mysqli_query($mysqli, $sql_pro);
 if ($query_cate) {
@@ -12,7 +12,7 @@ include("./pages/sidebar/sidebar.php");
 ?>
 <div class="main_content">
     <div class="cate_title">
-        <h2><?php echo $row_title['tendanhmuc'] ?></h2>
+        <h2><?php echo $row_title['name_sp'] ?></h2>
     </div>
     <ul class="product_list">
         <?php
@@ -23,10 +23,10 @@ include("./pages/sidebar/sidebar.php");
             $count++;
         ?>
             <li>
-                <a href="index.php?quanly=sanpham&id=<?php echo $row_pro['idSanPham'] ?>">
-                    <img src="admincp/modules/quanLySanPham/uploads/<?php echo $row_pro['hinhAnh'] ?>">
-                    <p class="title_product"><?php echo $row_pro['tenSanPham'] ?></p>
-                    <p class="price_product"><?php echo number_format($row_pro['giaSanPham'], 0, ',', ',') . 'vnđ' ?></p>
+                <a href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sp'] ?>">
+                    <img src="admincp/modules/quanLySanPham/uploads/<?php echo $row_pro['hinh_anh'] ?>">
+                    <p class="title_product"><?php echo $row_pro['ten_sp'] ?></p>
+                    <p class="price_product"><?php echo number_format($row_pro['gia_sp'], 0, ',', ',') . 'vnđ' ?></p>
                 </a>
             </li>
         <?php }

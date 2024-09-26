@@ -1,6 +1,6 @@
 <div class="header">
     <!-- <img src="images/banner-ao-da-bong.png" width="100%" height="170px"/> -->
-    <div class="header_info_container">
+    <div class="header_info_container" id="header">
         <div class="header_info">
             <p>Shopee : link shopee</p>
             <p style="margin-left : 10px">Hotline : <span style="color :yellow">09088888</span></p>
@@ -18,7 +18,7 @@
             </div>
             <div class="hotline">
                 <div class="phone">
-                    <img style="margin-top: 8px;" src="../images/phone.svg" alt="">
+                    <img style="margin-top: 8px;" src="/WebBanHang/images/phone.svg" alt="">
                 </div>
                 <div class="hotline_info">
                     <p style="margin : 0; font-size : 13px;">0988888888</p>
@@ -30,7 +30,7 @@
             </a>
             <a href="index.php?quanly=giohang" class="shopping_cart">
                 <div class="cart_icon_container">
-                    <img style="margin-top: 8px;" src="../images/shopping-bag.svg" alt="">
+                    <img style="margin-top: 8px;" src="/WebBanHang/images/shopping-bag.svg" alt="">
                 </div>
                 <?php
                 if (isset($_SESSION['cart'])) {

@@ -12,20 +12,20 @@
         if (isset($_SESSION['cart'])) {
             foreach ($_SESSION['cart'] as $cart_item) {
                 $count++;
-                $thanhtien = $cart_item['giaSanPham'] * $cart_item['soLuong'];
+                $thanhtien = $cart_item['gia_sp'] * $cart_item['so_luong'];
         ?>
                 <div class="cart_details">
                     <div class="detail_item">
                         <div class="name_img">
-                            <img width="100px" height="100px" src="/WebBanHang/admincp/modules/quanLySanPham/uploads/<?php echo $cart_item['hinhAnh'] ?>" alt="">
-                            <p><?php echo $cart_item['tenSanPham'] ?></p>
+                            <img width="100px" height="100px" src="/WebBanHang/admincp/modules/quanLySanPham/uploads/<?php echo $cart_item['hinh_anh'] ?>" alt="">
+                            <p><?php echo $cart_item['ten_sp'] ?></p>
                         </div>
-                        <div class="cart_header_item"><?php echo number_format($cart_item['giaSanPham'], 0, ',', ',') . 'đ' ?></div>
+                        <div class="cart_header_item"><?php echo number_format($cart_item['gia_sp'], 0, ',', ',') . 'đ' ?></div>
                         <div class="cart_header_item cart_soluong">
                             <span style="font-size: 20px; font-weight : bold; margin-bottom : 4px ">
                                 <a style="color : red;" href="pages/main/themgiohang.php?tru=<?php echo $cart_item['id'] ?>">-</a>
                             </span>
-                            <?php echo $cart_item['soLuong'] ?>
+                            <?php echo $cart_item['so_luong'] ?>
                             <span style="font-size: 18  px; font-weight : bold; margin-bottom : 4px ">
                                 <a style="color : red;" href="pages/main/themgiohang.php?cong=<?php echo $cart_item['id'] ?>">+</a>
                             </span>

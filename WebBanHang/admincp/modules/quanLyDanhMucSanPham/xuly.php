@@ -1,18 +1,18 @@
 <?php
 include('..//..//config/config.php');
-$tenLoaisp = $_POST['tendanhmuc'];
-$thuTu = $_POST['thutu'];
+$tenLoaisp = $_POST['name_sp'];
+$thuTu = $_POST['thu_tu'];
 if(isset($_POST['themDanhMuc'])){
-	$sql_them= "INSERT INTO tbl_danhmuc(tendanhmuc,thutu) VALUE('".$tenLoaisp."','".$thuTu."')";
+	$sql_them= "INSERT INTO tbl_danhmucqa(name_sp,thu_tu) VALUE('".$tenLoaisp."','".$thuTu."')";
 	mysqli_query($mysqli,$sql_them);
 	header('Location:../../index.php?action=quanLyDanhMucSanPham&query=them');
 }elseif(isset($_POST['suaDanhMuc'])) {
-	$sql_update= "UPDATE tbl_danhmuc SET tendanhmuc='".$tenLoaisp."', thutu= '".$thuTu."'WHERE id_danhmuc= '$_GET[id_dm]'";
+	$sql_update= "UPDATE tbl_danhmucqa SET name_sp='".$tenLoaisp."', thu_tu= '".$thuTu."'WHERE id_dm= '$_GET[idsp]'";
 	mysqli_query($mysqli,$sql_update);
 	header('Location:../../index.php?action=quanLyDanhMucSanPham&query=them');
 }else{
-	$id=$_GET['id_dm'];
-	$sql_xoa = "DELETE FROM tbl_danhmuc WHERE id_danhmuc='".$id."'";
+	$id=$_GET['idsp'];
+	$sql_xoa = "DELETE FROM tbl_danhmucqa WHERE id_dm='".$id."'";
 	mysqli_query($mysqli,$sql_xoa);
 	header('Location:../../index.php?action=quanLyDanhMucSanPham&query=them');
 }

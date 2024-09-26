@@ -1,1 +1,1 @@
-<p>footer admincp</p>
+<h3>Footer ADMIN</h3>

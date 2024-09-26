@@ -2,11 +2,11 @@ html {
   font-family: Inter;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  transition: 0.2s linear;
 }
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 * {
   text-decoration: none;
@@ -34,6 +34,7 @@ input[type="text"]::-ms-clear {
   display: flex;
   flex-direction: column;
   background-color: rgb(236, 236, 236);
+  scroll-behavior: smooth;
 }
 /* HEADER */
 .header {
@@ -167,7 +168,6 @@ input[type="text"]::-ms-clear {
 .login_button:hover {
   background-color: #ffe300;
   color: rgb(0, 0, 0);
-  transition: 0.2s linear;
 }
 .shopping_cart {
   width: auto;
@@ -238,7 +238,6 @@ input[type="text"]::-ms-clear {
 }
 .menu_items:hover {
   background-color: #ffe300;
-  transition: 0.2s linear;
 }
 .menu_items * {
   font-weight: 600;
@@ -353,7 +352,7 @@ ul.list_sidebar li {
   border-radius: 5px;
 } */
 .main_content {
-  width: 100%;
+  width: 95%;
   height: auto;
   background-color: rgb(255, 255, 255);
   padding: 10px 8px;
@@ -487,7 +486,7 @@ ul.product_list li img {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border : 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .login_content {
   width: 40%;
@@ -495,14 +494,14 @@ ul.product_list li img {
   flex-direction: column;
   align-items: center;
 }
-.input-box{
+.input-box {
   position: relative;
   width: 100%;
   height: 50px;
   border-bottom: 2px solid black;
   margin: 0;
 }
-.input-box label{
+.input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -513,30 +512,30 @@ ul.product_list li img {
   pointer-events: none;
   transition: 0.3s;
 }
-.input-box input:focus~label,
-.input-box input:valid~label {
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
   top: 5px;
 }
-.input-box input{
+.input-box input {
   width: 100%;
   background: transparent;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
   height: 80%;
   margin-top: 10px;
   font-size: 14px;
   font-weight: 300;
-  color:#162938;
+  color: #162938;
   padding: 0 0 0 5px;
 }
-.input-box .icon{
+.input-box .icon {
   position: absolute;
   top: 47%;
-  right:5px;
+  right: 5px;
   color: #162938;
   font-size: 17px;
 }
-.remember-forgot {  
+.remember-forgot {
   width: 100%;
   font-size: 13px;
   color: #162938;
@@ -555,36 +554,36 @@ ul.product_list li img {
   flex-direction: row;
   justify-content: space-between;
 } */
-.remember-forgot a{
+.remember-forgot a {
   text-decoration: none;
   color: #1500ff;
   font-size: 13px;
   font-weight: 500;
 }
-.remember-forgot label{
+.remember-forgot label {
   display: flex;
   flex-direction: row;
 }
-.remember-forgot label input{
+.remember-forgot label input {
   background-color: #162938;
   accent-color: #162938;
   margin-right: 3px;
 }
-.remember-forgot a:hover{
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 .login_form_btn {
   background-color: #a90019;
-    color: white;
-    width: 100%;
-    height: 50px;
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    border: none;
-    outline: none;
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 .login_form_btn:active {
   opacity: 0.7;
@@ -599,7 +598,153 @@ ul.product_list li img {
 
 /* FOOTER */
 .footer {
-  height: 150px;
-  background-color: rgb(0, 0, 0);
+  height: auto;
+  background-color: rgb(255, 255, 255);
   width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 20px;
+}
+.footer_content {
+  width: 1170px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.footer_info {
+  width: 30.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: auto;
+}
+.footer_info .title {
+  color: rgba(74, 74, 74, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 600;
+  line-height: 19.600000381469727px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.footer_info .info {
+  color: rgba(74, 74, 74, 1);
+  height: auto;
+  font-size: 14px;
+  align-self: stretch;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  cursor: pointer;
+  user-select: none;
+}
+.footer_info .info:hover {
+  color: #df2100;
+}
+.footer_copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(234, 236, 237, 1);
+  color: rgba(155, 155, 155, 1);
+  font-size: 12px;
+  height: 30px;
+  margin-top: 20px;
+}
+.thanhtoan_img {
+  width: 67px;
+  height: 26px;
+}
+.contact_icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 20px;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* FOOTER */
+
+/* THONG TIN CHUNG */
+.Demuc{
+  font-size: 20px;
+  font-weight: bold ;
+}
+.Chamnho{
+  font-size: 10px;
+}
+.Space_top{
+  margin-top: 100px;
+}
+.More{
+  font-size: 12px;
+  font-weight: bold;
+}
+.ChinhsachQuydinh{
+  font-size: 18px;
+}
+.Muclon{
+  font-size: 22px;
+  font-weight: bold;
+}
+.Buoc{
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+.NoiDung {
+  font-size: 16px;
+}
+.Muc {
+  font-size: 18px;
+  font-weight: bold;
+}
+.MucNho {
+  font-size: 14px;
+  font-weight: bold;
+}
+.Buoc {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+.Bold {
+  font-weight: bold;
+}
+.infor {
+  padding: 0px 15px;
+  line-height: 1.5rem;
+}
+/* THONG TIN CHUNG */
+
+.anchor {
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  padding: 5px 5px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 3px;
+  flex-direction: column;
+  background-color: rgba(220, 0, 33, 1);
+  cursor: pointer;
 }

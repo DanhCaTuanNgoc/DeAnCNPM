@@ -1,5 +1,5 @@
 <?php
-	$sql_cate= "SELECT * FROM tbl_danhmuc ORDER BY thutu ";
+	$sql_cate= "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
 	$cate= mysqli_query($mysqli,$sql_cate);
 ?>
 
@@ -16,7 +16,7 @@
             <?php 
                 while($dm = mysqli_fetch_array($cate)) {
             ?>
-            <li><a href="#"><?php echo $dm['tendanhmuc']?></a></li>
+            <li><a href="#"><?php echo $dm['name_sp']?></a></li>
             <?php } ?>
         </ul>
     </div>

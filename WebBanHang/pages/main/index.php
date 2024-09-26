@@ -14,10 +14,10 @@ $new_pro = mysqli_query($mysqli, $sql_pro);
         while ($row = mysqli_fetch_array($new_pro)) {
         ?>
             <li>
-                <a href="index.php?quanly=sanpham&id=<?php echo $row['idSanPham'] ?>">
-                    <img src="images/<?php echo $row['hinhAnh'] ?>">
-                    <p class="title_product"><?php echo $row['tenSanPham'] ?></p>
-                    <p class="price_product"><?php echo number_format($row['giaSanPham'], 0, ',', ',') . 'vnđ' ?></p>
+                <a href="index.php?quanly=sanpham&id=<?php echo $row['id_sp'] ?>">
+                    <img src="admincp/modules/quanLySanPham/uploads/<?php echo $row['hinh_anh'] ?>">
+                    <p class="title_product"><?php echo $row['ten_sp'] ?></p>
+                    <p class="price_product"><?php echo number_format($row['gia_sp'], 0, ',', ',') . 'vnđ' ?></p>
                 </a>
             </li>
         <?php
