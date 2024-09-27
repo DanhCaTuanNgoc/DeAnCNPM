@@ -1,13 +1,13 @@
 <?php
-	if(isset($_GET['tuKhoa'])){
-		$tuKhoa = $_GET['tuKhoa'];
+	if(isset($_POST['timKiem'])){
+		$tuKhoa = $_POST['tuKhoa'];
 	}else{
 		$tuKhoa = '';
 	}
     $sql_pro= "SELECT * FROM tbl_sanpham WHERE ten_sp LIKE '%".$tuKhoa."%'";
     $query_pro= mysqli_query($mysqli,$sql_pro);
 ?>
-<h3>Sản Phẩm Mới Nhất</h3>
+<h3>Từ khóa tìm kiếm: <?php echo $tuKhoa ?></h3>
 <ul class="product_list">
 	<?php 
 	while($row = mysqli_fetch_array($query_pro)){
