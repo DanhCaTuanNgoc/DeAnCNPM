@@ -35,7 +35,7 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat']==1) {
 
 			</ul>
 			<p>
-				<form action="index.php?quanly=timKiem" method="GET">
+				<form action="index.php?quanly=timKiem" method="POST">
 				<input type="text" name="tuKhoa" placeholder="Tìm Kiếm Sản Phẩm">
 				<input type="submit" name="timKiem" value="Tìm kiếm" >
 				</form>
