@@ -1,0 +1,1 @@
+<p>Cam mon ban da mua hang, chung  toi se lien he ban trong thoi gian som nhat</p>
