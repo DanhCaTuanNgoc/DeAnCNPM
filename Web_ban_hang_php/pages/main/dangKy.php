@@ -10,6 +10,7 @@
 		if($sql_dangky){
 			echo '<p style="color:green">Bạn đăng ký thành công</p>';
 			$_SESSION['dang_ky'] = $ten_khachhang;
+			$_SESSION['id_khachhang'] = mysqli_insert_id($mysqli);
 			header('Location:index.php?quanly=gioHang');
 		}
 	} 
@@ -44,7 +45,7 @@ table.dangKy tr td {
 	</tr>
 	<tr>
 		<td ><input type="submit" name="dang_ky" value="Đăng ký"></td>
-		<td><a href="index.php?quanly=dangNhap">Đăng Nhập</a></td>
+		<td><a href="index.php?quanly=dangNhap">Đăng nhap neu co tai khoan</a></td>
 	</tr>
 </table>
 </form>
