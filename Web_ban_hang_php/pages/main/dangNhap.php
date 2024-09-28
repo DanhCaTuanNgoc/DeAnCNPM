@@ -8,6 +8,7 @@
 		if($count > 0){
 			$row_data = mysqli_fetch_array($row);
 			$_SESSION['dang_ky'] = $row_data['ten_khachhang'];
+			$_SESSION['id_khachhang'] = $row_data['id_dangky'];
 			header("Location:index.php?quanly=gioHang");
 		}else{
 			echo '<p style="color:red">Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại</p>';
