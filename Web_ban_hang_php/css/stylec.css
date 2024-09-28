@@ -1,3 +1,4 @@
+@ -0,0 +1,160 @@
 body{
     padding: 0;
     margin: 0;
@@ -45,7 +46,7 @@ input.them_giohang {
 ul.list_menu {
   padding: 0;
   margin: 0 auto;
-  width: 69%;
+  width: 63%;
   list-style: none;
 }
 ul.list_menu li  {
@@ -131,6 +132,21 @@ p.product_price {
 }
 ul.product_list li a {
     text-decoration: none;
+}
+ul.list_page {
+    padding: 0;
+    list-style: none;
+}
+ul.list_page li {
+    float: left;
+    padding: 5px 13px ;
+    margin: 5px;
+    background: antiquewhite;
+    display: block;
+}
+ul.list_page li a {
+    text-decoration: none;
+    color: #000;
 }
 .footer{
     border:1px solid #ff1a8c ;
