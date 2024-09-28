@@ -60,14 +60,13 @@
 	}
 	// session_destroy();
 	if(isset($_POST['themGioHang'])){
-		// session_destroy();
 		$id = $_GET['idSanPham'];
-		$soLuong=1;
+		$so_luong=1;
 		$sql = "SELECT * FROM tbl_sanpham WHERE id_sp='".$id."' LIMIT 1";
 		$query = mysqli_query($mysqli,$sql);
 		$row = mysqli_fetch_array($query);
 		if($row) {
-			$new_pro = array(array('ten_sp'=>$row['ten_sp'], 'id'=>$id, 'so_luong'=>$soLuong, 'gia_sp'=>$row['gia_sp'], 'hinh_anh'=>$row['hinh_anh'], 'ma_sp'=>$row['ma_sp']));
+			$new_pro = array(array('ten_sp'=>$row['ten_sp'], 'id'=>$id, 'so_luong'=>$so_luong, 'gia_sp'=>$row['gia_sp'], 'hinh_anh'=>$row['hinh_anh'], 'ma_sp'=>$row['ma_sp']));
 			// check gio hang ton tai
 			if(isset($_SESSION['cart'])){
 				$found = false;
