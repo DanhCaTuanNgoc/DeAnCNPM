@@ -27,6 +27,8 @@
 					include("main/dangNhap.php");
 				}elseif ($tam=='timKiem') {
 					include("main/timKiem.php");
+				}elseif ($tam=='camMon') {
+					include("main/camMon.php");
 				}else{
 					include("main/index.php");
 				}
