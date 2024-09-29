@@ -11,7 +11,7 @@
 			$_SESSION['dangNhap'] = $taikhoan;
 			header("Location:index.php");
 		}else{
-			echo '<script>alert("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại")</script>';
+			echo '<p>Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại</p>';
 			header('Location:login.php');
 		}
 	}
