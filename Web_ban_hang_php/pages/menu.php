@@ -22,6 +22,7 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat']==1) {
 				if (isset($_SESSION['dang_ky'])) {
 				?>
 				<li><a href="index.php?dangXuat=1">Đăng Xuất</a></li>
+				<li><a href="index.php?quanly=doiMatKhau">Thay đổi mật khẩu</a></li>
 				<?php 
 				}else{
 				?>
@@ -31,8 +32,6 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat']==1) {
 				?>
 				<li><a href="index.php?quanly=tinTuc">Tin Tuc</a></li>
 				<li><a href="index.php?quanly=lienHe">Liên Hệ</a></li>
-
-
 			</ul>
 			<p>
 				<form action="index.php?quanly=timKiem" method="POST">
@@ -40,5 +39,6 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat']==1) {
 				<input type="submit" name="timKiem" value="Tìm kiếm" >
 				</form>
 			</p>
+
 		</div>
 		
