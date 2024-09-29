@@ -1,3 +1,9 @@
+<?php 
+ session_start();
+ if(!isset($_SESSION['dangNhap'])){
+ 	header('Location:login.php');
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +21,7 @@
 			include("modules/menu.php");
 			include("modules/main.php");
 			include("modules/footer.php");
-
 		?>
 		</div> 	
 </body>
 </html>
-
-
-<!--

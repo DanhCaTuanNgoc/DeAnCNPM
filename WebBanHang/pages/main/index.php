@@ -3,7 +3,7 @@ $sql_pro = "SELECT * FROM tbl_sanpham LIMIT 2";
 $new_pro = mysqli_query($mysqli, $sql_pro);
 ?>
 <?php
-    include("./pages/sidebar/sidebar.php");
+include("./pages/sidebar/sidebar.php");
 ?>
 <div class="main_content">
     <div class="cate_title">

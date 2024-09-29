@@ -1,5 +1,5 @@
 <div class="main_content">
-    <div class="infor">
+<div class="infor">
         <p class="NoiDung">Chính sách và vận chuyển giao nhận</p>
         <p class="Muc">1. Đối tượng và phạm vi vận chuyển:</p>
         <p>&bull; Chính sách giao nhận được áp dụng cho tất cả các khách hàng đặt hàng qua website 7TCC</p>
@@ -28,5 +28,5 @@
         <p> 1. Thông báo cho cửa hàng về việc hủy giao dịch qua đường dây nóng 0938.688.079 hoặc lời ghi nhắn tại http://7TCC/lien-he </p>
         <p> 2. Khi cửa hàng đã xác nhận được sản phẩm vẫn chưa được gửi đi.</p>
         <p> 3. Nếu sản phẩm đã được gửi đi, có thay đổi khách hàng phải chịu phí ship.</p>
-    </div>
-</div
+    </div>  
+</div>
