@@ -18,6 +18,10 @@
 					include("modules/quanLySanPham/lietke.php");
 				}elseif ($tam == 'quanLySanPham' && $query=='sua'){
     				include("modules/quanLySanPham/sua.php");
+				}elseif ($tam == 'quanLyDonHang' && $query=='lietke'){
+    				include("modules/quanLyDonHang/lietke.php");
+				}elseif ($tam == 'donHang' && $query=='xemDonHang'){
+    				include("modules/quanLyDonHang/xemDonHang.php");
 				}else {
 					include("modules/dashboard.php");
 				}
