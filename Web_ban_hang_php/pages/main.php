@@ -29,6 +29,8 @@
 					include("main/timKiem.php");
 				}elseif ($tam=='camMon') {
 					include("main/camMon.php");
+				}elseif ($tam=='doiMatKhau') {
+					include("main/doiMatKhau.php");
 				}else{
 					include("main/index.php");
 				}
