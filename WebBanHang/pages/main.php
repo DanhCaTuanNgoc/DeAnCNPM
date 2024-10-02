@@ -29,6 +29,10 @@
         include("main/Thongtinchung/CSDT.php");
     } elseif ($des == 'CSBM') {
         include("main/Thongtinchung/CSBM.php");
+    } elseif($des == 'dangky') {
+        include("pages/main/dangky.php");
+    } elseif ($des=='timKiem') {
+        include("main/timKiem.php");
     } else {
         include("main/index.php");
     }

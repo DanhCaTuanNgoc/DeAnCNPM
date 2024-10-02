@@ -6,14 +6,54 @@ $pro_info = mysqli_query($mysqli, $sql_pro_info);
     <?php
     while ($info = mysqli_fetch_array($pro_info)) {
     ?>
-        <form method="POST" action="/WebBanHang/pages/main/themgiohang.php?idsanpham=<?php echo $info['id_sp'] ?>">
+        <form class="product_content" method="POST" action="/WebBanHang/pages/main/themgiohang.php?idsanpham=<?php echo $info['id_sp'] ?>">
             <div class="product_img">
-                <img src="admincp/modules/quanLySanPham/uploads/<?php echo $info['hinh_anh'] ?>" alt="">
+                <img class="img" src="admincp/modules/quanLySanPham/uploads/<?php echo $info['hinh_anh'] ?>" alt="">
             </div>
             <div class="product_detail">
-                <h3>Tên sản phẩm : <?php echo $info['ten_sp'] ?></h3>
-                <p>Giá : <?php echo number_format($info['gia_sp'], 0, ',', '.') . 'đ' ?></p>
-                <p><input type="submit" name="themgiohang" value="Thêm giỏ hàng"></p>
+                <p class="ten_sp"><?php echo $info['ten_sp'] ?></p>
+                <?php
+                if ($info['so_luong'] > 0) {
+                ?>
+                    <p class="quantity">Tình trạng : <span style="color : red; font-weight : 500;">Còn hàng</span></p>
+                <?php } else { ?>
+                    <p class="quantity">Tình trạng : <span style="color : red; font-weight : 500;">Hết hàng</span></p>
+                <?php } ?>
+                <p class="gia_sp"><?php echo number_format($info['gia_sp'], 0, ',', ',') . 'đ' ?></p>
+
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td><strong>Tên sản phẩm</strong></td>
+                            <td><em><?php echo $info['ten_sp'] ?></em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Danh mục</strong></td>
+                            <td><em>ai biet</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thương hiệu</strong></td>
+                            <td><em>ai biet</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Xuất xứ</strong></td>
+                            <td><em>ai biet</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="soluong">
+                    <label for="" style="color : #55595C; font-size : 16px;">Số lượng</label>
+                    <div style="display : block">
+                        <button id="tang" class="soluong_btn">
+                            +
+                        </button>
+                        <input class="soluong_input" id="soluong_input" name="so_luong" type="number" value="1">
+                        <button id="giam" class="soluong_btn">
+                            -
+                        </button>
+                    </div>
+                </div>
+                <input class="mua_btn" type="submit" name="themgiohang" value="Thêm giỏ hàng">
             </div>
         </form>
     <?php } ?>

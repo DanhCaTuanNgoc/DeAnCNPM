@@ -1,5 +1,4 @@
-<?php
-$sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
+<?php $sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
 $lietke = mysqli_query($mysqli, $sql_lietke);
 ?>
 <div class="menu">

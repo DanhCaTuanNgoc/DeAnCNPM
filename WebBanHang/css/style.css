@@ -26,6 +26,18 @@ input[type="text"]::-moz-clear-button {
 input[type="text"]::-ms-clear {
   display: none;
 }
+
+/* Loại bỏ mũi tên tăng giảm trong trình duyệt Webkit (Chrome, Safari, Opera) */
+.soluong_input::-webkit-outer-spin-button,
+.soluong_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Loại bỏ mũi tên tăng giảm trong Firefox */
+.soluong_input[type="number"] {
+  -moz-appearance: textfield;
+}
 .wrapper {
   width: 100%;
   /* margin: 0 auto; */
@@ -33,6 +45,7 @@ input[type="text"]::-ms-clear {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: rgb(236, 236, 236);
   scroll-behavior: smooth;
 }
@@ -98,11 +111,29 @@ input[type="text"]::-ms-clear {
 .search_form {
   width: 100%;
   height: 100%;
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.search_input {
+  height: 90%;
+  width: 100%;
+  margin: 0;
   max-height: 40px;
   outline: none;
   border: none;
   font-size: 15px;
-  border-radius: 4px;
+}
+.search_btn {
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffe300;
+  width: 53px;
+  border-radius: 0 4px 4px 0;
 }
 .icon_container {
   position: absolute;
@@ -126,6 +157,7 @@ input[type="text"]::-ms-clear {
   justify-content: center;
   margin: 0 20px 0 20px;
   height: 50px;
+  position: relative;
 }
 .hotline_info {
   height: 100%;
@@ -135,6 +167,7 @@ input[type="text"]::-ms-clear {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: start;
   color: white;
 }
 .phone {
@@ -154,7 +187,7 @@ input[type="text"]::-ms-clear {
   display: flex;
   width: auto;
   margin: 0 20px 0 20px;
-  padding: 8px 10px;
+  padding: 8px 8px;
   height: 25px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -165,7 +198,32 @@ input[type="text"]::-ms-clear {
   align-items: center;
   color: #a90019;
 }
+.logout:hover #logout_button {
+  display: flex;
+}
 .login_button:hover {
+  background-color: #ffe300;
+  color: rgb(0, 0, 0);
+}
+.logout_button {
+  position: absolute;
+  width: 100px;
+  bottom: -25px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(255, 0, 0);
+  padding: 5px 5px;
+  display: none;
+  font-size: 14px;
+  align-items: self-start;
+  z-index: 1;
+  color: black;
+  border-radius: 3px;
+}
+.logout_button:hover {
   background-color: #ffe300;
   color: rgb(0, 0, 0);
 }
@@ -357,6 +415,7 @@ ul.list_sidebar li {
   background-color: rgb(255, 255, 255);
   padding: 10px 8px;
   border-radius: 5px;
+  position: relative;
 }
 ul.product_list {
   /* margin: 0;
@@ -405,6 +464,105 @@ ul.product_list li img {
 .cate_title * {
   margin: 0;
 }
+
+/* PRODUCT PAGE */
+
+.product_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+.product_detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+.product_img .img {
+  width: 458px;
+  height: 458px;
+}
+.product_detail .ten_sp {
+  font-size: 22px;
+  color: #191919;
+  margin: 10px 0 0 0;
+  line-height: 1.9rem;
+}
+.product_detail .quantity {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+.product_detail .gia_sp {
+  font-size: 24px;
+  color: #dc0021;
+  margin: 10px 0 5px 0;
+}
+.product_detail table {
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+.product_detail th,
+td {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  color: #1c1c1c;
+}
+.product_detail em {
+  font-size: 14px;
+}
+.product_detail tr {
+  height: 80px;
+}
+.soluong {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+}
+.soluong_btn {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 1px solid rgba(221, 221, 221, 1);
+  cursor: pointer;
+  font-size: 16px;
+}
+.soluong_btn:hover {
+  color: white;
+  background-color: #dc0021;
+}
+.soluong_input {
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  user-select: none;
+}
+.mua_btn {
+  margin: 20px 0 20px 0;
+  padding: 30px;
+  background: linear-gradient(to bottom, #ff2a4a, #dc0021);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(50% - 8px);
+}
+/* PRODUCT PAGE */
+
 /* MAIN CONTENT */
 
 /* MAIN */
@@ -498,35 +656,41 @@ ul.product_list li img {
   position: relative;
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid black;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
 }
 .input-box label {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 5px;
-  transform: translateY(-10%);
+  left: -70px; */
+  /* transform: translateY(-10%); */
   font-size: 13px;
   font-weight: 300;
   color: #162938;
   pointer-events: none;
-  transition: 0.3s;
+  width: 20%;
+  margin-bottom: 10px;
+  /* transition: 0.3s; */
 }
-.input-box input:focus ~ label,
+/* .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: 5px;
-}
+} */
 .input-box input {
-  width: 100%;
+  width: 80%;
   background: transparent;
   border: none;
   outline: none;
-  height: 80%;
+  height: 70%;
   margin-top: 10px;
   font-size: 14px;
   font-weight: 300;
   color: #162938;
   padding: 0 0 0 5px;
+  border-bottom: 2px solid black;
 }
 .input-box .icon {
   position: absolute;
@@ -593,6 +757,72 @@ ul.product_list li img {
 }
 .registerlink:hover {
   text-decoration: underline;
+}
+.register_input_box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.register_input_box input {
+  border: 1px solid rgba(221, 221, 221, 1);
+  outline: none;
+  height: 25px;
+  width: 75%;
+}
+.register_input_box label {
+  width: 25%;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+.input_title {
+  width: 30%;
+}
+.registration_success {
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #00ad2e;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 120px;
+  opacity: 0; /* Đặt opacity ban đầu để ẩn phần tử */
+  animation: slideIn 0.8s forwards; /* Gọi animation */
+}
+.registration_success2 {
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #00ad2e;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 120px;
+  opacity: 0; /* Đặt opacity ban đầu để ẩn phần tử */
+  animation: slideIn 0.8s forwards; /* Gọi animation */
+}
+.active {
+  display: flex;
+}
+@keyframes slideIn {
+  0% {
+    right: -400px;
+    opacity: 0;
+  }
+  50% {
+    right: -200px;
+    opacity: 1;
+  }
+  100% {
+    right: 20px; /* Vị trí dừng của phần tử */
+    opacity: 1;
+  }
 }
 /* LOGIN-REGISTER */
 
@@ -682,28 +912,28 @@ ul.product_list li img {
 /* FOOTER */
 
 /* THONG TIN CHUNG */
-.Demuc{
+.Demuc {
   font-size: 20px;
-  font-weight: bold ;
+  font-weight: bold;
 }
-.Chamnho{
+.Chamnho {
   font-size: 10px;
 }
-.Space_top{
+.Space_top {
   margin-top: 100px;
 }
-.More{
+.More {
   font-size: 12px;
   font-weight: bold;
 }
-.ChinhsachQuydinh{
+.ChinhsachQuydinh {
   font-size: 18px;
 }
-.Muclon{
+.Muclon {
   font-size: 22px;
   font-weight: bold;
 }
-.Buoc{
+.Buoc {
   font-size: 12px;
   font-style: italic;
   font-weight: bold;

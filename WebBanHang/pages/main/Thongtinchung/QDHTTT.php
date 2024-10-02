@@ -29,7 +29,7 @@
         <p>Ngân hàng MBBANK</p>
         <p>Số tài khoản: 0768893544</p>
         <p>Tên : Nguyễn Ngọc Tuấn</p>
-        <p><span class="Buoc">Bước 2:</span>Khách hàng thông báo cho cửa hàng (điện thoại, email, SMS,…) khi quý khách đã thực hiện chuyển khoản thành công hoặc liên hệ trực tiếp với bộ phận bán hàng trực tuyến.</p>h
+        <p><span class="Buoc">Bước 2:</span>Khách hàng thông báo cho cửa hàng (điện thoại, email, SMS,…) khi quý khách đã thực hiện chuyển khoản thành công hoặc liên hệ trực tiếp với bộ phận bán hàng trực tuyến.</p>
         <p><span class="Buoc">Bước 3:</span>Ngay sau khi nhận được thông báo xác nhận từ phía ngân hàng, nhân viên sẽ xác nhận lại với khách hàng đồng thời tiến hành giao hàng cho quý khách.:</p>
         <p class="Space_top"><u><em><strong>Lưu ý:</em></u></strong>Cửa hàng sẽ không chịu trách nhiệm về vấn đề sai sót trong quá trình chuyển khoản sai thông tin. Xin quý khách vui lòng làm việc trực tiếp với ngân hàng để giải quyết sai sót trên.</p>
     </div>

@@ -1,5 +1,5 @@
 <div class="main_content">
-    <div class="infor">
+<div class="infor">
         <h1>Chính sách bảo mật</h1>
         
         <h2>1. Mục đích và phạm vi thu thập:</h2>
@@ -40,5 +40,4 @@
             <li>Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân khách hàng, chúng tôi sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho khách hàng được biết.</li>
         </ul>
     </div>
-
-</div
+</div>

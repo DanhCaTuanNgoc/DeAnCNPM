@@ -1,5 +1,5 @@
-<div class= "main_content">
-    <div class="infor">
+<div class="main_content">
+<div class="infor">
         <p class = "ChinhsachQuydinh">Chính sách và quy định chung</p>
         <p class = "Demuc"> 1.    Giới thiệu:</p>
             <p> Chào mừng quý khách đã đến với www.7TCC.vn</p>
@@ -106,4 +106,4 @@
             </p>
         </p>
     </div>
-</div
+</div>
