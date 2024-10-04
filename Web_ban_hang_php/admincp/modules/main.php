@@ -30,6 +30,21 @@
     				include("modules/quanLyDonHang/xemDonHang.php");
 				}
 
+				if($tam=='quanLyDanhMucBaiViet' && $query=='them') {
+					include("modules/quanLyDanhMucBaiViet/them.php");
+					include("modules/quanLyDanhMucBaiViet/lietke.php");
+				}
+				elseif ($tam == 'quanLyDanhMucBaiViet' && $query=='sua'){
+    				include("modules/quanLyDanhMucBaiViet/sua.php");
+				}
+				elseif ($tam == 'quanLyBaiViet' && $query=='them'){
+    				include("modules/quanLyBaiViet/them.php");
+					include("modules/quanLyBaiViet/lietke.php");
+				}
+				elseif ($tam == 'quanLyBaiViet' && $query=='sua'){
+    				include("modules/quanLyBaiViet/sua.php");
+				}
+
 				elseif ($tam == 'quanLyDanhMucTinTuc' && $query=='them'){
     				include("modules/quanLyDanhMucTinTuc/them.php");
     				include("modules/quanLyDanhMucTinTuc/lietke.php");	
