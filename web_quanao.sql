@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 02, 2024 lúc 04:03 PM
+-- Thời gian đã tạo: Th10 04, 2024 lúc 04:58 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -40,6 +40,29 @@ CREATE TABLE `tbl_admin` (
 
 INSERT INTO `tbl_admin` (`id_ad`, `user_name`, `password`, `admin_status`) VALUES
 (4, 'admin', '202cb962ac59075b964b07152d234b70', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_baiviet`
+--
+
+CREATE TABLE `tbl_baiviet` (
+  `id` int(11) NOT NULL,
+  `tenbaiviet` varchar(255) NOT NULL,
+  `tomtat` mediumtext NOT NULL,
+  `noidung` longtext NOT NULL,
+  `id_danhmuc` int(11) NOT NULL,
+  `tinhtrang` int(11) NOT NULL,
+  `hinhanh` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_baiviet`
+--
+
+INSERT INTO `tbl_baiviet` (`id`, `tenbaiviet`, `tomtat`, `noidung`, `id_danhmuc`, `tinhtrang`, `hinhanh`) VALUES
+(1, 'vinh', 'sadasd', '', 9, 1, '126570-3840x2160-desktop-4k-gravity-falls-wallpaper-photo.jpg');
 
 -- --------------------------------------------------------
 
@@ -90,7 +113,8 @@ CREATE TABLE `tbl_dangky` (
 
 INSERT INTO `tbl_dangky` (`id_dangky`, `ten_khachhang`, `email`, `dia_chi`, `mat_khau`, `dien_thoai`) VALUES
 (11, 'Lương Thanh Tuấn', 'luongthanhtuan525@gmail.com', 'PJ3X+GH8, KDC 13E, Đô thị mới Nam Thành Phố, Ấp 5, Bình Chánh, TP. Hồ Chí Minh', '202cb962ac59075b964b07152d234b70', '0363296105'),
-(13, 'thanh thanh', 'luongthanhtuan474@gmail.com', 'luongthanhtuan525@gmail.comluongthanhtuan525@gmail.comluongthanhtuan525@gmail.comluongthanhtuan525@gmail.com', '202cb962ac59075b964b07152d234b70', '213414124');
+(13, 'thanh thanh', 'luongthanhtuan474@gmail.com', 'luongthanhtuan525@gmail.comluongthanhtuan525@gmail.comluongthanhtuan525@gmail.comluongthanhtuan525@gmail.com', '202cb962ac59075b964b07152d234b70', '213414124'),
+(14, 'vinh', 'capijim747@gmail.com', '', '4606e56c653ff7da5ccf7899674bab15', '0359855353');
 
 -- --------------------------------------------------------
 
@@ -132,6 +156,26 @@ CREATE TABLE `tbl_danhmuctt` (
 
 INSERT INTO `tbl_danhmuctt` (`id_tt`, `name_tt`, `thu_tu`) VALUES
 (7, 'd', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_danhmuc_baiviet`
+--
+
+CREATE TABLE `tbl_danhmuc_baiviet` (
+  `id_baiviet` int(11) NOT NULL,
+  `tendanhmuc_baiviet` varchar(255) NOT NULL,
+  `thutu` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_danhmuc_baiviet`
+--
+
+INSERT INTO `tbl_danhmuc_baiviet` (`id_baiviet`, `tendanhmuc_baiviet`, `thutu`) VALUES
+(1, 'truyentranh', 1),
+(9, 'truyentranh1', 3);
 
 -- --------------------------------------------------------
 
@@ -202,6 +246,12 @@ ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`id_ad`);
 
 --
+-- Chỉ mục cho bảng `tbl_baiviet`
+--
+ALTER TABLE `tbl_baiviet`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `tbl_chitiet_gh`
 --
 ALTER TABLE `tbl_chitiet_gh`
@@ -226,6 +276,12 @@ ALTER TABLE `tbl_danhmuctt`
   ADD PRIMARY KEY (`id_tt`);
 
 --
+-- Chỉ mục cho bảng `tbl_danhmuc_baiviet`
+--
+ALTER TABLE `tbl_danhmuc_baiviet`
+  ADD PRIMARY KEY (`id_baiviet`);
+
+--
 -- Chỉ mục cho bảng `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
@@ -248,6 +304,12 @@ ALTER TABLE `tbl_admin`
   MODIFY `id_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT cho bảng `tbl_baiviet`
+--
+ALTER TABLE `tbl_baiviet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT cho bảng `tbl_chitiet_gh`
 --
 ALTER TABLE `tbl_chitiet_gh`
@@ -257,7 +319,7 @@ ALTER TABLE `tbl_chitiet_gh`
 -- AUTO_INCREMENT cho bảng `tbl_dangky`
 --
 ALTER TABLE `tbl_dangky`
-  MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_danhmucqa`
@@ -270,6 +332,12 @@ ALTER TABLE `tbl_danhmucqa`
 --
 ALTER TABLE `tbl_danhmuctt`
   MODIFY `id_tt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_danhmuc_baiviet`
+--
+ALTER TABLE `tbl_danhmuc_baiviet`
+  MODIFY `id_baiviet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_giohang`
