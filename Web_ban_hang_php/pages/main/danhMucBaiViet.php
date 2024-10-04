@@ -5,13 +5,13 @@
     $query_name= mysqli_query($mysqli,$sql_name);
     $row_title= mysqli_fetch_array($query_name);
 ?>
-<h3>Danh Mục Bài viết: <?php echo $row_title['name_bv'] ?></h3>
+<h3>Danh Mục Bài viết: <span style="text-align: center; text-transform: uppercase"> <?php echo $row_title['name_bv']?> </span>  </h3>
 <ul class="product_list">
 	<?php
 		while($row_bv   = mysqli_fetch_array($query_bv)){
 	?>
-	<li>
-		<a href="index.php?quanly=baiViet&id=<?php echo $row_bv['id_bv']?>	">
+	<li style="text-decoration:none">
+		<a  href="index.php?quanly=baiViet&id=<?php echo $row_bv['id_bv']?>	" >
 		<img src="admincp/modules/quanLyBaiViet/uploads/<?php echo $row_bv['hinh_anh'] ?>">
 		</a>
 		<p class="product_name"><?php echo $row_bv['ten_bv'] ?></p>

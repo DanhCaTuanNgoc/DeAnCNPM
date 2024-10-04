@@ -6,7 +6,7 @@
     $query_name= mysqli_query($mysqli,$sql_name);
     $row_title= mysqli_fetch_array($query_name);
 ?>
-<h3>Danh Mục Sản phẩm: <?php echo $row_title['name_sp'] ?></h3>
+<h3>Danh Mục Sản phẩm: <span style="text-align: center; text-transform: uppercase"> <?php echo $row_title['name_sp'] ?> </span> </h3>
 <ul class="product_list">
 	<?php
 		while($row_pro = mysqli_fetch_array($query_pro)){

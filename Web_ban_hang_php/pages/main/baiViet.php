@@ -4,7 +4,7 @@
     $query_bv_all= mysqli_query($mysqli,$sql_bv);
     $row_bv_title= mysqli_fetch_array($query_bv);
 ?>
-<h3>Bài viết: <?php echo $row_bv_title['ten_bv'] ?></h3>
+<h3>Bài viết: <span style="text-align: center; text-transform: uppercase"> <?php echo $row_bv_title['ten_bv'] ?> </span> </h3>
 <ul class="baiviet">
 	<?php
 		while($row_bv = mysqli_fetch_array($query_bv_all)){
