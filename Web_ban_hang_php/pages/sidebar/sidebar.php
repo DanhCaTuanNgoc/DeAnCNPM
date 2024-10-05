@@ -15,11 +15,11 @@
 	<h4 style="text-align:center;">Danh mục bài viết</h4>
 				<ul class="list_sidebar">
 					<?php
-					    $sql_danhmucbv= "SELECT * FROM tbl_danhmucbv ORDER BY id_bv DESC";
+					    $sql_danhmucbv= "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
 					    $sql_querybv= mysqli_query($mysqli,$sql_danhmucbv);
 					    while ($row = mysqli_fetch_array($sql_querybv)) {
 					?>
-					<li style="text-transform: uppercase;"><a href="index.php?quanly=danhMucBaiViet&id=<?php echo $row['id_bv']?>"><?php echo $row['name_bv'] ?></a></li>
+					<li style="text-transform: uppercase;"><a href="index.php?quanly=danhMucBaiViet&id=<?php echo $row['id_baiviet']?>"><?php echo $row['tendanhmuc_baiviet'] ?></a></li>
 					<?php 
 					}
 					 ?>
