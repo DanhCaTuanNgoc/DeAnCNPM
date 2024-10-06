@@ -43,6 +43,7 @@
   </tr>
   <?php 
   }
+  //$_SESSION['cart']['tong_tien'] = $tongtien;
   ?>
   <tr>
     <td colspan="8">

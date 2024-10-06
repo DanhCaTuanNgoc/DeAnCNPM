@@ -9,7 +9,8 @@
 		$sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(ten_khachhang,email,dia_chi,mat_khau,dien_thoai) VALUE('".$ten_khachhang."','".$email."','".$dia_chi."','".$mat_khau."','".$dien_thoai."')");
 		if($sql_dangky){
 			echo '<p style="color:green">Bạn đăng ký thành công</p>';
-			$_SESSION['dang_ky'] = $ten_khachhang;
+			$_SESSION['dang_ky'] = $ten_khachhang;			
+			$_SESSION['email'] = $email;
 			$_SESSION['id_khachhang'] = mysqli_insert_id($mysqli);
 			header('Location:index.php?quanly=gioHang');
 		}
