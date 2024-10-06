@@ -4,7 +4,7 @@
 	if(isset($_POST['dangNhap'])){
 		$taikhoan = $_POST['username'];
 		$matkhau = md5($_POST['password']);
-		$sql = "SELECT * FROM tbl_admin WHERE user_name = '".$taikhoan."' AND password = '".$matkhau."' LIMIT 1 ";
+		$sql = "SELECT * FROM tbl_admin WHERE user_name = '".$taikhoan."' AND password = '".$matkhau."'  ";
 		$row = mysqli_query($mysqli,$sql);
 		$count = mysqli_num_rows($row);
 		if($count > 0){

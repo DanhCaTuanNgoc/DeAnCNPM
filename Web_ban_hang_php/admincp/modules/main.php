@@ -32,6 +32,8 @@
 		include("modules/quanLyBaiViet/lietke.php");
 	} elseif ($tam == 'quanLyBaiViet' && $query == 'sua') {
 		include("modules/quanLyBaiViet/sua.php");
+	} elseif ($tam == 'quanLyWeb' && $query == 'capnhat') {
+		include("modules/thongTinWeb/quanly.php");
 	} else {
 		include("modules/dashboard.php");
 	}
