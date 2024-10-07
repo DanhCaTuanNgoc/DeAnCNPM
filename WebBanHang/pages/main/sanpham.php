@@ -6,7 +6,7 @@ $pro_info = mysqli_query($mysqli, $sql_pro_info);
     <?php
     while ($info = mysqli_fetch_array($pro_info)) {
     ?>
-        <form class="product_content" method="POST" action="/WebBanHang/pages/main/themgiohang.php?idsanpham=<?php echo $info['id_sp'] ?>">
+        <form class="product_content" method="POST" action="/pages/main/themgiohang.php?idsanpham=<?php echo $info['id_sp'] ?>">
             <div class="product_img">
                 <img class="img" src="admincp/modules/quanLySanPham/uploads/<?php echo $info['hinh_anh'] ?>" alt="">
             </div>
@@ -56,5 +56,19 @@ $pro_info = mysqli_query($mysqli, $sql_pro_info);
                 <input class="mua_btn" type="submit" name="themgiohang" value="Thêm giỏ hàng">
             </div>
         </form>
+        <div class="tabs">
+            <ul id="tabs-nav">
+                <li><a href="#chitiet">Tóm tắt sản phẩm</a></li>
+                <li><a href="#noidung">Nội dung sản phẩm</a></li>
+            </ul>
+            <div id="tabs-content">
+                <div id="chitiet" class="tab-content">
+                    <?php echo $info['tom_tat'] ?>
+                </div>
+                <div id="noidung" class="tab-content">
+                    <?php echo $info['noi_dung'] ?>
+                </div>
+            </div>
+        </div>
     <?php } ?>
 </div>

@@ -10,7 +10,7 @@
             <p style="margin : 4px 0px;">Lọc nhanh sản phẩm tìm kiếm</p>
         </div>
     </div>
-    <div class="cate_content">
+    <!-- <div class="cate_content">
         <div class="cate_title_sidebar"><p class="title">Danh mục</p></div>
         <ul class="list_sidebar">
             <?php 
@@ -19,5 +19,5 @@
             <li><a href="#"><?php echo $dm['name_sp']?></a></li>
             <?php } ?>
         </ul>
-    </div>
+    </div> -->
 </div>

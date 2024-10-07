@@ -9,6 +9,10 @@
         include("main/danhmuc.php");
     } elseif ($des == 'giohang') {
         include("main/giohang.php");
+    } elseif ($des == 'danhmucbaiviet') {
+        include("main/danhmucbaiviet.php");
+    } elseif ($des == 'baiviet') {
+        include("main/baiviet.php");
     } elseif ($des == 'tintuc') {
         include("main/tintuc.php");
     } elseif ($des == 'lienhe') {
@@ -29,10 +33,14 @@
         include("main/Thongtinchung/CSDT.php");
     } elseif ($des == 'CSBM') {
         include("main/Thongtinchung/CSBM.php");
-    } elseif($des == 'dangky') {
+    } elseif ($des == 'dangky') {
         include("pages/main/dangky.php");
-    } elseif ($des=='timKiem') {
+    } elseif ($des == 'timKiem') {
         include("main/timKiem.php");
+    } elseif ($des == 'doimatkhau') {
+        include("pages/main/doimatkhau.php");
+    } elseif ($des == 'camon') {
+        include("pages/main/camon.php");
     } else {
         include("main/index.php");
     }

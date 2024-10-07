@@ -7,12 +7,11 @@
 		$sql = "SELECT * FROM tbl_admin WHERE user_name = '".$taikhoan."' AND password = '".$matkhau."' LIMIT 1 ";
 		$row = mysqli_query($mysqli,$sql);
 		$count = mysqli_num_rows($row);
-        // $count = 1;
 		if($count > 0){
 			$_SESSION['dangNhap'] = $taikhoan;
 			header("Location:index.php");
 		}else{
-			echo '<script>alert("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại")</script>';
+			echo '<p>Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại</p>';
 			header('Location:login.php');
 		}
 	}

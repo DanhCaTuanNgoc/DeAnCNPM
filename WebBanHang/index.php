@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,10 +35,7 @@
 <body>
 
     <div class="wrapper">
-        <?php if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
-        // session_destroy();
+        <?php
         include("admincp/config/config.php");
         include("pages/header.php");
         include("pages/menu.php");
@@ -45,6 +47,7 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
 </html>

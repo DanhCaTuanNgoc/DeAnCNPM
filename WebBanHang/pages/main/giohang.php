@@ -10,14 +10,16 @@
         <?php
         $count = 0;
         if (isset($_SESSION['cart'])) {
+            $tongtien = 0;
             foreach ($_SESSION['cart'] as $cart_item) {
                 $count++;
                 $thanhtien = $cart_item['gia_sp'] * $cart_item['so_luong'];
+                $tongtien += $thanhtien;
         ?>
                 <div class="cart_details">
                     <div class="detail_item">
                         <div class="name_img">
-                            <img width="100px" height="100px" src="/WebBanHang/admincp/modules/quanLySanPham/uploads/<?php echo $cart_item['hinh_anh'] ?>" alt="">
+                            <img width="100px" height="100px" src="/admincp/modules/quanLySanPham/uploads/<?php echo $cart_item['hinh_anh'] ?>" alt="">
                             <p><?php echo $cart_item['ten_sp'] ?></p>
                         </div>
                         <div class="cart_header_item"><?php echo number_format($cart_item['gia_sp'], 0, ',', ',') . 'đ' ?></div>
@@ -41,14 +43,34 @@
         <?php
         if ($count == 0) {
         ?>
-            <img style="margin-top: 40px;" src="/WebBanHang/images/emptycart.jpg" alt="EmtpyCart" width="200px" height="200px">
+            <img style="margin-top: 40px;" src="../images/emptycart.jpg" alt="EmtpyCart" width="200px" height="200px">
             <h4 style="font-style: italic; margin : 0 0 20px 0;">Giỏ hàng trống <a style="font-size: 13px; font-weight : 400; color : blue; text-decoration : underline;" href="index.php?">Mua sắm tại đây</a></h4>
         <?php } else { ?>
             <div class="cart_footer">
-                <a href="pages/main/themgiohang.php?xoatatca=1">Xóa tất cả</a>
-                <h3>Tổng tiền</h3>
+                <h3 style="margin-left : 50px; width : auto">Tổng tiền : <?php echo number_format($tongtien, 0, ',', ',') . 'đ' ?></h3>
+                <a style="margin-right : 50px; color : red;" href="pages/main/themgiohang.php?xoatatca=1">Xóa tất cả</a>
             </div>
         <?php } ?>
+
+        <?php
+        if (isset($_SESSION['dang_ky']) && $count != 0) {
+        ?>
+            <div style=" display : flex; margin-top : 20px;">
+                <a href="pages/main/thanhtoan.php" class="purchase_button">
+                    Đặt hàng
+                </a>
+            </div>
+        <?php
+        } else {
+        ?>
+            <div style=" display : flex; margin-top : 20px;">
+                <a href="index.php?quanly=dangky" class="purchase_button">
+                    Đăng ký đặt hàng
+                </a>
+            </div>
+        <?php
+        }
+        ?>
 
     </div>
 </div>
