@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -200,33 +199,32 @@ CREATE TABLE `tbl_sanpham` (
   `hinh_anh` varchar(50) NOT NULL,
   `tom_tat` tinytext NOT NULL,
   `noi_dung` text NOT NULL,
-  `tinh_trang` varchar(50) NOT NULL,
-  `id_dm` int(11) NOT NULL
+  `id_dm` int(11) NOT NULL,
+  `tinh_trang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_sanpham`
 --
 
-INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hinh_anh`, `tom_tat`, `noi_dung`, `tinh_trang`, `id_dm`) VALUES
-(104, 'ao mu sieu dep', 'mu_1', 1, 1, 'aoMU.png', '1', '1', '1', 52),
-(105, 'ao mu sieu dep', 'mu_2', 2, 2, 'aoMU.png', '1', '1', '1', 52),
-(106, 'ao mu sieu dep', 'mu_3', 3, 3, 'aoMU.png', '1', '1', '1', 52),
-(107, 'Ao Yonex dep', 'yn_1', 1, 1, 'aoYONEX.png', '1', '1', '1', 47),
-(108, 'Ao Yonex dep', 'yn_2', 2, 2, 'aoYONEX.png', '1', '1', '1', 47),
-(109, 'ao mu sieu dep', 'yn_3', 300, 3, 'aoYONEX.png', '1', '1', '1', 47),
-(110, 'ao mu dang cap', 'mu_4', 4, 4, 'aoMU.png', '1', '1', '1', 52),
-(113, 'ao mc sieu depp', 'mc_4', 44, 4, 'aoMC.png', '1', '1', '1', 48);
-
---
--- Indexes for dumped tables
---
+INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hinh_anh`, `tom_tat`, `noi_dung`, `id_dm`, `tinh_trang`) VALUES
+(110, 'Áo t', 'fd', 100000, 10, 'chatluong.png', 'Áo', 'Tốt', 47, 1),
+(112, 'quần Dài Yonex', 'quanyoxex', 100000, 20, 'quanyonex.png', 'quần', 'quần Yonex', 47, 0),
+(113, 'quần Yonex', 'fd', 100000, 20, 'yoxex.png', 'ok', 'quần Yonex', 47, 1),
+(114, 'áo thun', 'ao thun', 100000, 10, 'aothun.png', 'ao', 'ao', 47, 1);
 
 --
 -- Indexes for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`id_ad`);
+
+--
+-- Indexes for table `tbl_baiviet`
+--
+ALTER TABLE `tbl_baiviet`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_danhmuc` (`id_danhmuc`);
 
 --
 -- Indexes for table `tbl_chitiet_gh`
@@ -244,7 +242,13 @@ ALTER TABLE `tbl_dangky`
 -- Indexes for table `tbl_danhmucqa`
 --
 ALTER TABLE `tbl_danhmucqa`
-  ADD PRIMARY KEY (`id_dm`) USING BTREE;
+  ADD PRIMARY KEY (`id_dm`);
+
+--
+-- Indexes for table `tbl_danhmuc_baiviet`
+--
+ALTER TABLE `tbl_danhmuc_baiviet`
+  ADD PRIMARY KEY (`id_baiviet`);
 
 --
 -- Indexes for table `tbl_giohang`
@@ -262,41 +266,30 @@ ALTER TABLE `tbl_sanpham`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `tbl_admin`
---
 ALTER TABLE `tbl_admin`
   MODIFY `id_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
---
--- AUTO_INCREMENT for table `tbl_chitiet_gh`
---
+ALTER TABLE `tbl_baiviet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `tbl_chitiet_gh`
   MODIFY `id_ctgh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
---
--- AUTO_INCREMENT for table `tbl_dangky`
---
 ALTER TABLE `tbl_dangky`
   MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
---
--- AUTO_INCREMENT for table `tbl_danhmucqa`
---
 ALTER TABLE `tbl_danhmucqa`
-  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
---
--- AUTO_INCREMENT for table `tbl_giohang`
---
+ALTER TABLE `tbl_danhmuc_baiviet`
+  MODIFY `id_baiviet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 ALTER TABLE `tbl_giohang`
-  MODIFY `id_gh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_gh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
---
--- AUTO_INCREMENT for table `tbl_sanpham`
---
 ALTER TABLE `tbl_sanpham`
   MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
