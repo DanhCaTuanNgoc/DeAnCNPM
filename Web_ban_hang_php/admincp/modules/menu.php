@@ -1,4 +1,5 @@
 <ul class="admin_list">
+	<li><a href="index.php">Thống kê</a></li>
 	<li><a href="index.php?action=quanLyDanhMucSanPham&query=them">Quản lý danh mục sản phẩm</a></li>
 	<li><a href="index.php?action=quanLySanPham&query=them">Quản lý sản phẩm</a></li>
 	<li><a href="index.php?action=quanLyDanhMucBaiViet&query=them">Quản lý danh mục bài viết</a></li>
