@@ -3,13 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 03:05 PM
+-- Generation Time: Oct 07, 2024 at 04:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -61,7 +62,14 @@ CREATE TABLE `tbl_baiviet` (
 --
 
 INSERT INTO `tbl_baiviet` (`id`, `tenbaiviet`, `tomtat`, `noidung`, `id_danhmuc`, `tinhtrang`, `hinhanh`) VALUES
-(0, 'hẹn gặp lại', 'ád', 'ád', 0, 1, 'hengaplai.jpg');
+(2, 'MU chậm sa thải Ten Hag', 'Summary for MU chậm sa thải Ten Hag', 'Content for MU chậm sa thải Ten Hag', 1, 1, 'tin1.jpg'),
+(3, 'BXH Ngoại hạng Anh: MU tệ nhất lịch sử, Chelsea lung lay top 4', 'Summary for BXH Ngoại hạng Anh', 'Content for BXH Ngoại hạng Anh', 1, 1, 'tin2.jpg'),
+(4, 'Ten Hag cúi đầu: Ai đã cứu thầy tạm sống sót?', 'Summary for Ten Hag cúi đầu', 'Content for Ten Hag cúi đầu', 1, 1, 'tin3.jpg'),
+(5, 'Lewandowski ghi 3 bàn đỉnh cao, bắt kịp Haaland đua Chiếc Giày Vàng', 'Summary for Lewandowski', 'Content for Lewandowski', 1, 1, 'tin4.jpg'),
+(6, 'Xấu hổ: Dàn sao MU thua ông già 36 tuổi, Rashford bị nghi nói xấu Ten Hag', 'Summary for MU thua ông già 36 tuổi', 'Content for MU thua ông già 36 tuổi', 1, 1, 'tin5.jpg'),
+(8, 'Video bóng đá: Brighton - Tottenham, hàng công thăng hoa', 'Summary for Brighton vs Tottenham', 'Content for Brighton vs Tottenham', 1, 1, 'tin7.jpg'),
+(9, 'Video futsal: Brazil - Argentina, đăng quang kịch tính chung kết Futsal World Cup', 'Summary for Brazil vs Argentina Futsal', 'Content for Brazil vs Argentina Futsal', 1, 1, 'tin8.jpg'),
+(10, 'Video bóng đá: Sociedad - Atletico, Alvarez ghi bàn giây 51', 'Summary for Sociedad vs Atletico', 'Content for Sociedad vs Atletico', 1, 1, 'tin9.jpg');
 
 -- --------------------------------------------------------
 
@@ -155,8 +163,8 @@ CREATE TABLE `tbl_danhmuc_baiviet` (
 --
 
 INSERT INTO `tbl_danhmuc_baiviet` (`id_baiviet`, `tendanhmuc_baiviet`, `thutu`) VALUES
-(9, 'truyentranh1', 3),
-(0, 'truyentranh2', 34);
+(0, 'truyentranh2', 34),
+(9, 'truyentranh1', 3);
 
 -- --------------------------------------------------------
 
@@ -214,6 +222,10 @@ INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hi
 (114, 'áo thun', 'ao thun', 100000, 10, 'aothun.png', 'ao', 'ao', 47, 1);
 
 --
+-- Indexes for dumped tables
+--
+
+--
 -- Indexes for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
@@ -266,30 +278,53 @@ ALTER TABLE `tbl_sanpham`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `tbl_admin`
+--
 ALTER TABLE `tbl_admin`
   MODIFY `id_ad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
+--
+-- AUTO_INCREMENT for table `tbl_baiviet`
+--
 ALTER TABLE `tbl_baiviet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
+--
+-- AUTO_INCREMENT for table `tbl_chitiet_gh`
+--
 ALTER TABLE `tbl_chitiet_gh`
   MODIFY `id_ctgh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
+--
+-- AUTO_INCREMENT for table `tbl_dangky`
+--
 ALTER TABLE `tbl_dangky`
   MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
+--
+-- AUTO_INCREMENT for table `tbl_danhmucqa`
+--
 ALTER TABLE `tbl_danhmucqa`
   MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
+--
+-- AUTO_INCREMENT for table `tbl_danhmuc_baiviet`
+--
 ALTER TABLE `tbl_danhmuc_baiviet`
   MODIFY `id_baiviet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
+--
+-- AUTO_INCREMENT for table `tbl_giohang`
+--
 ALTER TABLE `tbl_giohang`
   MODIFY `id_gh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
+--
+-- AUTO_INCREMENT for table `tbl_sanpham`
+--
 ALTER TABLE `tbl_sanpham`
   MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
