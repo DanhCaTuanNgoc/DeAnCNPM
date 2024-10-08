@@ -1334,3 +1334,75 @@ ul#tabs-nav li.active a {
     - 970px : good
 
     */
+
+/* FOOTER */
+.footer {
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+  flex-wrap: wrap; /* Quan trọng để cho phép nội dung xuống dòng khi màn hình hẹp */
+}
+
+.footer_info {
+  width: 30%; /* Giữ nguyên kích thước cho màn hình lớn */
+  padding: 10px;
+}
+
+.footer_info .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer_info .info {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Khi màn hình nhỏ hơn 768px */
+@media only screen and (max-width: 768px) {
+  .footer_content {
+    flex-direction: column; /* Chuyển footer sang dạng cột */
+    align-items: center; /* Căn giữa các phần tử */
+  }
+  
+  .footer_info {
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các phần tử */
+  }
+
+  .footer_info .title {
+    font-size: 14px; /* Giảm kích thước font */
+  }
+
+  .footer_info .info {
+    font-size: 12px; /* Giảm kích thước font */
+  }
+}
+
+/* Khi màn hình nhỏ hơn 480px */
+@media only screen and (max-width: 480px) {
+  .footer_content {
+    padding: 10px; /* Giảm padding cho màn hình rất nhỏ */
+  }
+
+  .footer_info .title {
+    font-size: 12px;
+  }
+
+  .footer_info .info {
+    font-size: 10px;
+  }
+}
