@@ -1,10 +1,18 @@
-<?php $sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
+<?php 
+$sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
 $lietke = mysqli_query($mysqli, $sql_lietke);
 ?>
 <div class="menu">
     <div class="menu_content">
         <div class="menu_items">
             <a class="item" href="index.php">Trang chủ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+        </div>
+        <!-- Thêm nút Đăng ký và Đăng nhập -->
+        <div class="menu_items">
+            <a class="item" href="index.php?quanly=dangky">Đăng ký<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+        </div>
+        <div class="menu_items">
+            <a class="item" href="index.php?quanly=dangnhap">Đăng nhập<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
         <?php
         while ($row_danhmuc = mysqli_fetch_array($lietke)) {
@@ -32,28 +40,41 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
                 <li>
                     <div class="search_container_menubar">
                         <form class="search_form" action="index.php?quanly=timKiem" method="POST">
-                            <input class="search_input" type="text" name="tuKhoa" id="search-box" placeholder="Bạn cần tìm gì hôm nay ?">
+                            <input class="search_input" type="text" name="tuKhoa" id="search-box" placeholder="......">
                             <button class="search_btn" type="submit" name="timKiem" class="icon_container">
                                 <img src="../images/search-icon.svg" alt="arrow">
                             </button>
                         </form>
                     </div>
                 </li>
-                <li> <a class="item" href="index.php">Trang chủ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                <li> 
+                    <a class="item" href="index.php">Trang chủ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                </li>
+                <!-- Thêm nút Đăng ký và Đăng nhập trong drawer -->
+                <li>
+                    <a class="item" href="index.php?quanly=dangky">Đăng ký<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                </li>
+                <li>
+                    <a class="item" href="index.php?quanly=dangnhap">Đăng nhập<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
                 <?php
+                // Reset con trỏ kết quả truy vấn về đầu để lặp lại
+                mysqli_data_seek($lietke, 0); // Đưa con trỏ về đầu
                 while ($row_danhmuc = mysqli_fetch_array($lietke)) {
                 ?>
-
                     <li>
                         <a class="item" href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_dm'] ?>"><?php echo $row_danhmuc['name_sp'] ?><span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                     </li>
                 <?php } ?>
-                <li> <a class="item" href="index.php?quanly=giohang">Giỏ hàng<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                <li> 
+                    <a class="item" href="index.php?quanly=giohang">Giỏ hàng<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
-                <li> <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                <li> 
+                    <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
-                <li><a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a></li>
+                <li>
+                    <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+                </li>
             </ul>
         </div>
     </div>
