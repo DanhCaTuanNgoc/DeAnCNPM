@@ -503,11 +503,12 @@ ul.list_sidebar li {
 ul.product_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* Canh lề trái thay vì center */
   padding: 0;
   margin: 0 auto;
   list-style: none;
 }
+
 ul.product_list li {
   margin: 5px;
   padding: 10px;
@@ -1366,6 +1367,17 @@ ul#tabs-nav li.active a {
     width: 80.1%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  ul.product_list {
+    justify-content: center; /* Căn giữa sản phẩm khi chỉ còn 1 sản phẩm trên hàng */
+  }
+
+  ul.product_list li {
+    width: 100%; /* Mỗi sản phẩm chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+  }
+}
+
 @media only screen and (max-width: 470px) {
   html {
     font-size: 50%;
