@@ -29,6 +29,16 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         <div class="drawer" id="drawer">
             <a href="#" class="close-btn" id="close-btn">&times;</a>
             <ul>
+                <li>
+                    <div class="search_container_menubar">
+                        <form class="search_form" action="index.php?quanly=timKiem" method="POST">
+                            <input class="search_input" type="text" name="tuKhoa" id="search-box" placeholder="Bạn cần tìm gì hôm nay ?">
+                            <button class="search_btn" type="submit" name="timKiem" class="icon_container">
+                                <img src="../images/search-icon.svg" alt="arrow">
+                            </button>
+                        </form>
+                    </div>
+                </li>
                 <li> <a class="item" href="index.php">Trang chủ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
                 <?php
