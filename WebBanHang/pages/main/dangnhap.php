@@ -10,6 +10,7 @@ if (isset($_POST['dangNhap'])) {
         $row_data = mysqli_fetch_array($row);
         $login_success = true;
         $_SESSION['dang_ky'] = $row_data['ten_khachhang'];
+        $_SESSION['email'] = $row_data['email'];
         $_SESSION['id_khachhang'] = $row_data['id_dangky'];
         // header('Location:../../index.php?quanly=giohang');
         echo "<script>window.location.href='index.php?';</script>";

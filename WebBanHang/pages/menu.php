@@ -20,7 +20,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
             <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
         <div class="menu_items">
-            <a class="item" href="index.php?quanly=QDHTTT">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+            <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
         <div class="hamburger" id="hamburger">
             <img src="../images/bars-solid.svg" alt="" width="30px" height="30px">
@@ -43,7 +43,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
                 </li>
                 <li> <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
-                <li><a class="item" href="index.php?quanly=QDHTTT">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a></li>
+                <li><a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a></li>
             </ul>
         </div>
     </div>

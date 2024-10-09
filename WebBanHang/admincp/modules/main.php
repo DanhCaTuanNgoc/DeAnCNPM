@@ -32,8 +32,10 @@
 		include("modules/quanLyBaiViet/lietke.php");
 	} elseif ($tam == 'quanLyBaiViet' && $query == 'sua') {
 		include("modules/quanLyBaiViet/sua.php");
+	} elseif ($tam == 'quanLyWeb') {
+		include("modules/thongTinWeb/quanly.php");
 	} else {
-		include("modules/dashboard.php");
+		include("dashboard.php");
 	}
 	?>
 

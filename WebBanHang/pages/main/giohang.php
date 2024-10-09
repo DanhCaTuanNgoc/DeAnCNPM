@@ -53,7 +53,7 @@
         <?php } ?>
 
         <?php
-        if (isset($_SESSION['dang_ky']) && $count != 0) {
+        if (isset($_SESSION['dang_ky']) && isset($_SESSION['id_khachhang']) && $count != 0) {
         ?>
             <div style=" display : flex; margin-top : 20px;">
                 <a href="pages/main/thanhtoan.php" class="purchase_button">

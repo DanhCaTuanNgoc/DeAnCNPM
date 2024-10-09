@@ -12,6 +12,7 @@
  		<th>Email</th>
  		<th>SDT</th>
  		<th>Trang thai</th>
+		<th>Ngay dat</th>
  		<th>Quan ly</th>
  	</tr>
  	<?php
@@ -36,6 +37,7 @@
 
   			 ?>
   		</td>
+		<td><?php echo $row['cart_date'] ?></td>
   		<td>
   			<a href="index.php?action=donHang&query=xemDonHang&code=<?php echo $row['ma_gh'] ?>">Xem don hang</a>
   			<a href=""></a>
