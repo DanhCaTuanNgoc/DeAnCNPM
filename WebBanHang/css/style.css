@@ -137,7 +137,8 @@ input[type="text"]::-ms-clear {
   font-size: 40px;
 }
 .search_container {
-  width: 415.5px;
+  width: 40%;
+  max-width: 40%;
   height: 40px;
   display: flex;
   position: relative;
@@ -146,7 +147,7 @@ input[type="text"]::-ms-clear {
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 1);
   padding-left: 7px;
-  margin-left: 65px;
+  margin-left: 20px;
   margin-right: 10px;
 }
 .search_form {
@@ -1238,52 +1239,28 @@ ul#tabs-nav li.active a {
   }
 }
 
-/* Khi có class active, input tìm kiếm sẽ hiển thị */
-.search_input.active {
-  display: block;
-}
-
 @media only screen and (max-width: 944px) {
   html {
     font-size: 55.5%;
   }
-  
   .footer_content {
     align-items: flex-start;
     justify-content: start;
     flex-wrap: wrap;
   }
-
   .footer_info {
     width: 25.3%;
   }
-
-  .search_container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  /* .search_container {
     width: auto;
     padding: 0;
     background-color: transparent;
   }
-
-  /* Form input tìm kiếm được ẩn ban đầu */
-  .search_input {
-    display: none; /* Ban đầu input bị ẩn */
-    width: 70%;
-    max-width: 300px;
-    height: 40px;
-    border: 1px solid #ccc;
-    padding: 0 10px;
-    border-radius: 4px 0 0 4px;
+  .search_container input {
+    display: none;
   }
-
-  .search_input.active {
-    display: block; /* Hiển thị khi có class active */
-  }
-
   .search_container .search_btn {
-    height: 40px;
+    height: 100%;
     border: none;
     outline: none;
     cursor: pointer;
@@ -1291,33 +1268,27 @@ ul#tabs-nav li.active a {
     width: 45px;
     border-radius: 100vh;
   }
-
   .header_content {
     justify-content: end;
     align-self: flex-start;
   }
-
   .shopping_cart {
     margin-left: 10px;
     margin-right: 20px;
   }
-
   .logo {
     margin-right: auto;
   }
-
   .hamburger {
     display: block;
     margin: 0 0px 0 80px;
   }
-
   .menu_content {
     justify-content: start;
   }
-
   .menu_items {
     display: none;
-  }
+  } */
 }
 
 @media only screen and (max-width: 788px) {
@@ -1327,11 +1298,65 @@ ul#tabs-nav li.active a {
   #main {
     background-color: rgb(207, 118, 118);
   }
+  .search_container_menubar {
+    width: 100%;
+    max-width: 40%;
+    height: 40px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    padding-left: 7px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
   ul.product_list li {
     float: left;
     margin: 5px;
     padding: 10px;
     width: 45.1%;
+  }
+  .search_container {
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    margin-left: 20px;
+  }
+  .search_container input {
+    display: none;
+  }
+  .search_container .search_btn {
+    /* height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #ffe300;
+    width: 45px;
+    border-radius: 100vh; */
+    display: none;
+  }
+  .header_content {
+    justify-content: end;
+    align-self: flex-start;
+  }
+  .shopping_cart {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .logo {
+    margin-right: auto;
+  }
+  .hamburger {
+    display: block;
+    margin: 0 0px 0 80px;
+  }
+  .menu_content {
+    justify-content: start;
+  }
+  .menu_items {
+    display: none;
   }
 }
 
@@ -1364,176 +1389,3 @@ ul#tabs-nav li.active a {
     - 970px : good
 
     */
-
-/* Fix for search form visibility issues */
-.header_search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.header_search input[type="search"] {
-  width: 60%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  box-sizing: border-box; /* Ensure it resizes properly */
-}
-
-.header_search button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f00;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-@media (max-width: 1024px) {
-  .header_search {
-    width: 100%; /* Ensure full width on medium screens */
-  }
-
-  .header_search input[type="search"] {
-    width: 80%; /* Increase width to make input larger */
-  }
-
-  .header_search button {
-    width: auto; /* Make sure button size adjusts properly */
-  }
-}
-
-@media (max-width: 768px) {
-  .header_search {
-    flex-direction: column; /* Stack the search bar vertically */
-    width: 100%;
-  }
-
-  .header_search input[type="search"] {
-    width: 100%; /* Full width on smaller screens */
-    margin-bottom: 10px; /* Add spacing between input and button */
-  }
-
-  .header_search button {
-    width: 100%; /* Make the button full width */
-  }
-}
-
-/* FOOTER (as before) */
-.footer {
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1170px;
-  flex-wrap: wrap;
-}
-
-.footer_info {
-  width: 30%;
-  padding: 10px;
-}
-
-.footer_info .title {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.footer_info .info {
-  font-size: 14px;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 768px) {
-  .footer_content {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer_info {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .footer_info .title {
-    font-size: 14px;
-  }
-
-  .footer_info .info {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .footer_content {
-    padding: 10px;
-  }
-
-  .footer_info .title {
-    font-size: 12px;
-  }
-
-  .footer_info .info {
-    font-size: 10px;
-  }
-}
-
-/* Improved search form layout using Flexbox */
-.search_container {
-  display: flex;
-  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-  justify-content: space-between; /* Distribute items evenly */
-  align-items: center;
-}
-
-.search_input {
-  flex: 1; /* Ensure the input takes up available space */
-  min-width: 0; /* Prevent overflow */
-}
-
-.search_btn {
-  flex-shrink: 0; /* Ensure the button does not shrink too much */
-}
-
-/* Minimum width to prevent shrinking */
-.search_input {
-  min-width: 150px; /* Set a minimum width for the input */
-}
-
-.search_btn {
-  min-width: 50px; /* Set a minimum width for the button */
-}
-
-/* Hide unnecessary elements like the logo on small screens */
-@media (max-width: 480px) {
-  .logo {
-    display: none; /* Hide the logo on very small screens */
-  }
-
-  .search_container {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .search_input, .search_btn {
-    width: 100%; /* Make the input and button take full width */
-  }
-}
-
-/* Ensure proper stacking with z-index */
-.search_container {
-  position: relative;
-  z-index: 10; /* Ensure the form stays on top */
-}
