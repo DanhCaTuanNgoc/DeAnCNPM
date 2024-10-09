@@ -17,7 +17,7 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
             <div class="logo"><a style="cursor : pointer; padding-top : 12px"><img src="images/image7tcc2removebgpreview11884-0kr5-200h.png" alt="7TCC LOGO" width="200px" height="70px"></a></div>
             
             <div class="search_container">
-                <form class="search_form" action="index.php?quanly=timKiem" method="POST">
+                <form class="search_form" action="index.php?quanly=timKiem" method="POST" onsubmit="return validateSearch()">
                     <input class="search_input" type="text" name="tuKhoa" id="search-box" placeholder="Bạn cần tìm gì hôm nay ?">
                     <button class="search_btn" type="submit" name="timKiem" class="icon_container">
                         <img src="../images/search-icon.svg" alt="arrow">
@@ -79,3 +79,16 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
         </div>
     </div>
 </div>
+
+<script src="js/script.js"></script> <!-- Make sure this script is linked correctly -->
+
+<script>
+    function validateSearch() {
+        var searchInput = document.getElementById('search-box').value.trim();
+        if (searchInput === '') {
+            alert('Vui lòng nhập từ khóa tìm kiếm.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
