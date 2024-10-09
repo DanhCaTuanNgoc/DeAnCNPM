@@ -1,5 +1,5 @@
  <?php
-$mysqli = new mysqli("localhost","root","","web_quan");
+$mysqli = new mysqli("localhost","root","","web_quanao");
 
 // Check connection
 if ($mysqli -> connect_errno) {
