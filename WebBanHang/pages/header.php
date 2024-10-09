@@ -17,9 +17,9 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
             <div class="logo"><a style="cursor : pointer; padding-top : 12px"><img src="images/image7tcc2removebgpreview11884-0kr5-200h.png" alt="7TCC LOGO" width="200px" height="70px"></a></div>
             
             <div class="search_container">
-                <form class="search_form" action="index.php?quanly=timKiem" method="POST" id="searchForm">
+                <form class="search_form" action="index.php?quanly=timKiem" method="POST">
                     <input class="search_input" type="text" name="tuKhoa" id="search-box" placeholder="Bạn cần tìm gì hôm nay ?">
-                    <button class="search_btn" type="button" id="searchBtn">
+                    <button class="search_btn" type="submit" name="timKiem" class="icon_container">
                         <img src="../images/search-icon.svg" alt="arrow">
                     </button>
                 </form>
@@ -79,4 +79,3 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
         </div>
     </div>
 </div>
-
