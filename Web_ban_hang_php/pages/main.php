@@ -13,6 +13,12 @@
 					include("main/danhMucSanPham.php");
 				}elseif ($tam=='gioHang') {
 					include("main/gioHang.php");
+				}elseif ($tam=='vanChuyen') {
+					include("main/vanChuyen.php");
+				}elseif ($tam=='thanhToan') {
+					include("main/thongTinThanhToan.php");
+				}elseif ($tam=='donHangDaDat') {
+					include("main/donHangDaDat.php");
 				}elseif ($tam=='danhMucBaiViet') {
 					include("main/danhMucBaiViet.php");
 				}elseif ($tam=='baiViet') {

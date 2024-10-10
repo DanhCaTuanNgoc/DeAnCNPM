@@ -1,24 +1,32 @@
-
-<p>Gio hang
-  <br>
-  <?php 
-  if(isset($_SESSION['dang_ky'])){
-    echo 'Xin Chào: '.'<span style="color : red">'.$_SESSION['dang_ky'].'</span>';
-  }
-  ?>
-</p>
-
-  
-<div class="wrapper-2">	
-  <div class="arrow-steps clearfix">
-    <div class="step current"> <span> <a href="index.php?quanly=gioHang"> Giỏ hàng</a></span> </div>
-    <div class="step"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
-    <div class="step"> <span><a href="index.php?quanly=thanhToan">Thanh toán</a></span> </div>
-    <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
-	</div>
+<p>Thông tin vận chuyển</p>
+<div class="wrapper-2">
+    <div class="arrow-steps clearfix">
+        <div class="step done"> <span> <a href="index.php?quanly=gioHang"> Giỏ hàng</a></span> </div>
+        <div class="step current"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
+        <div class="step "> <span><a href="index.php?quanly=thanhToan">Thanh toán</a></span> </div>
+        <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
+    </div>
 </div>
-
-  <table style="width: 100%; text-align: center; border-collapse: collapse;" border="1">
+    <h4>THÔNG TIN VẬN CHUYỂN</h4>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <form action="/action_page.php">
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <!-- Don hang -->
+    </div>
+    <table style="width: 100%; text-align: center; border-collapse: collapse;" border="1">
   <tr>
     <th>Id</th>
     <th>Ma SP</th>
@@ -40,8 +48,6 @@
       $i++;
   ?>
 
-  
-
 
   <tr>
     <td><?php echo $i; ?></td>
@@ -55,7 +61,6 @@
       </td>
     <td><?php echo number_format($cart_item['gia_sp'],0,',','.').' VND ' ?></td>
     <td><?php echo number_format($thanhtien,0,',','.').' VND ' ?></td>
-    <td><a href="pages/main/themGioHang.php?xoa=<?php echo $cart_item['id']?>">Xoa</a></td>
   </tr>
   <?php 
   }
@@ -88,3 +93,5 @@
   <?php 
   } ?>
 </table> 
+</div>
+</div>

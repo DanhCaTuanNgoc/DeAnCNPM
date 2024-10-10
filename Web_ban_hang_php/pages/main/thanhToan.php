@@ -1,11 +1,11 @@
 <?php
   session_start();
   include('../../admincp/config/config.php');
-  require('../../Carbon-3.8.0/autoload.php');
+  //require('../../Carbon-3.8.0/autoload.php');
   use Carbon\Carbon;
   use Carbon\CarbonInterval;
 
-  $now = Carbon::now('Asia/Ho_Chi_Minh');
+  //$now = Carbon::now('Asia/Ho_Chi_Minh');
     $id_khachhang = $_SESSION['id_khachhang'];
     $ma_gh = rand(0,9999);
     $insert_cart = "INSERT INTO tbl_giohang(id_khachhang,ma_gh,trang_thai,cart_date) VALUE('".$id_khachhang."','".$ma_gh."',1,'".$now."')";
