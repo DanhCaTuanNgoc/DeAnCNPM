@@ -240,6 +240,27 @@ CREATE TABLE `tbl_lienhe` (
 INSERT INTO `tbl_lienhe` (`id`, `thongtinlienhe`) VALUES
 (1,'Liên hệ website chúng tôi');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_giaohang`
+--
+
+CREATE TABLE `tbl_giaohang` (
+  `id_shipping` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `note` varchar(200)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_lienhe`
+--
+
+INSERT INTO `tbl_giaohang` (`id_shipping`, `name`,`phone`,`address`,`note`) VALUES
+(1,'Quốc Nguyễn',0931454176,'HCM','');
+
 --
 -- Indexes for dumped tables
 --
