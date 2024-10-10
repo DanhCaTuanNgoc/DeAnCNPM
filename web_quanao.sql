@@ -222,6 +222,24 @@ INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hi
 (113, 'quần Yonex', 'fd', 100000, 20, 'yoxex.png', 'ok', 'quần Yonex', 47, 1),
 (114, 'áo thun', 'ao thun', 100000, 10, 'aothun.png', 'ao', 'ao', 47, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_lienhe`
+--
+
+CREATE TABLE `tbl_lienhe` (
+  `id` int(11) NOT NULL,
+  `thongtinlienhe` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_lienhe`
+--
+
+INSERT INTO `tbl_lienhe` (`id`, `thongtinlienhe`) VALUES
+(1,'Liên hệ website chúng tôi');
+
 --
 -- Indexes for dumped tables
 --
