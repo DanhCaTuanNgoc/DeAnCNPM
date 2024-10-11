@@ -275,13 +275,43 @@ a:hover {
 	-moz-transition: opacity 0.3s ease 0.5s;
 	-ms-transition: opacity 0.3s ease 0.5s;
 	transition: opacity 0.3s ease 0.5s;
+    color: green;
 }
 
 .arrow-steps .step.current {
 	color: #fff;
-	background-color: #23468c;
+	background-color: #5c8cec;
 }
 
 .arrow-steps .step.current:after {
-	border-left: 17px solid #23468c;	
+	border-left: 17px solid #5c8cec;	
+}
+
+.btn.btn-success{
+    background-color: rgb(78, 199, 78);
+    margin-bottom: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn.btn-primary{
+    background-color: rgb(78, 134, 199);
+    margin-bottom: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.col-md-4 .form-check {
+    margin: 8px;
+}
+
+.btn.btn-danger{
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
