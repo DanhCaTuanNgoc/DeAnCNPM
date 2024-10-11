@@ -1,9 +1,9 @@
 <div class="main">
-			<?php
+    <?php
 				include("sidebar/sidebar.php")
 			?>
-			<div class="maincontent">
-				<?php
+    <div class="maincontent">
+        <?php
 				if(isset($_GET['quanly'])) {
 					$tam= $_GET['quanly']; 
 				}else {
@@ -15,7 +15,7 @@
 					include("main/gioHang.php");
 				}elseif ($tam=='vanChuyen') {
 					include("main/vanChuyen.php");
-				}elseif ($tam=='thanhToan') {
+				}elseif ($tam=='thongTinThanhToan') {
 					include("main/thongTinThanhToan.php");
 				}elseif ($tam=='donHangDaDat') {
 					include("main/donHangDaDat.php");
@@ -44,6 +44,6 @@
 				}else{
 					include("main/index.php");
 				}
-				?>	
-			</div>
-		</div>
+				?>
+    </div>
+</div>
