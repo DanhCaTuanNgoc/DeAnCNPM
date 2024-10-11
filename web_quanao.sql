@@ -251,7 +251,9 @@ CREATE TABLE `tbl_giaohang` (
   `name` varchar(100) NOT NULL,
   `phone` varchar(11) NOT NULL,
   `address` varchar(200) NOT NULL,
-  `note` varchar(200)
+  `note` varchar(200),  
+  `id_dangky` int(11) NOT NULL,
+ PRIMARY KEY (`id_shipping`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -307,6 +309,12 @@ ALTER TABLE `tbl_danhmuc_baiviet`
 --
 ALTER TABLE `tbl_giohang`
   ADD PRIMARY KEY (`id_gh`);
+
+  --
+-- Indexes for table `tbl_giaohang`
+--
+ALTER TABLE `tbl_giaohang`
+  MODIFY `id_shipping` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Indexes for table `tbl_sanpham`
