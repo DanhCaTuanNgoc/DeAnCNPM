@@ -14,6 +14,7 @@
  		<th>Trang thai</th>
 		<th>Ngay dat</th>
  		<th>Quan ly</th>
+		<th>In Don Hang</th>
  	</tr>
  	<?php
  	$i = 0;
@@ -41,8 +42,10 @@
   		<td>
   			<a href="index.php?action=donHang&query=xemDonHang&code=<?php echo $row['ma_gh'] ?>">Xem don hang</a>
   			<a href=""></a>
-
   		</td>
+		<td>
+			<a href="modules/quanLyDonHang/indonhang.php?&code=<?php echo $row['ma_gh'] ?>">In Đơn Hàng</a>
+		</td>
   	</tr>
   	<?php
   	}	
