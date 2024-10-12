@@ -1,4 +1,3 @@
-// Increment quantity
 document.getElementById("tang").addEventListener("click", function(event) {
     event.preventDefault();
     let quantityInput = document.getElementById("soluong_input");
@@ -6,13 +5,12 @@ document.getElementById("tang").addEventListener("click", function(event) {
     quantityInput.value = currentValue + 1;
 });
 
-// Decrement quantity
 document.getElementById("giam").addEventListener("click", function(event) {
     event.preventDefault();
     let quantityInput = document.getElementById("soluong_input");
     let currentValue = parseInt(quantityInput.value);
     
-    if (currentValue > 1) { // Ensure value doesn't go below 1
+    if (currentValue > 1) { // Đảm bảo giá trị không xuống dưới 1
         quantityInput.value = currentValue - 1;
     }
 });
@@ -22,7 +20,7 @@ $('#tabs-nav li:first-child').addClass('active');
 $('.tab-content').hide();
 $('.tab-content:first').show();
 
-// Tab click function
+// Click function
 $('#tabs-nav li').click(function(){
   $('#tabs-nav li').removeClass('active');
   $(this).addClass('active');
@@ -32,3 +30,6 @@ $('#tabs-nav li').click(function(){
   $(activeTab).fadeIn();
   return false;
 });
+
+
+
