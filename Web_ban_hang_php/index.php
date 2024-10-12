@@ -1,55 +1,53 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/stylec.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>SHOP BAN QUAN AO</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>7TCC</title>
+    <!-- LINK FONT STYLE -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        data-tag="font" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font" />
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+        data-tag="font" />
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        data-tag="font" />
 </head>
+
 <body>
-	<div class="wrapper">
-		<?php
-			session_start();
-			include("admincp/config/config.php");
-			include("pages/header.php");
-			include("pages/menu.php");
-			include("pages/main.php");
-			include("pages/footer.php");
 
-		?>
-		
-	</div>  
-		
+    <div class="wrapper">
+        <?php
+        include("admincp/config/config.php");
+        include("pages/header.php");
+        include("pages/menu.php");
+        include("pages/main.php");
+        include("pages/footer.php");
+        include("pages/anchor.php");
+        ?>
+    </div>
 </body>
-<!-- <script type="text/javascript">
-	/**/
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
 
-$( document ).ready(function() {
-		
-		var back =$(".prev");
-		var	next = $(".next");
-		var	steps = $(".step");
-		
-		next.bind("click", function() { 
-			$.each( steps, function( i ) {
-				if (!$(steps[i]).hasClass('current') && !$(steps[i]).hasClass('done')) {
-					$(steps[i]).addClass('current');
-					$(steps[i - 1]).removeClass('current').addClass('done');
-					return false;
-				}
-			})		
-		});
-		back.bind("click", function() { 
-			$.each( steps, function( i ) {
-				if ($(steps[i]).hasClass('done') && $(steps[i + 1]).hasClass('current')) {
-					$(steps[i + 1]).removeClass('current');
-					$(steps[i]).removeClass('done').addClass('current');
-					return false;
-				}
-			})		
-		});
-
-	})
-</script> -->
 </html>

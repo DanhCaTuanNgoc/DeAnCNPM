@@ -1,27 +1,23 @@
-<div class="sidebar">
-	<h4 style="text-align:center;">Danh mục quần áo</h4>
-				<ul class="list_sidebar">
-					<?php
-					    $sql_danhmuc= "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC";
-					    $sql_query= mysqli_query($mysqli,$sql_danhmuc);
-					    while ($row = mysqli_fetch_array($sql_query)) {
-					?>
-					<li style="text-transform: uppercase;"><a href="index.php?quanly=danhMucSanPham&id=<?php echo $row['id_dm']?>"><?php echo $row['name_sp'] ?></a></li>
-					<?php 
-					}
-					 ?>
-				</ul>
+<?php
+	$sql_cate= "SELECT * FROM tbl_danhmucqa ORDER BY id_dm DESC ";
+	$cate= mysqli_query($mysqli,$sql_cate);
+?>
 
-	<h4 style="text-align:center;">Danh mục bài viết</h4>
-				<ul class="list_sidebar">
-					<?php
-					    $sql_danhmucbv= "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
-					    $sql_querybv= mysqli_query($mysqli,$sql_danhmucbv);
-					    while ($row = mysqli_fetch_array($sql_querybv)) {
-					?>
-					<li style="text-transform: uppercase;"><a href="index.php?quanly=danhMucBaiViet&id=<?php echo $row['id_baiviet']?>"><?php echo $row['tendanhmuc_baiviet'] ?></a></li>
-					<?php 
-					}
-					 ?>
-				</ul>				
+<div class="sidebar">
+    <div class="filter_content">
+        <div class="filter_title">
+            <p class="title">Bộ lọc sản phẩm</p>
+            <p style="margin : 4px 0px;">Lọc nhanh sản phẩm tìm kiếm</p>
+        </div>
+    </div>
+    <!-- <div class="cate_content">
+        <div class="cate_title_sidebar"><p class="title">Danh mục</p></div>
+        <ul class="list_sidebar">
+            <?php 
+                while($dm = mysqli_fetch_array($cate)) {
+            ?>
+            <li><a href="#"><?php echo $dm['name_sp']?></a></li>
+            <?php } ?>
+        </ul>
+    </div> -->
 </div>
