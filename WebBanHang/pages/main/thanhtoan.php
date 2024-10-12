@@ -10,8 +10,14 @@ use Carbon\CarbonInterval;
 $now = Carbon::now('Asia/Ho_Chi_Minh');
 $id_khachhang = $_SESSION['id_khachhang'];
 $ma_gh = rand(0, 9999);
+//lay thong tin van chuyen
+$cart_payment = $_POST['payment'];
+$id_dangky = $_SESSION['id_khachhang'];
+$sql_get_vanchuyen = mysqli_query($mysqli, "SELECT * FROM tbl_giaohang WHERE id_dangky='$id_dangky' LIMIT 1");
+$row_get_vanchuyen = mysqli_fetch_array($sql_get_vanchuyen);
+$id_shipping = $row_get_vanchuyen['cart_shipping'];
 $insert_cart = "INSERT INTO tbl_giohang(id_khachhang,ma_gh,trang_thai,cart_date) VALUE('" . $id_khachhang . "','" . $ma_gh . "',1,'" . $now . "')";
-$cart_query = mysqli_query($mysqli,$insert_cart);
+$cart_query = mysqli_query($mysqli, $insert_cart);
 
 if ($cart_query) {
   // add gio hang chi tiet

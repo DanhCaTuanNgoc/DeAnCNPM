@@ -9,6 +9,13 @@
         include("main/danhmuc.php");
     } elseif ($des == 'giohang') {
         include("main/giohang.php");
+    } elseif ($des == 'vanChuyen') {
+        include("main/vanchuyen.php");
+    } elseif ($des == 'thongTinThanhToan') {
+        include("main/thongtinthanhtoan.php");
+    } elseif ($des == 'donHangDaDat') {
+        include("main/donhangdadat.php");
+        //vinh
     } elseif ($des == 'danhmucbaiviet') {
         include("main/danhmucbaiviet.php");
     } elseif ($des == 'baiviet') {

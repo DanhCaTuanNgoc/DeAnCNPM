@@ -64,7 +64,7 @@ if (isset($_POST['themgiohang'])) {
             // print_r($_SESSION['cart']);
         }
     }
-    header('Location:../../index.php?quanly=sanpham&id='.$id.'&additem_success=1');
+    header('Location:../../index.php?quanly=sanpham&id=' . $id . '&additem_success=1');
 }
 
 // xóa tất cả

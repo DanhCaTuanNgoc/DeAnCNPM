@@ -30,7 +30,7 @@
             <a class="info">Tin tức</a>
         </div>
     </div>
-    <div class="footer_content">
+    <div class="footer_content n">
         <div class="footer_info">
             <p class="title">Phương thức thanh toán</p>
             <div class="sda">
@@ -70,7 +70,7 @@
                 </a>
             </div>
         </div>
-        <iframe style="width : 450px; height : 230px; margin-left : 20px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125380.16760889493!2d106.52379583426023!3d10.877697566303755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a742dabfd33%3A0xd99a9f06eac63692!2zSMOzYyBNw7RuLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1680348941697!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="ggmap" style="width : 450px; height : 230px; margin-left : 20px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125380.16760889493!2d106.52379583426023!3d10.877697566303755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a742dabfd33%3A0xd99a9f06eac63692!2zSMOzYyBNw7RuLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1680348941697!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="footer_copyright">Copy right by 7TCC| For True Fans Since 2024.</div>
 </div>

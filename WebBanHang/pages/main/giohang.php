@@ -1,4 +1,16 @@
 <div class="main_content">
+
+    <div class="container">	
+    <div class="wrapper-2">
+    <div class="arrow-steps clearfix">
+        <div class="step current"> <span> <a href="index.php?quanly=giohang"> Giỏ hàng</a></span> </div>
+        <div class="step"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
+        <div class="step"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
+        <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
+    </div>
+    </div>
+    </div>
+
     <div class="cart_content">
         <div class="cart_header">
             <div class="cart_header_product">Sản phẩm</div>
@@ -56,7 +68,7 @@
         if (isset($_SESSION['dang_ky']) && isset($_SESSION['id_khachhang']) && $count != 0) {
         ?>
             <div style=" display : flex; margin-top : 20px;">
-                <a href="pages/main/thanhtoan.php" class="purchase_button">
+                <a href="index.php?quanly=vanChuyen" class="purchase_button">
                     Đặt hàng
                 </a>
             </div>
