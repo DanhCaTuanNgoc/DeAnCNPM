@@ -177,7 +177,10 @@ CREATE TABLE `tbl_giohang` (
   `id_gh` int(11) NOT NULL,
   `id_khachhang` int(11) NOT NULL,
   `ma_gh` varchar(100) NOT NULL,
-  `trang_thai` int(11) NOT NULL
+  `trang_thai` int(11) NOT NULL,
+  `cart_date` date,
+  `cart_payment` varchar(50) NOT NULL,
+  `cart_shipping` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -224,6 +227,8 @@ INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hi
 
 -- --------------------------------------------------------
 
+
+
 --
 -- Table structure for table `tbl_lienhe`
 --
@@ -264,9 +269,28 @@ INSERT INTO `tbl_giaohang` (`id_shipping`, `name`,`phone`,`address`,`note`) VALU
 (1,'Quốc Nguyễn',0931454176,'HCM','');
 
 --
--- Indexes for dumped tables
+-- Table structure for table `tbl_momo`
 --
 
+CREATE TABLE `tbl_momo` (
+  `id_momo` int(20) NOT NULL,
+  `partner_code` varchar(50) NOT NULL,
+  `order_id` int(20) NOT NULL,
+  `amount` varchar(50) NOT NULL,
+  `order_info` varchar(100),
+  `order_type` varchar(50) NOT NULL,
+  `trans_id` int(20) NOT NULL,
+  `pay_type` varchar(50) NOT NULL,
+  `code_cart` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_momo`
+--
+
+INSERT INTO `tbl_momo` (`id_momo`, `partner_code`, `order_id`, `amount`,`order_info`,`order_type`,`trans_id`,`pay_type`,`code_cart`) VALUES
+(0, '0', 0, '0','','',0,'napas',''),
+(1, '1', 1, '0','','',1,'banking','');
 --
 -- Indexes for table `tbl_admin`
 --
