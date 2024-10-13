@@ -51,10 +51,10 @@
                     <?php
                     if (isset($_SESSION['cart'])) {
                         $i = 0;
-                        $tongtien = 0;
+                        $tongtien_vnd = 0;
                         foreach ($_SESSION['cart'] as $cart_item) {
                             $thanhtien = $cart_item['so_luong'] * $cart_item['gia_sp'];
-                            $tongtien += $thanhtien;
+                            $tongtien_vnd += $thanhtien;
                             $i++;
                     ?>
                             <tr>
@@ -77,7 +77,7 @@
                         ?>
                         <tr>
                             <td colspan="8">
-                                <p style="float: left;">Tong tien : <?php echo number_format($tongtien, 0, ',', '.') . ' VND ' ?>
+                                <p style="float: left;">Tong tien : <?php echo number_format($tongtien_vnd, 0, ',', '.') . ' VND ' ?>
                                 </p>
                                 <div style="clear: both;"></div>
                             </td>
@@ -95,6 +95,15 @@
                 </table>
 
             </div>
+            <?php
+            // $tongtien = 0;
+            //             foreach ($_SESSION['cart'] as $key => $value) {
+            //                 $thanhtien = $cart_item['so_luong'] * $cart_item['gia_sp'];
+            //                 $tongtien += $thanhtien;
+            // }
+            // $tongtien_vnd = $tongtien;
+            // $tongtien_usd = round($tongtien/25267);
+            ?>
             <div class="col-md-4" style="float:left;margin-left:10px;">
                 <h4> PHƯƠNG THỨC THANH TOÁN</h4>
                 <div class="form-check">
@@ -135,11 +144,13 @@
     </form>
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded "
         action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px">
+        <input type="hidden" value="<?php echo $tongtien_vnd?>" name="tongtien_vnd">
         <input type="submit" name="momo" value="Thanh toán MOMO QRCode" class="btn btn-danger">
     </form>
 
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded"
         action="pages/main/xuLyThanhToanMomo_atm.php" style="margin-bottom:5px">
+        <input type="hidden" value="<?php echo $tongtien_vnd?>" name="tongtien_vnd">
         <input type="submit" name="momo" value="Thanh toán MOMO ATM" class="btn btn-danger">
     </form>
     <input type="submit" value="Đặt hàng" name="thanhToan" class="btn btn-danger">
