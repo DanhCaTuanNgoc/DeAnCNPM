@@ -1,59 +1,91 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['dangNhap'])){
-    header('Location:login.php');
+if (!isset($_SESSION['dangNhap'])) {
+	header('Location:login.php');
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style_admin.css">
-    <title>Hello ADMIN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style_admin.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+	<title>Hello ADMIN</title>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header section -->
-        <header class="text-center mt-4">
-            <h3 class="admin_title">WELCOME ADMIN</h3>
-        </header>
 
-        <!-- Navigation and main content area -->
-        <div class="row mt-5">
-            <!-- Sidebar navigation menu -->
-            <div class="col-md-3">
-                <?php
-                // Including menu module (left sidebar)
-                include("modules/menu.php");
-                ?>
-            </div>
+	<head>
+		<h3 class="admin_title">WELLCOME ADMIN</h3>
+	</head>
+	<div class="wrapper">
+		<?php
+		include("config/config.php");
+		include("modules/header.php");
+		include("modules/menu.php");
+		include("modules/main.php");
+		include("modules/footer.php");
+		?>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			thongke();
+			var char = new Morris.Line({
+				element: 'chart',
 
-            <!-- Main content section -->
-            <div class="col-md-9">
-                <?php
-                // Include configuration and session management
-                include("config/config.php");
-                
-                // Including header, main, and footer modules
-                include("modules/header.php");
-                include("modules/main.php");
-                ?>
-            </div>
-        </div>
+				xkey: 'date',
 
-        <!-- Footer section -->
-        <footer class="text-center mt-5">
-            <?php
-            // Including footer module
-            include("modules/footer.php");
-            ?>
-        </footer>
-    </div>
+				ykeys: ['order', 'sale', 'quantily'],
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+				labels: ['đơn hàng', 'giá', 'số lượng đã bán']
+			});
+
+			$('.select_date').change(function() {
+				var thoigian = $(this).val();
+				if (thoigian == '7ngay') {
+					var text = '7 ngày qua';
+				} else if (thoigian == '28ngay') {
+					var text = '28 ngày qua';
+				} else if (thoigian == '90ngay') {
+					var text = '90 ngày qua';
+				} else {
+					var text = '365 ngày qua';
+				}
+
+				$.ajax({
+					url: "modules/thongke.php",
+					method: "POST",
+					dataType: "JSON",
+					data: {
+						thoigian: thoigian
+					},
+					success: function(data) {
+						char.setData(data);
+						$('#text-date').text(text);
+					}
+				});
+			});
+
+			function thongke() {
+				var text = '365 ngày qua';
+				$.ajax({
+					url: "modules/thongke.php",
+					method: "POST",
+					dataType: "JSON",
+
+					success: function(data) {
+						char.setData(data);
+						$('#text-data').text(text);
+					}
+				});
+			}
+		});
+	</script>
 </body>
+
 </html>
