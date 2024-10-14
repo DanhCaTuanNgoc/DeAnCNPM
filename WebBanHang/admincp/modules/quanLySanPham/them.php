@@ -1,6 +1,12 @@
 <!-- Link Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<?php
+	include("config/config.php");
+	$sql_lietke= "SELECT * FROM tbl_sanpham, tbl_danhmucqa WHERE tbl_sanpham.id_dm = tbl_danhmucqa.id_dm ORDER BY id_sp DESC";
+	$lietke= mysqli_query($mysqli, $sql_lietke);
+?>
+
 <div class="container mt-5">
     <h3 class="text-center">Thêm Sản Phẩm</h3>
     <form method="POST" action="modules/quanLySanPham/xuly.php" enctype="multipart/form-data">

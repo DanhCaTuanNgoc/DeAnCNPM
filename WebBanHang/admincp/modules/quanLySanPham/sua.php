@@ -1,4 +1,5 @@
 <?php
+include("config/config.php");
 $sql_sua_sp= "SELECT * FROM tbl_sanpham WHERE ma_sp='$_GET[idsp]' LIMIT 1";
 $sua_sp= mysqli_query($mysqli,$sql_sua_sp);
 ?>
