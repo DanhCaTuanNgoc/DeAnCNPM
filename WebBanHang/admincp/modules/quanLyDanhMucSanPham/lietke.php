@@ -1,4 +1,6 @@
 <?php
+	include("config/config.php");
+
     $sql_lietke = "SELECT * FROM tbl_danhmucqa ORDER BY thu_tu";
     $lietke = mysqli_query($mysqli, $sql_lietke);
 ?>
