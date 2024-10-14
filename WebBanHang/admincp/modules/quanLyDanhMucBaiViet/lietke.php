@@ -1,4 +1,5 @@
 <?php
+	include("config/config.php");
     $sql_lietke_danhmucbv= "SELECT * FROM tbl_danhmuc_baiviet ORDER BY thutu DESC ";
     $lietke_danhmucbv= mysqli_query($mysqli,$sql_lietke_danhmucbv);
 ?>
