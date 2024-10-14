@@ -1,1 +1,1 @@
-<h3>Footer ADMIN</h3>
+<h3 class="text-center">Footer ADMIN</h3>
