@@ -9,7 +9,7 @@ $sua_sp= mysqli_query($mysqli,$sql_sua_sp);
 
 <div class="container mt-5">
     <h3 class="text-center">Sửa Sản Phẩm</h3>
-    <form method="POST" action="modules/quanLySanPham/xuly.php?idsp=<?php echo $row['ma_sp'] ?>" enctype="multipart/form-data">
+    <form method="POST" action="modules/quanLySanPham/xuly.php?idsp=<?php echo $_GET['idsp']; ?>" enctype="multipart/form-data">
         <?php while($row= mysqli_fetch_array($sua_sp)) { ?>
         <div class="mb-3">
             <label for="ten_sp" class="form-label">Tên Sản Phẩm</label>

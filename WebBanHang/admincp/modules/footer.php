@@ -25,7 +25,7 @@
         </div>
         <hr class="bg-light">
         <div class="text-center">
-            <p>&copy; 2024 Công ty 7TCC. Bản quyền thuộc về chúng tôi.</p>
+            <p>&copy; 2024 Công ty ABC. Bản quyền thuộc về chúng tôi.</p>
         </div>
     </div>
 </footer>

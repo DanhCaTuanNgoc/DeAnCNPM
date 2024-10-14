@@ -1,4 +1,5 @@
 <?php
+    include("config/config.php");
     $sql_sua = "SELECT * FROM tbl_danhmucqa WHERE id_dm='$_GET[idsp]' LIMIT 1";
     $sua = mysqli_query($mysqli, $sql_sua);
 ?>

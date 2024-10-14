@@ -1,4 +1,5 @@
 <?php
+    include("config/config.php");
     $sql_sua_danhmucbv= "SELECT * FROM tbl_danhmuc_baiviet WHERE id_baiviet='$_GET[idbaiviet]' LIMIT 1";
     $sua_danhmucbv= mysqli_query($mysqli,$sql_sua_danhmucbv);
 ?>
