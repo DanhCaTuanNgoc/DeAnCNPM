@@ -28,6 +28,10 @@ if (!isset($_SESSION['dangNhap'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="#">Welcome Admin</a>
                 </li>
+                <li class="nav-item">
+                    <!-- Nút đăng xuất -->
+                    <a class="nav-link btn btn-danger text-white" href="logout.php">Đăng xuất</a>
+                </li>
             </ul>
         </div>
     </nav>
