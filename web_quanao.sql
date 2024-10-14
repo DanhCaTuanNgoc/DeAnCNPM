@@ -203,16 +203,17 @@ INSERT INTO `tbl_giohang` (`id_gh`, `id_khachhang`, `ma_gh`, `trang_thai`) VALUE
 --
 
 CREATE TABLE `tbl_sanpham` (
-  `id_sp` int(11) NOT NULL,
+  `id_sp` int(11) NOT NULL AUTO_INCREMENT,
   `ten_sp` varchar(200) NOT NULL,
   `ma_sp` varchar(100) NOT NULL,
   `gia_sp` int(11) NOT NULL,
   `so_luong` int(11) NOT NULL,
-  `hinh_anh` varchar(50) NOT NULL,
-  `tom_tat` tinytext NOT NULL,
-  `noi_dung` text NOT NULL,
+  `hinh_anh` varchar(50),
+  `tom_tat` TEXT NOT NULL,
+  `noi_dung` LONGTEXT NOT NULL,
   `id_dm` int(11) NOT NULL,
-  `tinh_trang` int(11) NOT NULL
+  `tinh_trang` int(11) NOT NULL,
+  PRIMARY KEY (`id_sp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
