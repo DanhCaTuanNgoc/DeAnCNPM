@@ -1,4 +1,5 @@
 <?php
+	include("config/config.php");
     $sql_lietke = "SELECT * FROM tbl_baiviet,tbl_danhmuc_baiviet WHERE tbl_baiviet.id_danhmuc=tbl_danhmuc_baiviet.id_baiviet ORDER BY id DESC";
     $lietke = mysqli_query($mysqli, $sql_lietke);
 ?>

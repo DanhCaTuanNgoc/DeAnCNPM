@@ -1,6 +1,12 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<?php
+	include("config/config.php");
+    $sql_lietke = "SELECT * FROM tbl_baiviet,tbl_danhmuc_baiviet WHERE tbl_baiviet.id_danhmuc=tbl_danhmuc_baiviet.id_baiviet ORDER BY id DESC";
+    $lietke = mysqli_query($mysqli, $sql_lietke);
+?>
+
 <div class="container mt-5">
     <h3 class="text-center">Thêm Bài Viết</h3>
     <form method="POST" action="modules/quanLyBaiViet/xuly.php" enctype="multipart/form-data">
