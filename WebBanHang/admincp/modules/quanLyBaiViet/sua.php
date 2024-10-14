@@ -1,79 +1,59 @@
 <?php
-    $sql_sua_bv= "SELECT * FROM tbl_baiviet WHERE id='$_GET[idbv]' LIMIT 1";
-    $sua_bv= mysqli_query($mysqli,$sql_sua_bv);
+    $sql_sua_bv = "SELECT * FROM tbl_baiviet WHERE id='$_GET[idbv]' LIMIT 1";
+    $sua_bv = mysqli_query($mysqli, $sql_sua_bv);
 ?>
-<h3>Sửa Sản Phẩm</h3>
- <table border="1px" width="100%" style="border-collapse: collapse;">
-  <?php 
-        while($row= mysqli_fetch_array($sua_bv)) {
-  ?>
- <form method="POST" action="modules/quanLyBaiViet/xuly.php?idbv=<?php echo $row['id'] ?>" enctype="multipart/form-data">
-  <tr>
-    <td>Tên Sản Phẩm</td>
-    <td><input type="text" value="<?php echo $row['tenbaiviet'] ?>" name="tenbaiviet"></td>
-  </tr>
-  <tr>
-    <td>Hình ảnh</td>
-    <td><input type="file" name="hinhanh">
-      <img src="modules/quanLyBaiViet/uploads/<?php echo $row['hinhanh'] ?>" width='150px'>
-    </td>
-  </tr>
-  <tr>
-    <td>Tom tat</td>
-    <td><textarea rows="8" cols="100%" name="tomtat" style="resize: none;"><?php echo $row['tomtat'] ?></textarea></td>
-  </tr>
-  <tr>
-    <td>Noi dung</td>
-    <td><textarea rows="8" cols="100%" name="noi_dung"style="resize: none;"><?php echo $row['noidung'] ?></textarea></td>
-  </tr>
-  <tr>
-    <td>Mã Danh Mục</td>
-    <td>
-        <select name="id_danhmuc">
-            <?php
-              $sql_danhmuc= "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
-              $sql_query= mysqli_query($mysqli,$sql_danhmuc);
-              while($row_danhmuc= mysqli_fetch_array($sql_query)){
-                if($row_danhmuc['id_baiviet']==$row['id_baiviet']) {
-            ?>
-            <option selected value="<?php echo $row_danhmuc['id_baiviet'] ?>"><?php echo $row_danhmuc['tendanhmuc_baiviet']?></option>
-            <?php 
-              }else{
-            ?>
-            <option value="<?php echo $row_danhmuc['id_baiviet'] ?>"><?php echo $row_danhmuc['tendanhmuc_baiviet']?></option>
-            <?php
-              }
-            }
-             ?> 
-              
-        </select>
-    </td>
-  </tr>
-  <tr>
-    <td>Tinh Trang</td>
-    <td>
-        <select name="tinhtrang">
-          <?php
-          if($row['tinhtrang']== 1){
-          ?>
-            <option value="1" selected>Kich Hoat</option>
-            <option value="0">An</option>
-          <?php
-          }else{
-          ?>
-            <option value="1">Kich Hoat</option>
-            <option value="0" selected>An</option>
-          <?php 
-          }
-           ?>
-        </select>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="8"><input type="submit" name="suabaiviet" value="Sua San Pham"></td>
-  </tr>
- </form>
-  <?php
-    }   
-    ?>
-</table>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <h3 class="text-center">Sửa Bài Viết</h3>
+    <?php while ($row = mysqli_fetch_array($sua_bv)) { ?>
+    <form method="POST" action="modules/quanLyBaiViet/xuly.php?idbv=<?php echo $row['id'] ?>" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="tenbaiviet" class="form-label">Tên Bài Viết</label>
+            <input type="text" class="form-control" id="tenbaiviet" value="<?php echo $row['tenbaiviet'] ?>" name="tenbaiviet">
+        </div>
+        <div class="mb-3">
+            <label for="hinhanh" class="form-label">Hình Ảnh</label>
+            <input type="file" class="form-control" id="hinhanh" name="hinhanh">
+            <img src="modules/quanLyBaiViet/uploads/<?php echo $row['hinhanh'] ?>" width="150px" class="mt-2">
+        </div>
+        <div class="mb-3">
+            <label for="tomtat" class="form-label">Tóm Tắt</label>
+            <textarea rows="5" class="form-control" id="tomtat" name="tomtat"><?php echo $row['tomtat'] ?></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="noidung" class="form-label">Nội Dung</label>
+            <textarea rows="5" class="form-control" id="noidung" name="noidung"><?php echo $row['noidung'] ?></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="link" class="form-label">Link</label>
+            <input type="text" class="form-control" id="link" value="<?php echo $row['link'] ?>" name="link">
+        </div>
+        <div class="mb-3">
+            <label for="id_danhmuc" class="form-label">Danh Mục Bài Viết</label>
+            <select class="form-select" id="id_danhmuc" name="id_danhmuc">
+                <?php
+                $sql_danhmuc = "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
+                $sql_query = mysqli_query($mysqli, $sql_danhmuc);
+                while ($row_danhmuc = mysqli_fetch_array($sql_query)) {
+                    $selected = ($row_danhmuc['id_baiviet'] == $row['id_danhmuc']) ? 'selected' : '';
+                    echo "<option value='" . $row_danhmuc['id_baiviet'] . "' $selected>" . $row_danhmuc['tendanhmuc_baiviet'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="tinhtrang" class="form-label">Tình Trạng</label>
+            <select class="form-select" id="tinhtrang" name="tinhtrang">
+                <option value="1" <?php echo ($row['tinhtrang'] == 1) ? 'selected' : '' ?>>Kích Hoạt</option>
+                <option value="0" <?php echo ($row['tinhtrang'] == 0) ? 'selected' : '' ?>>Ẩn</option>
+            </select>
+        </div>
+        <button type="submit" name="suabaiviet" class="btn btn-primary">Sửa Bài Viết</button>
+    </form>
+    <?php } ?>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
