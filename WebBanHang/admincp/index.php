@@ -47,7 +47,7 @@ if (!isset($_SESSION['dangNhap'])) {
                     </div>
                 </div>
 
-                <div class="mt-4">
+                <!-- <div class="mt-4">
                     <h5 id="text-date">365 ngày qua</h5>
                     <select class="form-control select_date mb-3">
                         <option value="7ngay">7 ngày qua</option>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['dangNhap'])) {
                         <option value="365ngay" selected>365 ngày qua</option>
                     </select>
                     <div id="chart"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
