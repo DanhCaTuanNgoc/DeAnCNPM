@@ -1,51 +1,51 @@
-<h3>Thêm Bài Viết</h3>
- <table border="1px" width="100%" style="border-collapse: collapse;">
- <form method="POST" action="modules/quanLyBaiViet/xuly.php" enctype="multipart/form-data">
- 	<tr>
-  	<td>Tên Bài Viết</td>
-  	<td><input type="text" name="tenbaiviet"></td>
-  </tr>
-  <tr>
-  	<td>Hình ảnh</td>
-  	<td><input type="file" name="hinhanh"></td>
-  </tr>
-  <tr>
-    <td>Tóm tắt</td>
-    <td><textarea rows="8" cols="100%" name="tomtat" style="resize: none;"></textarea></td>
-  </tr>
-  <tr>
-    <td>Nội dung</td>
-    <td><textarea rows="8" cols="100%" name="noidung"style="resize: none;"></textarea></td>
-  </tr>
-  <tr>
-    <td>Danh Mục Bài Viết</td>
-    <td>
-        <select name="id_danhmuc">
-            <?php
-              $sql_danhmuc= "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
-              $sql_query= mysqli_query($mysqli,$sql_danhmuc);
-              while($row_danhmuc= mysqli_fetch_array($sql_query)){
-            ?>
-            <option value="<?php echo $row_danhmuc['id_baiviet'] ?>"><?php echo $row_danhmuc['tendanhmuc_baiviet']?></option>
-            <?php 
-            }
-             ?>  
-              
-        </select>
-    </td>
-  </tr>
-  <tr>
-    <td>Tình Trạng</td>
-    <td>
-        <select name="tinhtrang">
-            <option value="1">Kich Hoat</option>
-            <option value="0">An</option>
-        </select>
-    </td>
-  </tr>
-  <tr>
-  	<td colspan="9"><input type="submit" name="thembaiviet" value="Thêm Bài Viết"></td>
-  </tr>
- </form>
-  
-</table>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <h3 class="text-center">Thêm Bài Viết</h3>
+    <form method="POST" action="modules/quanLyBaiViet/xuly.php" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="tenbaiviet" class="form-label">Tên Bài Viết</label>
+            <input type="text" class="form-control" id="tenbaiviet" name="tenbaiviet">
+        </div>
+        <div class="mb-3">
+            <label for="hinhanh" class="form-label">Hình Ảnh</label>
+            <input type="file" class="form-control" id="hinhanh" name="hinhanh">
+        </div>
+        <div class="mb-3">
+            <label for="tomtat" class="form-label">Tóm Tắt</label>
+            <textarea rows="5" class="form-control" id="tomtat" name="tomtat"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="noidung" class="form-label">Nội Dung</label>
+            <textarea rows="5" class="form-control" id="noidung" name="noidung"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="link" class="form-label">Link</label>
+            <input type="text" class="form-control" id="link" name="link">
+        </div>
+        <div class="mb-3">
+            <label for="id_danhmuc" class="form-label">Danh Mục Bài Viết</label>
+            <select class="form-select" id="id_danhmuc" name="id_danhmuc">
+                <?php
+                $sql_danhmuc = "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
+                $sql_query = mysqli_query($mysqli, $sql_danhmuc);
+                while ($row_danhmuc = mysqli_fetch_array($sql_query)) {
+                    echo "<option value='" . $row_danhmuc['id_baiviet'] . "'>" . $row_danhmuc['tendanhmuc_baiviet'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="tinhtrang" class="form-label">Tình Trạng</label>
+            <select class="form-select" id="tinhtrang" name="tinhtrang">
+                <option value="1">Kích Hoạt</option>
+                <option value="0">Ẩn</option>
+            </select>
+        </div>
+        <button type="submit" name="thembaiviet" class="btn btn-success">Thêm Bài Viết</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
