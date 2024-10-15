@@ -11,7 +11,14 @@
     </div>
     <form action="pages/main/thanhtoan.php" method="POST">
         <div class="row">
+        <h4 style="text-align:center;">THÔNG TIN THANH TOÁN</h4>
             <?php
+            if (!isset($_SESSION['id_khachhang'])) {// Nếu khách hàng chưa đăng nhập
+                
+                echo '<h4>Bạn chưa đăng nhập, không thể tiến hành thanh toán.</h4>';
+                echo '<a href="index.php?quanly=dangnhap">Đăng nhập ngay</a>';
+                exit; 
+            }
             $id_dangky = $_SESSION['id_khachhang'];
             $sql_get_vanchuyen = mysqli_query($mysqli, "SELECT * FROM tbl_giaohang WHERE id_dangky='$id_dangky' LIMIT 1");
             $count = mysqli_num_rows($sql_get_vanchuyen);
