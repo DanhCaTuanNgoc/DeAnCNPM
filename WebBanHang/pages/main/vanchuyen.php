@@ -52,7 +52,7 @@
           $address = '';
           $note = '';
         }
-        ?>
+      ?>
       <div class="col-md-12"></div>
       <form action="" autocomplete="off" method="POST">
           <div class="form-group">
@@ -154,7 +154,7 @@
   }
   else{
     ?>
-    <h4>Bạn chưa đăng nhập, không thể xem giỏ hàng </h4>
+    <h4 >Bạn chưa đăng nhập, không thể xem thông tin vận chuyển </h4>
     <a href="index.php?quanly=dangnhap">Đăng nhập ngay</a>
     <?php
   }
