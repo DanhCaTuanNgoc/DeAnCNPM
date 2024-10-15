@@ -274,7 +274,6 @@ INSERT INTO `tbl_giaohang` (`id_shipping`, `name`,`phone`,`address`,`note`) VALU
 --
 
 CREATE TABLE `tbl_momo` (
-  `id_momo` int(20) NOT NULL,
   `partner_code` varchar(50) NOT NULL,
   `order_id` int(20) NOT NULL,
   `amount` varchar(50) NOT NULL,
@@ -289,9 +288,9 @@ CREATE TABLE `tbl_momo` (
 -- Dumping data for table `tbl_momo`
 --
 
-INSERT INTO `tbl_momo` (`id_momo`, `partner_code`, `order_id`, `amount`,`order_info`,`order_type`,`trans_id`,`pay_type`,`code_cart`) VALUES
-(0, '0', 0, '0','','',0,'napas',''),
-(1, '1', 1, '0','','',1,'banking','');
+INSERT INTO `tbl_momo` (`partner_code`, `order_id`, `amount`,`order_info`,`order_type`,`trans_id`,`pay_type`,`code_cart`) VALUES
+('0', 0, '0','','',0,'napas',''),
+('1', 1, '0','','',1,'banking','');
 --
 -- Indexes for table `tbl_admin`
 --
@@ -341,11 +340,11 @@ ALTER TABLE `tbl_giohang`
 ALTER TABLE `tbl_giaohang`
   MODIFY `id_shipping` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- Indexes for table `tbl_sanpham`
---
-ALTER TABLE `tbl_sanpham`
-  ADD PRIMARY KEY (`id_sp`);
+-- --
+-- -- Indexes for table `tbl_sanpham`
+-- --
+-- ALTER TABLE `tbl_sanpham`
+--   ADD PRIMARY KEY (`id_sp`);
 
 --
 -- AUTO_INCREMENT for dumped tables
