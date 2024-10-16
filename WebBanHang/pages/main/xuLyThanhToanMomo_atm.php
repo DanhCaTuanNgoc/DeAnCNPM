@@ -29,18 +29,17 @@ $partnerCode = 'MOMOBKUN20180529';
 $accessKey = 'klm05TvNBzhg7h7j';
 $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 $orderInfo = "Thanh toán qua MoMo ATM";
-// $amount = $_POST['tongtien_vnd'];
-$amount = 10000;
+$amount = "10000";
 $orderId = time() ."";
-$redirectUrl = "http://localhost/DeAnCNPM-main/WebBanHang/index.php?quanly=camon";
-$ipnUrl = "http://localhost/DeAnCNPM-main/WebBanHang/index.php?quanly=camon";
+$redirectUrl = "http://localhost/DeAnCNPM-main/web_ban_hang_php/index.php?quanly=camMon";
+$ipnUrl = "http://localhost/DeAnCNPM-main/web_ban_hang_php/index.php?quanly=camMon";
 $extraData = "";
 
 
 
     $requestId = time() . "";
     $requestType = "payWithATM";
-    //$extraData = ($_POST["extraData"] ? $_POST["extraData"] : "");
+    $extraData = ($_POST["extraData"] ? $_POST["extraData"] : "");
     //before sign HMAC SHA256 signature
     $rawHash = "accessKey=" . $accessKey . "&amount=" . $amount . "&extraData=" . $extraData . "&ipnUrl=" . $ipnUrl . "&orderId=" . $orderId . "&orderInfo=" . $orderInfo . "&partnerCode=" . $partnerCode . "&redirectUrl=" . $redirectUrl . "&requestId=" . $requestId . "&requestType=" . $requestType;
     $signature = hash_hmac("sha256", $rawHash, $secretKey);

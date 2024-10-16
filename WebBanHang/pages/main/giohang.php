@@ -1,5 +1,5 @@
 <div class="main_content">
-<p></p>
+
     <div class="container">	
     <div class="wrapper-2">
     <div class="arrow-steps clearfix">
@@ -11,16 +11,7 @@
     </div>
     </div>
 
-    
-    <h4 style="text-align:center;">THÔNG TIN GIỎ HÀNG</h4>
-        <?php
-        if (!isset($_SESSION['id_khachhang'])) {
-            // Nếu khách hàng chưa đăng nhập
-            echo '<h4>Bạn chưa đăng nhập, không thể xem giỏ hàng.</h4>';
-            echo '<a href="index.php?quanly=dangnhap">Đăng nhập ngay</a>';
-            exit; // Ngừng thực thi mã bên dưới
-        }
-        ?><div class="cart_content">
+    <div class="cart_content">
         <div class="cart_header">
             <div class="cart_header_product">Sản phẩm</div>
             <div class="cart_header_item">Đơn giá</div>

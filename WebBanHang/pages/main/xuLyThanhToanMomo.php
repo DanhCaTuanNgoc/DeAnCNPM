@@ -31,11 +31,10 @@ $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 
 
 $orderInfo = "Thanh toán qua mã QR MoMo";
-// $amount = $_POST['tongtien_vnd'];
-$amount = 10000;
+$amount = "10000";
 $orderId = time() ."";
-$redirectUrl = "http://localhost/DeAnCNPM-main/WebBanHang/index.php?quanly=camon";
-$ipnUrl = "http://localhost/DeAnCNPM-main/WebBanHang/index.php?quanly=camon";
+$redirectUrl = "http://localhost/DeAnCNPM-main/web_ban_hang_php/index.php?quanly=camMon";
+$ipnUrl = "http://localhost/DeAnCNPM-main/web_ban_hang_php/index.php?quanly=camMon";
 $extraData = "";
 
     $requestId = time() . "";

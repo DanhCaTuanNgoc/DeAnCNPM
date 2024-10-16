@@ -1,5 +1,5 @@
 <div class="main_content">
-<p>Thông tin thanh toán</p>
+    <p>Thông tin thanh toán</p>
 
     <div class="wrapper-2">
         <div class="arrow-steps clearfix">
@@ -9,7 +9,7 @@
             <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
         </div>
     </div>
-    <form action="pages/main/thanhtoan.php" method="POST">
+    <form action="pages/main/thanhtoan.php" method="POST" enctype="application/x-www-form-urlencoded">
         <div class="row">
             <?php
             $id_dangky = $_SESSION['id_khachhang'];
@@ -132,7 +132,9 @@
                         Paypal
                     </label>
                 </div>
+
     </form>
+
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded "
         action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px">
         <input type="submit" name="momo" value="Thanh toán MOMO QRCode" class="btn btn-danger">

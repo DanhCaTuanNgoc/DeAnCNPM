@@ -34,9 +34,8 @@
         }
       ?>
   <div class="row">
-      <?php        
-        if (isset($_SESSION['id_khachhang'])){
-          $id_dangky = $_SESSION['id_khachhang'];
+      <?php
+        $id_dangky = $_SESSION['id_khachhang'];
         $sql_get_vanchuyen = mysqli_query($mysqli,"SELECT * FROM tbl_giaohang WHERE id_dangky='$id_dangky' LIMIT 1");
         $count = mysqli_num_rows($sql_get_vanchuyen);
         if($count > 0){
@@ -52,7 +51,7 @@
           $address = '';
           $note = '';
         }
-      ?>
+        ?>
       <div class="col-md-12"></div>
       <form action="" autocomplete="off" method="POST">
           <div class="form-group">
@@ -150,15 +149,7 @@
           </td>
       </tr>
       <?php 
-    } 
-  }
-  else{
-    ?>
-    <h4 >Bạn chưa đăng nhập, không thể xem thông tin vận chuyển </h4>
-    <a href="index.php?quanly=dangnhap">Đăng nhập ngay</a>
-    <?php
-  }
-  ?>
+    } ?>
   </table>
   </div>
   </div>
