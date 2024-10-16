@@ -11,14 +11,7 @@
     </div>
     <form action="pages/main/thanhtoan.php" method="POST">
         <div class="row">
-        <h4 style="text-align:center;">THÔNG TIN THANH TOÁN</h4>
             <?php
-            if (!isset($_SESSION['id_khachhang'])) {// Nếu khách hàng chưa đăng nhập
-                
-                echo '<h4>Bạn chưa đăng nhập, không thể tiến hành thanh toán.</h4>';
-                echo '<a href="index.php?quanly=dangnhap">Đăng nhập ngay</a>';
-                exit; 
-            }
             $id_dangky = $_SESSION['id_khachhang'];
             $sql_get_vanchuyen = mysqli_query($mysqli, "SELECT * FROM tbl_giaohang WHERE id_dangky='$id_dangky' LIMIT 1");
             $count = mysqli_num_rows($sql_get_vanchuyen);
@@ -58,10 +51,10 @@
                     <?php
                     if (isset($_SESSION['cart'])) {
                         $i = 0;
-                        $tongtien_vnd = 0;
+                        $tongtien = 0;
                         foreach ($_SESSION['cart'] as $cart_item) {
                             $thanhtien = $cart_item['so_luong'] * $cart_item['gia_sp'];
-                            $tongtien_vnd += $thanhtien;
+                            $tongtien += $thanhtien;
                             $i++;
                     ?>
                             <tr>
@@ -84,7 +77,7 @@
                         ?>
                         <tr>
                             <td colspan="8">
-                                <p style="float: left;">Tong tien : <?php echo number_format($tongtien_vnd, 0, ',', '.') . ' VND ' ?>
+                                <p style="float: left;">Tong tien : <?php echo number_format($tongtien, 0, ',', '.') . ' VND ' ?>
                                 </p>
                                 <div style="clear: both;"></div>
                             </td>
@@ -102,15 +95,6 @@
                 </table>
 
             </div>
-            <?php
-            // $tongtien = 0;
-            //             foreach ($_SESSION['cart'] as $key => $value) {
-            //                 $thanhtien = $cart_item['so_luong'] * $cart_item['gia_sp'];
-            //                 $tongtien += $thanhtien;
-            // }
-            // $tongtien_vnd = $tongtien;
-            // $tongtien_usd = round($tongtien/25267);
-            ?>
             <div class="col-md-4" style="float:left;margin-left:10px;">
                 <h4> PHƯƠNG THỨC THANH TOÁN</h4>
                 <div class="form-check">
@@ -151,13 +135,11 @@
     </form>
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded "
         action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px">
-        <input type="hidden" value="<?php echo $tongtien_vnd?>" name="tongtien_vnd">
         <input type="submit" name="momo" value="Thanh toán MOMO QRCode" class="btn btn-danger">
     </form>
 
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded"
         action="pages/main/xuLyThanhToanMomo_atm.php" style="margin-bottom:5px">
-        <input type="hidden" value="<?php echo $tongtien_vnd?>" name="tongtien_vnd">
         <input type="submit" name="momo" value="Thanh toán MOMO ATM" class="btn btn-danger">
     </form>
     <input type="submit" value="Đặt hàng" name="thanhToan" class="btn btn-danger">
