@@ -33,6 +33,9 @@ if ($cart_payment == 'tienmat' || $cart_payment == 'chuyenkhoan') {
     $so_luong = $value['so_luong'];
     $insert_order_details = "INSERT INTO tbl_chitiet_gh(ma_gh,id_sp,so_luong_mua) VALUE('" . $ma_gh . "','" . $id_sp . "','" . $so_luong . "')";
     mysqli_query($mysqli, $insert_order_details);
+    // cap nhat so luong san pham
+    $update_stock = "UPDATE tbl_sanpham SET so_luong_con_lai = so_luong_con_lai - $so_luong WHERE id_sp = $id_sp";
+    mysqli_query($mysqli, $update_stock);
   }
   unset($_SESSION['cart']);
   header('Location:../../index.php?quanly=camon');
@@ -108,6 +111,9 @@ if ($cart_payment == 'tienmat' || $cart_payment == 'chuyenkhoan') {
       $tong_tien += $thanhtien;
       $insert_order_details = "INSERT INTO tbl_chitiet_gh(ma_gh,id_sp,so_luong_mua) VALUE('" . $ma_gh . "','" . $id_sp . "','" . $so_luong . "')";
       mysqli_query($mysqli, $insert_order_details);
+      // cap nhat so luong san pham
+      $update_stock = "UPDATE tbl_sanpham SET so_luong_con_lai = so_luong_con_lai - $so_luong WHERE id_sp = $id_sp";
+      mysqli_query($mysqli, $update_stock);
     }
     unset($_SESSION['cart']);
     $_SESSION['code_cart'] = $ma_gh;
