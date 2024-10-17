@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2024 at 04:19 AM
+-- Generation Time: Oct 17, 2024 at 06:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,15 +54,23 @@ CREATE TABLE `tbl_baiviet` (
   `noidung` longtext NOT NULL,
   `id_danhmuc` int(11) NOT NULL,
   `tinhtrang` int(11) NOT NULL,
-  `hinhanh` varchar(255) NOT NULL
+  `hinhanh` varchar(255) NOT NULL,
+  `link` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_baiviet`
 --
 
-INSERT INTO `tbl_baiviet` (`id`, `tenbaiviet`, `tomtat`, `noidung`, `id_danhmuc`, `tinhtrang`, `hinhanh`) VALUES
-(0, 'hẹn gặp lại', 'ád', 'ád', 0, 1, 'hengaplai.jpg');
+INSERT INTO `tbl_baiviet` (`id`, `tenbaiviet`, `tomtat`, `noidung`, `id_danhmuc`, `tinhtrang`, `hinhanh`, `link`) VALUES
+(2, 'MU chậm sa thải Ten Hag', 'Summary for MU chậm sa thải Ten Hag', 'Content for MU chậm sa thải Ten Hag', 1, 1, 'tin1.jpg', 'https://www.24h.com.vn/bong-da/nong-bang-xep-hang-ngoai-hang-anh-mu-te-nhat-lich-su-chelsea-lung-lay-top-4-c48a1608578.html'),
+(3, 'BXH Ngoại hạng Anh: MU tệ nhất lịch sử, Chelsea lung lay top 4', 'Summary for BXH Ngoại hạng Anh', 'Content for BXH Ngoại hạng Anh', 1, 1, 'tin2.jpg', 'https://www.24h.com.vn/bong-da/ten-hag-biet-cui-dau-ai-da-cuu-thay-tam-song-sot-qua-giong-bao-c48a1608663.html'),
+(4, 'Ten Hag cúi đầu: Ai đã cứu thầy tạm sống sót?', 'Summary for Ten Hag cúi đầu', 'Content for Ten Hag cúi đầu', 1, 1, 'tin3.jpg', 'https://www.24h.com.vn/bong-da/lewandowski-ghi-3-ban-dinh-cao-bat-kip-haaland-dua-chiec-giay-vang-c48a1608595.html'),
+(5, 'Lewandowski ghi 3 bàn đỉnh cao, bắt kịp Haaland đua Chiếc Giày Vàng', 'Summary for Lewandowski', 'Content for Lewandowski', 1, 1, 'tin4.jpg', 'https://www.24h.com.vn/bong-da/xau-ho-dan-sao-mu-thua-ong-gia-36-tuoi-rashford-bi-nghi-noi-xau-ten-hag-c48a1608619.html'),
+(6, 'Xấu hổ: Dàn sao MU thua ông già 36 tuổi, Rashford bị nghi nói xấu Ten Hag', 'Summary for MU thua ông già 36 tuổi', 'Content for MU thua ông già 36 tuổi', 1, 1, 'tin5.jpg', 'https://www.24h.com.vn/bong-da/video-bong-da-brighton-tottenham-hang-cong-thang-hoa-ngoai-hang-anh-c48a1608573.html'),
+(8, 'Video bóng đá: Brighton - Tottenham, hàng công thăng hoa', 'Summary for Brighton vs Tottenham', 'Content for Brighton vs Tottenham', 1, 1, 'tin7.jpg', 'https://www.24h.com.vn/bong-da/video-bong-da-sociedad-atletico-alvarez-ghi-ban-giay-51-la-liga-c48a1608577.html'),
+(9, 'Video futsal: Brazil - Argentina, đăng quang kịch tính chung kết Futsal World Cup', 'Summary for Brazil vs Argentina Futsal', 'Content for Brazil vs Argentina Futsal', 1, 1, 'tin8.jpg', 'https://www.24h.com.vn/bong-da/video-futsal-brazil-argentina-dang-quang-kich-tinh-chung-ket-futsal-world-cup-c48a1608596.html'),
+(10, 'Video bóng đá: Sociedad - Atletico, Alvarez ghi bàn giây 51', 'Summary for Sociedad vs Atletico', 'Content for Sociedad vs Atletico', 1, 1, 'tin9.jpg', 'https://www.24h.com.vn/bong-da/video-bong-da-sociedad-atletico-alvarez-ghi-ban-giay-51-la-liga-c48a1608577.html');
 
 -- --------------------------------------------------------
 
@@ -134,7 +142,35 @@ INSERT INTO `tbl_chitiet_gh` (`id_ctgh`, `ma_gh`, `id_sp`, `so_luong_mua`) VALUE
 (63, '9125', 117, 1),
 (64, '9521', 117, 1),
 (65, '3195', 117, 1),
-(66, '747', 117, 1);
+(66, '747', 117, 1),
+(67, '1950', 117, 1),
+(68, '6839', 117, 1),
+(69, '2742', 117, 1),
+(70, '1716', 117, 1),
+(71, '1668', 117, 1),
+(72, '7804', 117, 1),
+(73, '4963', 117, 1),
+(74, '913', 117, 1),
+(75, '5125', 117, 1),
+(76, '8263', 117, 1),
+(77, '1693', 117, 1),
+(78, '7777', 117, 1),
+(79, '8808', 117, 1),
+(80, '8785', 117, 2),
+(81, '8785', 117, 2),
+(82, '6436', 116, 2),
+(83, '3347', 116, 2),
+(84, '3282', 115, 1),
+(85, '2615', 115, 1),
+(86, '8658', 115, 2),
+(87, '4844', 115, 1),
+(88, '5221', 115, 1),
+(89, '6297', 116, 1),
+(90, '3176', 115, 1),
+(91, '7215', 117, 1),
+(92, '5113', 119, 1),
+(93, '2299', 119, 1),
+(94, '7570', 121, 1);
 
 -- --------------------------------------------------------
 
@@ -294,7 +330,48 @@ INSERT INTO `tbl_giohang` (`id_gh`, `id_khachhang`, `ma_gh`, `cart_date`, `cart_
 (56, 14, '9125', '2024-10-16 09:14:10', '', 0, 1),
 (57, 14, '9521', '2024-10-16 09:14:52', '', 0, 1),
 (58, 14, '3195', '2024-10-16 09:16:07', '', 0, 1),
-(59, 14, '747', '2024-10-16 09:18:29', '', 0, 1);
+(59, 14, '747', '2024-10-16 09:18:29', '', 0, 1),
+(60, 14, '1950', '2024-10-16 09:23:14', '', 0, 1),
+(61, 14, '6839', '2024-10-16 09:23:51', '', 0, 1),
+(62, 14, '2742', '2024-10-16 09:24:45', '', 0, 1),
+(63, 14, '1716', '2024-10-16 09:27:08', '', 0, 1),
+(64, 14, '1668', '2024-10-16 09:28:28', '', 0, 1),
+(65, 14, '7804', '2024-10-16 09:29:23', '', 0, 1),
+(67, 14, '913', '2024-10-16 09:51:51', 'chuyenkhoan', 0, 1),
+(68, 14, '5125', '2024-10-16 09:52:18', 'chuyenkhoan', 0, 1),
+(70, 14, '1693', '2024-10-16 09:53:20', 'tienmat', 0, 1),
+(71, 14, '7777', '2024-10-16 09:53:34', 'tienmat', 0, 1),
+(72, 14, '8808', '2024-10-16 09:59:23', 'tienmat', 0, 1),
+(73, 14, '8785', '2024-10-16 10:03:26', 'tienmat', 0, 1),
+(74, 14, '8785', '2024-10-16 10:03:26', '', 0, 1),
+(75, 14, '7154', '2024-10-16 10:03:36', 'tienmat', 0, 1),
+(76, 14, '7154', '2024-10-16 10:03:36', '', 0, 1),
+(77, 14, '6436', '2024-10-16 10:04:44', 'tienmat', 0, 1),
+(78, 14, '3347', '2024-10-16 10:05:27', 'tienmat', 0, 1),
+(79, 14, '3282', '2024-10-16 10:06:18', '', 0, 1),
+(80, 14, '2615', '2024-10-16 10:10:59', '', 0, 1),
+(81, 14, '8658', '2024-10-16 10:14:33', '', 0, 1),
+(82, 14, '4844', '2024-10-16 10:20:49', '', 0, 1),
+(83, 14, '5221', '2024-10-16 10:25:33', '', 0, 1),
+(84, 14, '6297', '2024-10-16 10:29:23', 'tienmat', 0, 1),
+(85, 14, '3176', '2024-10-16 10:33:01', '', 0, 1),
+(86, 14, '7215', '2024-10-16 10:35:01', '', 0, 1),
+(87, 14, '5113', '2024-10-16 10:36:20', '', 0, 1),
+(89, 14, '7570', '2024-10-17 11:14:10', 'tienmat', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_khuyenmai`
+--
+
+CREATE TABLE `tbl_khuyenmai` (
+  `id_km` int(11) NOT NULL,
+  `ten` varchar(100) NOT NULL,
+  `giamgia` varchar(10) NOT NULL,
+  `ngay_bat_dau` date NOT NULL,
+  `ngay_ket_thuc` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -352,6 +429,7 @@ CREATE TABLE `tbl_sanpham` (
   `ma_sp` varchar(100) NOT NULL,
   `gia_sp` int(11) NOT NULL,
   `so_luong` int(11) NOT NULL,
+  `so_luong_con_lai` int(11) NOT NULL,
   `hinh_anh` varchar(50) NOT NULL,
   `tom_tat` tinytext NOT NULL,
   `noi_dung` text NOT NULL,
@@ -363,11 +441,12 @@ CREATE TABLE `tbl_sanpham` (
 -- Dumping data for table `tbl_sanpham`
 --
 
-INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `hinh_anh`, `tom_tat`, `noi_dung`, `id_dm`, `tinh_trang`) VALUES
-(115, 'Áo MU', '10', 300000, 100, 'aoMU.png', 'áo ', 'áo', 52, 1),
-(116, 'Áo MC', '5', 400000, 110, 'aoMC.png', 'áo', 'áo', 48, 1),
-(117, 'Yonex', '10', 200000, 100, 'aoYONEX.png', 'yonex', 'yonex', 47, 1),
-(119, 'Yonex3', '3', 200000, 100, 'aoYONEX.png', '', '', 47, 1);
+INSERT INTO `tbl_sanpham` (`id_sp`, `ten_sp`, `ma_sp`, `gia_sp`, `so_luong`, `so_luong_con_lai`, `hinh_anh`, `tom_tat`, `noi_dung`, `id_dm`, `tinh_trang`) VALUES
+(115, 'Áo MU', '10', 300000, 100, 0, 'aoMU.png', 'áo ', 'áo', 52, 1),
+(116, 'Áo MC', '5', 400000, 110, 0, 'aoMC.png', 'áo', 'áo', 48, 1),
+(117, 'Yonex', '10', 200000, 100, 0, 'aoYONEX.png', 'yonex', 'yonex', 47, 1),
+(119, 'Yonex3', '3', 200000, 100, 0, 'aoYONEX.png', '', '', 47, 1),
+(121, 'áo mới', '1230', 100000, 9, 8, 'nguyenhaiblog_com.jfif', '9', '9', 52, 1);
 
 -- --------------------------------------------------------
 
@@ -397,6 +476,17 @@ INSERT INTO `tbl_thongke` (`id`, `ngaydat`, `donhang`, `doanhthu`, `soluongdaban
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_thuonghieu`
+--
+
+CREATE TABLE `tbl_thuonghieu` (
+  `id_thuonghieu` int(11) NOT NULL,
+  `tenthuonghieu` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_vnpay`
 --
 
@@ -418,7 +508,12 @@ CREATE TABLE `tbl_vnpay` (
 --
 
 INSERT INTO `tbl_vnpay` (`id_vnpay`, `vnp_amount`, `vnp_bankcode`, `vnp_banktranno`, `vnp_cardtype`, `vnp_orderinfo`, `vnp_paydate`, `vnp_tmncode`, `vnp_transactionno`, `code_cart`) VALUES
-(1, '1000000', 'NCB', 'VNP14613309', 'ATM', 'Thanh toán đơn hàng', '20241014123808', 'IZK6416P', '14613309', '7303');
+(1, '1000000', 'NCB', 'VNP14613309', 'ATM', 'Thanh toán đơn hàng', '20241014123808', 'IZK6416P', '14613309', '7303'),
+(2, '', '', '', '', '', '', '', '', ''),
+(3, '', '', '', '', '', '', '', '', ''),
+(4, '', '', '', '', '', '', '', '', ''),
+(5, '20000000', 'NCB', 'VNP14616085', 'ATM', 'Thanh toán đơn hàng', '20241016103802', 'IZK6416P', '14616085', '2299'),
+(6, '20000000', 'NCB', 'VNP14616085', 'ATM', 'Thanh toán đơn hàng', '20241016103802', 'IZK6416P', '14616085', '2299');
 
 --
 -- Indexes for dumped tables
@@ -474,6 +569,12 @@ ALTER TABLE `tbl_giohang`
   ADD PRIMARY KEY (`id_gh`);
 
 --
+-- Indexes for table `tbl_khuyenmai`
+--
+ALTER TABLE `tbl_khuyenmai`
+  ADD PRIMARY KEY (`id_km`);
+
+--
 -- Indexes for table `tbl_lienhe`
 --
 ALTER TABLE `tbl_lienhe`
@@ -490,6 +591,12 @@ ALTER TABLE `tbl_sanpham`
 --
 ALTER TABLE `tbl_thongke`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_thuonghieu`
+--
+ALTER TABLE `tbl_thuonghieu`
+  ADD PRIMARY KEY (`id_thuonghieu`);
 
 --
 -- Indexes for table `tbl_vnpay`
@@ -511,13 +618,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbl_chitiet_gh`
 --
 ALTER TABLE `tbl_chitiet_gh`
-  MODIFY `id_ctgh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id_ctgh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `tbl_dangky`
@@ -541,7 +648,13 @@ ALTER TABLE `tbl_danhmuc_baiviet`
 -- AUTO_INCREMENT for table `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
-  MODIFY `id_gh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id_gh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+
+--
+-- AUTO_INCREMENT for table `tbl_khuyenmai`
+--
+ALTER TABLE `tbl_khuyenmai`
+  MODIFY `id_km` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_lienhe`
@@ -553,7 +666,7 @@ ALTER TABLE `tbl_lienhe`
 -- AUTO_INCREMENT for table `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
-  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT for table `tbl_thongke`
@@ -562,10 +675,16 @@ ALTER TABLE `tbl_thongke`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `tbl_thuonghieu`
+--
+ALTER TABLE `tbl_thuonghieu`
+  MODIFY `id_thuonghieu` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_vnpay`
 --
 ALTER TABLE `tbl_vnpay`
-  MODIFY `id_vnpay` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_vnpay` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
