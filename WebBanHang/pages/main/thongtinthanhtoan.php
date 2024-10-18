@@ -29,7 +29,7 @@
             }
             ?>
             <div class="col-md-8" style="float:left;width: 680px;">
-                <h4>THÔNG TIN VẬN CHUYỂN VÀ GIỎ HÀNG</h4>
+                <h4 style="text-align:center">THÔNG TIN VẬN CHUYỂN VÀ GIỎ HÀNG</h4>
                 <ul>
                     <li>Họ và tên: <b><?php echo $name ?></b></li>
                     <li>Số điện thoại: <b><?php echo $phone ?></b></li>
