@@ -18,7 +18,18 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         </div>
         <div class="menu_items">
             <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+            <div class="news_content" id="news_content">
+                <a href="index.php?quanly=baiviet&id=10">Video bóng đá: Sociedad - Atletico, Alvarez ghi bàn giây 51</a>
+                <a href="index.php?quanly=baiviet&id=9">Video futsal: Brazil - Argentina, đăng quang kịch tính chung kết Futsal World Cup</a>
+                <a href="index.php?quanly=baiviet&id=8">Video bóng đá: Brighton - Tottenham, hàng công thăng hoa</a>
+                <a href="index.php?quanly=baiviet&id=6">Xấu hổ: Dàn sao MU thua ông già 36 tuổi, Rashford bị nghi nói xấu Ten Hag</a>
+                <a href="index.php?quanly=baiviet&id=5">Lewandowski ghi 3 bàn đỉnh cao, bắt kịp Haaland đua Chiếc Giày Vàng</a>
+                <a href="index.php?quanly=baiviet&id=4">Ten Hag cúi đầu: Ai đã cứu thầy tạm sống sót?</a>
+                <a href="index.php?quanly=baiviet&id=3">BXH Ngoại hạng Anh: MU tệ nhất lịch sử, Chelsea lung lay top 4</a>
+                <a href="index.php?quanly=baiviet&id=2">MU chậm sa thải Ten Hag</a>
+            </div>
         </div>
+
         <div class="menu_items">
             <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
