@@ -41,6 +41,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         <div class="menu_items">
             <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
+        
         <div class="hamburger" id="hamburger">
             <img src="../images/bars-solid.svg" alt="" width="30px" height="30px">
         </div>
@@ -70,8 +71,26 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
                 <?php } ?>
                 <li> <a class="item" href="index.php?quanly=giohang">Giỏ hàng<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
                 </li>
-                <li> <a class="item" href="index.php?quanly=tintuc">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+
+                <li> 
+                
+                <a class="item" href="index.php?quanly=tintuc" id="newsMenuItem">Tin tức<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>                
+                <div class="news_content_burger" id="news_content_burger" style="display: none;">
+                    <?php
+                        // Lấy danh mục bài viết
+                        $sql_danhmuc = "SELECT * FROM tbl_danhmuc_baiviet ORDER BY id_baiviet DESC";
+                        $query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
+                        while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {
+                    ?>
+                        <a href="index.php?quanly=danhmucbaiviet&id_baiviet=<?php echo $row_danhmuc['id_baiviet']; ?>">
+                            <span style="text-transform: uppercase;"><?php echo $row_danhmuc['tendanhmuc_baiviet']; ?></span>
+                        </a><br>
+                    <?php 
+                        }
+                    ?>
+                </div>
                 </li>
+
                 <li><a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a></li>
             </ul>
         </div>
@@ -84,10 +103,12 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         const hamburger = document.getElementById('hamburger');
         const drawer = document.getElementById('drawer');
         const closeBtn = document.getElementById('close-btn');
+        const newsMenuItem = document.getElementById('newsMenuItem'); // Thêm ID cho mục tin tức
+        const newsContentBurger = document.getElementById('news_content_burger');
 
         // Mở ngăn kéo
         hamburger.addEventListener('click', function() {
-            drawer.style.width = '250px';
+            drawer.style.width = '400px';
         });
 
         // Đóng ngăn kéo
@@ -102,5 +123,28 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
                 drawer.style.width = '0';
             }
         });
+
+        // Hiện danh mục khi di chuột vào mục "Tin tức"
+        newsMenuItem.addEventListener('mouseover', function() {
+               newsContentBurger.style.display = 'block'; // Hiện danh mục
+        });
+
+            // Ẩn danh mục khi di chuột ra ngoài "Tin tức" và danh mục
+        newsMenuItem.addEventListener('mouseleave', function() {
+            if (!newsContentBurger.matches(':hover')) {
+                newsContentBurger.style.display = 'none'; // Ẩn danh mục
+            }
+        });
+
+            // Giữ danh mục hiển thị khi di chuột vào danh mục
+        newsContentBurger.addEventListener('mouseenter', function() {
+            newsContentBurger.style.display = 'block'; // Giữ danh mục hiển thị
+        });
+
+            // Ẩn danh mục khi di chuột ra ngoài danh mục
+        newsContentBurger.addEventListener('mouseleave', function() {
+            newsContentBurger.style.display = 'none'; // Ẩn danh mục
+        });
     });
+
 </script>
