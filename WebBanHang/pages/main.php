@@ -43,7 +43,9 @@
     } elseif ($des == 'dangky') {
         include("pages/main/dangky.php");
     } elseif ($des == 'timKiem') {
-        include("main/timKiem.php");
+        include("main/timkiem.php");
+    } elseif ($des == 'timKiemNangCao') {
+        include("main/timKiemNangCao.php");   
     } elseif ($des == 'doimatkhau') {
         include("pages/main/doimatkhau.php");
     } elseif ($des == 'camon') {
