@@ -1594,7 +1594,7 @@ border-left: 17px solid #5c8cec;
 }
 
 .news_content a {
-  padding: 4px;
+  padding: 6px;
   text-decoration: none;
   color: #000;
   display: block;
@@ -1612,7 +1612,7 @@ border-left: 17px solid #5c8cec;
 .news_content_burger {
   position: absolute;
   left:50%;
-  top:20%;
+  top: 28%;
   display: none;
   font-size: 14px;
   z-index: 3;
