@@ -108,7 +108,7 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
 
         // Mở ngăn kéo
         hamburger.addEventListener('click', function() {
-            drawer.style.width = '400px';
+            drawer.style.width = '350px';
         });
 
         // Đóng ngăn kéo
