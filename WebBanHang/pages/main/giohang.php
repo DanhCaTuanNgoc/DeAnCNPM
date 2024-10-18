@@ -1,5 +1,5 @@
 <div class="main_content">
-<p>Giỏ hàng</p>
+<p class="title">Giỏ hàng</p>
     <div class="container">	
     <div class="wrapper-2">
     <div class="arrow-steps clearfix">
@@ -9,9 +9,9 @@
         <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
     </div>
     </div>
-    <h4 style="text-align:center">THÔNG TIN GIỎ HÀNG</h4>
+    
     </div>
-
+    <h4 class="title">THÔNG TIN GIỎ HÀNG</h4>
     <div class="cart_content">
         <div class="cart_header">
             <div class="cart_header_product">Sản phẩm</div>
