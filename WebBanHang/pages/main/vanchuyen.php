@@ -1,5 +1,5 @@
 <div class="main_content">
-  <p>Thông tin vận chuyển</p>
+  <p class="title">Thông tin vận chuyển</p>
   <div class="wrapper-2">
       <div class="arrow-steps clearfix">
           <div class="step done"> <span> <a href="index.php?quanly=giohang"> Giỏ hàng</a></span> </div>
@@ -8,7 +8,7 @@
           <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
       </div>
   </div>
-  <h4 style="text-align:center;">THÔNG TIN VẬN CHUYỂN</h4>
+  <h4 class="title">THÔNG TIN VẬN CHUYỂN</h4>
   <?php
         if(isset($_POST['themvanchuyen'])){
           $name = $_POST['name'];
