@@ -8,6 +8,7 @@
             <div class="step current"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
             <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
         </div>
+        <h4 style="text-align:center">THÔNG TIN VẬN CHUYỂN VÀ GIỎ HÀNG</h4>
     </div>
     <form action="pages/main/thanhtoan.php" method="POST" enctype="application/x-www-form-urlencoded">
         <div class="row">
@@ -29,23 +30,23 @@
             }
             ?>
             <div class="col-md-8" style="float:left;width: 680px;">
-                <h4 style="text-align:center">THÔNG TIN VẬN CHUYỂN VÀ GIỎ HÀNG</h4>
+                
                 <ul>
                     <li>Họ và tên: <b><?php echo $name ?></b></li>
                     <li>Số điện thoại: <b><?php echo $phone ?></b></li>
                     <li>Địa chỉ: <b><?php echo $address ?></b></li>
                     <li>Note: <b><?php echo $note ?></b></li>
                 </ul>
-
-                <table style="width: 100%; text-align: center; border-collapse: collapse;" border="1">
+            <!-- <div class="table-responsive"> -->
+                <table class="table"  border="2">
                     <tr>
                         <th>Id</th>
-                        <th>Ma SP</th>
-                        <th>Ten san pham</th>
-                        <th>Hinh anh</th>
-                        <th>So luong</th>
-                        <th>Gia san pham</th>
-                        <th>Thanh Tien</th>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Thành tiền</th>
                     </tr>
 
                     <?php
@@ -93,10 +94,10 @@
                     <?php
                     } ?>
                 </table>
-
+                <!-- </div> -->
             </div>
             <div class="col-md-4" style="float:left;margin-left:10px;">
-                <h4> PHƯƠNG THỨC THANH TOÁN</h4>
+                <h4 style="text-align:center"> PHƯƠNG THỨC THANH TOÁN</h4>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="payment" value="tienmat" id="radios1" checked>
                     <img style="width: 32px; height:32px" src="images/cash.jpg">
@@ -136,7 +137,7 @@
     </form>
 
     <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded "
-        action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px">
+        action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px,width: 500px">
         <input type="submit" name="momo" value="Thanh toán MOMO QRCode" class="btn btn-danger">
     </form>
 
