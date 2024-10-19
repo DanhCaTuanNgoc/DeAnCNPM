@@ -1,8 +1,8 @@
 <div class="main_content">
     <?php
-        $sql_bv= "SELECT * FROM tbl_baiviet WHERE tbl_baiviet.id='$_GET[id]' ORDER BY id DESC";
+        $sql_bv= "SELECT * FROM tbl_baiviet WHERE tbl_baiviet.id=id ORDER BY id DESC";
         $query_bv= mysqli_query($mysqli,$sql_bv);
-        $sql_name= "SELECT * FROM tbl_danhmuc_baiviet WHERE tbl_danhmuc_baiviet.id_baiviet='$_GET[id]' LIMIT 1";
+        $sql_name= "SELECT * FROM tbl_danhmuc_baiviet WHERE tbl_danhmuc_baiviet.id_baiviet=id_baiviet LIMIT 1";
         $query_name= mysqli_query($mysqli,$sql_name);
         $row_title= mysqli_fetch_array($query_name);
     ?>
