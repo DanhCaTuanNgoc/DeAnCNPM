@@ -7,14 +7,14 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
     <!-- <img src="images/banner-ao-da-bong.png" width="100%" height="170px"/> -->
     <div class="header_info_container" id="header">
         <div class="header_info">
-            <p>Shopee : link shopee</p>
-            <p style="margin-left : 10px">Hotline : <span style="color :yellow">09088888</span></p>
-            <p style="margin-left : 10px">Youtube : link youtube</p>
+            <p>Shopee : <a href="https://shopee.vn/">tại đây</a></p>
+            <p style="margin-left : 10px">Hotline : <span style="color :yellow">0909888888</span></p>
+            <p style="margin-left : 10px">Youtube : <a href="https://www.youtube.com/watch?v=fSVmM71LTOI">tại đây</a></p>
         </div>
     </div>
     <div class="header_content_container">
         <div class="header_content">
-            <div class="logo"><a style="cursor : pointer; padding-top : 12px"><img src="images/image7tcc2removebgpreview11884-0kr5-200h.png" alt="7TCC LOGO" width="200px" height="70px"></a></div>
+            <div class="logo"><a style="cursor : pointer; padding-top : 12px" href="index.php"><img src="images/image7tcc2removebgpreview11884-0kr5-200h.png" alt="7TCC LOGO" width="200px" height="70px"></a></div>
             
             <div class="search_container">
                 <form class="search_form" action="index.php?quanly=timKiem" method="POST">
@@ -29,8 +29,8 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
                     <img style="margin-top: 8px;" src="../images/phone.svg" alt="">
                 </div>
                 <div class="hotline_info">
-                    <p style="margin : 0; font-size : 13px;">0988888888</p>
-                    <p style="margin : 0; font-size : 10px;">Tổng đài miễn phí</p>
+                    <p style="margin : 0; font-size : 13px;">0909888888</p>
+                    <p style="margin : 0; font-size : 12px;">Tổng đài miễn phí</p>
                 </div>
             </div>
             <?php
@@ -42,7 +42,7 @@ if (isset($_GET['dangXuat']) && $_GET['dangXuat'] == 1) {
                         <img style="margin-top: 8px;" src="../images/user.svg" alt="">
                     </div>
                     <div class="hotline_info">
-                        <p style="margin : 0 0 1px 0; font-size : 10px;">Xin chào</p>
+                        <p style="margin : 0 0 1px 0; font-size : 12px;">Xin chào</p>
                         <p style="margin : 0; font-size : 14px; font-style : italic;"><?php print_r($_SESSION['dang_ky']); ?></p>
                     </div>
                     <div class="logout_content" id="logout_content">
