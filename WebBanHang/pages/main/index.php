@@ -17,25 +17,32 @@ $new_pro = mysqli_query($mysqli, $sql_pro);
     <?php
     include("./pages/sidebar/sidebar.php");
     ?>
-    <div class="main_content_with_sidebar">
+    <div class="main_content main_content_with_sidebar ">
+
         <div class="cate_title">
-            <h2>Sản phẩm mới nhất</h2>
+            <h4>Sản phẩm mới nhất</h4>
         </div>
-        <ul class="product_list">
-            <?php
-            while ($row = mysqli_fetch_array($new_pro)) {
-            ?>
-                <li>
-                    <a href="index.php?quanly=sanpham&id=<?php echo $row['id_sp'] ?>">
-                        <img src="admincp/modules/quanLySanPham/uploads/<?php echo $row['hinh_anh'] ?>">
-                        <p class="title_product"><?php echo $row['ten_sp'] ?></p>
-                        <p class="price_product"><?php echo number_format($row['gia_sp'], 0, ',', ',') . 'vnđ' ?></p>
-                    </a>
-                </li>
-            <?php
-            }
-            ?>
-        </ul>
+        <div class="container mt-3">
+            <div class="row">
+                <?php
+                while ($row = mysqli_fetch_array($new_pro)) {
+                ?>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <div class="product card h-40">
+                            <a href="index.php?quanly=sanpham&id=<?php echo $row['id_sp'] ?>" class="text-decoration-none text-dark">
+                                <img src="admincp/modules/quanLySanPham/uploads/<?php echo $row['hinh_anh'] ?>" class="card-img-top img-fluid" alt="<?php echo $row['ten_sp'] ?>">
+                                <div class="card-body text-center">
+                                    <p class="title_product card-title"><?php echo $row['ten_sp'] ?></p>
+                                    <p class="price_product card-text text-danger"><?php echo number_format($row['gia_sp'], 0, ',', ',') . 'vnđ' ?></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
         <div style="clear:both;"></div>
         <?php
         $sql_page = mysqli_query($mysqli, "SELECT * FROM tbl_sanpham");

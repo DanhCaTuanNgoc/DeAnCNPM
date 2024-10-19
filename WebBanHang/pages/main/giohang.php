@@ -1,18 +1,26 @@
 <div class="main_content">
-<p class="title">Giỏ hàng</p>
-    <div class="container">	
-    <div class="wrapper-2">
-    <div class="arrow-steps clearfix">
-        <div class="step current"> <span> <a href="index.php?quanly=giohang"> Giỏ hàng</a></span> </div>
-        <div class="step"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
-        <div class="step"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
-        <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
-    </div>
-    </div>
     
-    </div>
-    <h4 class="title">THÔNG TIN GIỎ HÀNG</h4>
     <div class="cart_content">
+        <?php
+        if (isset($_SESSION['dang_ky']) && isset($_SESSION['id_khachhang'])) { ?>
+                <div class="wrapper-2">
+                    <div class="arrow-steps clearfix">
+                        <div class="step current"> <span> <a href="index.php?quanly=giohang"> Giỏ hàng</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
+                    </div>
+            </div>
+        <?php } else { ?>
+                <div class="wrapper-2">
+                    <div class="arrow-steps clearfix">
+                        <div class="step current"> <span> <a href="index.php?quanly=giohang&user_notfound=1"> Giỏ hàng</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=giohang&user_notfound=1"> Vận chuyển</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
+                        <div class="step"> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
+                    </div>
+                </div>
+        <?php } ?>
         <div class="cart_header">
             <div class="cart_header_product">Sản phẩm</div>
             <div class="cart_header_item">Đơn giá</div>
@@ -57,19 +65,25 @@
         if ($count == 0) {
         ?>
             <img style="margin-top: 40px;" src="../images/emptycart.jpg" alt="EmtpyCart" width="200px" height="200px">
-            <h4 style="font-style: italic; margin : 0 0 20px 0;">Giỏ hàng trống <a style="font-size: 13px; font-weight : 400; color : blue; text-decoration : underline;" href="index.php?">Mua sắm tại đây</a></h4>
-        <?php } else { ?>
+            <h4 style="font-style: italic; margin : 0 0 20px 0;">Giỏ hàng trống </h4>
+            <div style=" display : flex; margin-top : 0px;">
+                <a href="index.php" class="dathang_button">
+                    Mua sắm
+                </a>
+            </div>
+            <?php } else { ?>
             <div class="cart_footer">
-                <h3 style="margin-left : 50px; width : auto">Tổng tiền : <?php echo number_format($tongtien, 0, ',', ',') . 'đ' ?></h3>
                 <a style="margin-right : 50px; color : red;" href="pages/main/themgiohang.php?xoatatca=1">Xóa tất cả</a>
+                <h3 style="margin-left : 50px; width : auto">Tổng tiền : <?php echo number_format($tongtien, 0, ',', ',') . 'đ' ?></h3>
             </div>
         <?php } ?>
 
         <?php
-        if (isset($_SESSION['dang_ky']) && isset($_SESSION['id_khachhang']) && $count != 0) {
+        if($count != 0) {
+        if (isset($_SESSION['dang_ky']) && isset($_SESSION['id_khachhang'])) {
         ?>
             <div style=" display : flex; margin-top : 20px;">
-                <a href="index.php?quanly=vanChuyen" class="purchase_button">
+                <a href="index.php?quanly=vanChuyen" class="dathang_button">
                     Đặt hàng
                 </a>
             </div>
@@ -77,12 +91,12 @@
         } else {
         ?>
             <div style=" display : flex; margin-top : 20px;">
-                <a href="index.php?quanly=dangky" class="purchase_button">
-                    Đăng ký đặt hàng
+                <a href="index.php?quanly=dangnhap" class="dathang_button">
+                    Đăng nhập để đặt hàng
                 </a>
             </div>
         <?php
-        }
+        }}
         ?>
 
     </div>
