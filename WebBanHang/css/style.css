@@ -1588,6 +1588,7 @@ border-left: 17px solid #5c8cec;
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  /* display: block; */
 }
 
 .form-group{
@@ -1603,6 +1604,14 @@ border-left: 17px solid #5c8cec;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  width: 200px;
+}
+
+.table{
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 465px;
 }
 
 
