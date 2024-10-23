@@ -17,6 +17,10 @@
         include("main/donhangdadat.php");
     } elseif ($des == 'lichSuDonHang') {
         include("main/lichsudonhang.php");
+    } elseif ($des == 'xemDonHang') {
+        include("main/xemdonhang.php");
+    } elseif ($des == 'inDonHang') {
+        include("main/indonhang.php");
         //vinh
     } elseif ($des == 'danhmucbaiviet') {
         include("main/danhmucbaiviet.php");
