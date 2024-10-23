@@ -15,10 +15,6 @@ $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
             <tr>
                 <th>ID</th>
                 <th>Mã Giỏ Hàng</th>
-                <th>Tên Khách Hàng</th>
-                <th>Địa Chỉ</th>
-                <th>Email</th>
-                <th>SDT</th>
                 <th>Trạng Thái</th>
                 <th>Ngày Đặt</th>
                 <th>Quản Lý</th>
@@ -35,10 +31,6 @@ $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
                 <tr>
                     <td> <?php echo $i ?></td>
                     <td> <?php echo $row['ma_gh'] ?></td>
-                    <td> <?php echo $row['ten_khachhang'] ?></td>
-                    <td> <?php echo $row['dia_chi'] ?></td>
-                    <td> <?php echo $row['email'] ?></td>
-                    <td> <?php echo $row['dien_thoai'] ?></td>
                     <td>
                         <?php
                         if ($row['trang_thai'] == 1) {
