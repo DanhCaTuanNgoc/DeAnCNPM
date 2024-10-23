@@ -1,5 +1,6 @@
 <?php
-$sql_lietke_dh = "SELECT * FROM tbl_giohang,tbl_dangky WHERE tbl_giohang.id_khachhang = tbl_dangky.id_dangky ORDER BY tbl_giohang.id_gh DESC ";
+$id_khachhang = $_SESSION['id_khachhang'];
+$sql_lietke_dh = "SELECT * FROM tbl_giohang,tbl_dangky WHERE tbl_giohang.id_khachhang = tbl_dangky.id_dangky  AND tbl_giohang.id_khachhang = $id_khachhang ORDER BY tbl_giohang.id_gh DESC ";
 $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
 ?>
 
@@ -48,10 +49,10 @@ $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
                     </td>
                     <td><?php echo $row['cart_date'] ?></td>
                     <td>
-                        <a href="index.php?action=donHang&query=xemDonHang&code=<?php echo $row['ma_gh'] ?>" class="btn btn-info btn-sm">Xem Đơn Hàng</a>
+                        <a href="index.php?quanly=xemDonHang&code=<?php echo $row['ma_gh'] ?>" class="btn btn-info btn-sm">Xem Đơn Hàng</a>
                     </td>
                     <td>
-                        <a href="modules/quanLyDonHang/indonhang.php?&code=<?php echo $row['ma_gh'] ?>" class="btn btn-primary btn-sm">In Đơn Hàng</a>
+                        <a href="main/indonhang.php?&code=<?php echo $row['ma_gh'] ?>" class="btn btn-primary btn-sm">In Đơn Hàng</a>
                     </td>
                 </tr>
             <?php
