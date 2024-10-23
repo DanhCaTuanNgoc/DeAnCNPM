@@ -5,7 +5,7 @@
                 <div class="step done"> <span> <a href="index.php?quanly=giohang"> Giỏ hàng</a></span> </div>
                 <div class="step done"> <span><a href="index.php?quanly=vanChuyen"> Vận chuyển</a></span> </div>
                 <div class="step current"> <span><a href="index.php?quanly=thongTinThanhToan">Thanh toán</a></span> </div>
-                <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử đơn hàng</a></span> </div>
+                <div class="step "> <span><a href="index.php?quanly=donHangDaDat">Lịch sử</a></span> </div>
             </div>
         </div>
         <h4>THÔNG TIN VẬN CHUYỂN VÀ GIỎ HÀNG</h4>
@@ -94,7 +94,7 @@
                     <h5 style="text-align:center"> PHƯƠNG THỨC THANH TOÁN</h5>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="payment" value="tienmat" id="radios1" checked>
-                        <img style="width: 32px; height:32px" src="images/cash.jpg">
+                        <img style="width: 32px; height:32px" src="../../">
                         <label class="form-check-label" for="radios1">
                             Tiền mặt
                         </label>
@@ -113,24 +113,18 @@
                             VNPay
                         </label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="payment" value="paypal" id="radios5">
-                        <img style="width: 32px; height:32px" src="images/paypal.png">
-                        <label class="form-check-label" for="radios5">
-                            Paypal
-                        </label>
-                    </div>
                     <?php if ($i > 0) { ?>
-                        <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded "
-                            action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px;width: 500px">
-                            <button type="submit" name="momo" value="Thanh toán MOMO QRCode" class="purchase_button momo">Thanh toán MOMO QRCode</button>
-                        </form>
-            
-                        <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded"
-                            action="pages/main/xuLyThanhToanMomo_atm.php" style="margin-bottom:5px">
-                            <button type="submit" name="momo" value="Thanh toán MOMO ATM" class="purchase_button momo">Thanh toán MOMO ATM</button>
-                        </form>
-                        <button type="submit" value="Đặt hàng" name="thanhToan" class="purchase_button">Đặt hàng</button>
+                        <form></form>
+                            <button type="submit" value="Đặt hàng" name="thanhToan" class="purchase_button">Đặt hàng</button>
+                            <h4>Hoặc</h4>
+                            <form method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="pages/main/xuLyThanhToanMomo.php" style="margin-bottom:5px;width: 500px">
+                                <button type="submit" name="momo" value="Thanh toán MOMO QRCode" class="purchase_button momo">Thanh toán MOMO QRCode</button>
+                            </form>
+                
+                            <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded"
+                                action="pages/main/xuLyThanhToanMomo_atm.php" style="margin-bottom:5px">
+                                <button type="submit" name="momo" value="Thanh toán MOMO ATM" class="purchase_button momo">Thanh toán MOMO ATM</button>
+                            </form>
                     <?php } else { ?>
                             <a href="index.php" class="dathang_button">
                                 Mua sắm
