@@ -8,6 +8,7 @@ $query_lietke_dh = mysqli_query($mysqli,$sql_lietke_dh);
     <tr>
         <th>ID</th>
         <th>Mã đơn hàng</th>
+        <th>Tên sản phẩm</th>
         <th>Số lượng</th>
         <th>Đơn giá</th>
         <th>Thành tiền</th>
