@@ -17,14 +17,14 @@ $i = 0;
 $tongtien = 0;
 while($row = mysqli_fetch_array($query_lietke_dh)){
     $i++;
-    $thanhtien = $row['giasp'] * $row['soluongmua'];
+    $thanhtien = $row['gia_sp'] * $row['so_luong_mua'];
     $tongtien += $thanhtien;
 ?>
 <tr>
     <td><?php ehco $i ?></td>
     <td><?php ehco $row['ma_gh'] ?></td>
-    <td><?php ehco $row['tensanpham'] ?></td>
-    <td><?php ehco $row['soluongmua'] ?></td>
+    <td><?php ehco $row['ten_sp'] ?></td>
+    <td><?php ehco $row['so_luong_mua'] ?></td>
     <td><?php ehco number_format($row['giasp'],0,',','.').'vnd' ?></td>
     <td><?php ehco number_format($thanhtien,0,',','.').'vnd' ?></td>
 </tr>
