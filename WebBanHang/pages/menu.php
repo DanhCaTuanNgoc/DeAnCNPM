@@ -41,6 +41,9 @@ $lietke = mysqli_query($mysqli, $sql_lietke);
         <div class="menu_items">
             <a class="item" href="index.php?quanly=lienhe">Liên hệ<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
         </div>
+        <div class="menu_items">
+            <a class="item" href="index.php?quanly=lichSuDonHang">Lịch sử đơn hàng<span class="arrow_menu"><img src="../images/arrow-icon.svg" alt="arrow"></span></a>
+        </div>
         
         <div class="hamburger" id="hamburger">
             <img src="../images/bars-solid.svg" alt="" width="30px" height="30px">
