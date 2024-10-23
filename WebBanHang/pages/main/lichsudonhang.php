@@ -23,6 +23,7 @@ $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
                 <th>Ngày Đặt</th>
                 <th>Quản Lý</th>
                 <th>In Đơn Hàng</th>
+                <th>Hình thức thanh toán</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +54,20 @@ $lietke_dh = mysqli_query($mysqli, $sql_lietke_dh);
                     </td>
                     <td>
                         <a href="main/indonhang.php?&code=<?php echo $row['ma_gh'] ?>" class="btn btn-primary btn-sm">In Đơn Hàng</a>
+                    </td>
+                    <td>
+                        <?php
+                        if($row['cartpayment'] == 'vnpay' || $row['cartpayment'] == 'momo' || $row['cartpayment'] == 'paypal'){
+                        ?>
+                        <a href=""><?php echo row['cart_payment'] ?></a>
+                        <?php
+                        }
+                        else{
+                        ?>
+                        <?php echo row['cart_payment'] ?>
+                        <?php                            
+                        }
+                        ?>
                     </td>
                 </tr>
             <?php
