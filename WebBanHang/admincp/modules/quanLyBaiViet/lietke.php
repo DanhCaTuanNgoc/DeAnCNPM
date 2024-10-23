@@ -10,38 +10,40 @@
     <h3 class="text-center">Liệt Kê Bài Viết</h3>
     <table class="table table-bordered">
         <thead class="table-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Tên Bài Viết</th>
-                <th scope="col">Hình Ảnh</th>
-                <th scope="col">Mã Danh Mục</th>
-                <th scope="col">Tóm Tắt</th>
-                <th scope="col">Nội Dung</th>
-                <th scope="col">Trạng Thái</th>
-                <th scope="col">Quản Lý</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $i = 0;
-            while ($row = mysqli_fetch_array($lietke)) {
-                $i++;
-            ?>
-            <tr>
-                <td><?php echo $i ?></td>
-                <td><?php echo $row['tenbaiviet'] ?></td>
-                <td><img src="modules/quanLybaiviet/uploads/<?php echo $row['hinhanh'] ?>" width="150px"></td>
-                <td><?php echo $row['id_danhmuc'] ?></td>
-                <td><?php echo $row['tomtat'] ?></td>
-                <td><?php echo $row['noidung'] ?></td>
-                <td><?php echo ($row['tinhtrang'] == 1) ? 'Kích hoạt' : 'Ẩn'; ?></td>
-                <td>
-                    <a href="modules/quanLyBaiViet/xuly.php?idbv=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm">Xóa</a>
-                    <a href="?action=quanLyBaiViet&query=sua&idbv=<?php echo $row['id'] ?>" class="btn btn-warning btn-sm">Sửa</a>
-                </td>
-            </tr>
-            <?php } ?>
-        </tbody>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tên Bài Viết</th>
+        <th scope="col">Hình Ảnh</th>
+        <th scope="col">Mã Danh Mục</th>
+        <th scope="col">Tóm Tắt</th>
+        <th scope="col">Nội Dung</th>
+        <th scope="col">Link</th> <!-- New column -->
+        <th scope="col">Trạng Thái</th>
+        <th scope="col">Quản Lý</th>
+    </tr>
+</thead>
+<tbody>
+    <?php
+    $i = 0;
+    while ($row = mysqli_fetch_array($lietke)) {
+        $i++;
+    ?>
+    <tr>
+        <td><?php echo $i ?></td>
+        <td><?php echo $row['tenbaiviet'] ?></td>
+        <td><img src="modules/quanLybaiviet/uploads/<?php echo $row['hinhanh'] ?>" width="150px"></td>
+        <td><?php echo $row['id_danhmuc'] ?></td>
+        <td><?php echo $row['tomtat'] ?></td>
+        <td><?php echo $row['noidung'] ?></td>
+        <td><a href="<?php echo $row['link'] ?>"><?php echo $row['link'] ?></a></td> <!-- New field -->
+        <td><?php echo ($row['tinhtrang'] == 1) ? 'Kích hoạt' : 'Ẩn'; ?></td>
+        <td>
+            <a href="modules/quanLyBaiViet/xuly.php?idbv=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm">Xóa</a>
+            <a href="?action=quanLyBaiViet&query=sua&idbv=<?php echo $row['id'] ?>" class="btn btn-warning btn-sm">Sửa</a>
+        </td>
+    </tr>
+    <?php } ?>
+</tbody>
     </table>
 </div>
 
