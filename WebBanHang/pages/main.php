@@ -15,6 +15,8 @@
         include("main/thongtinthanhtoan.php");
     } elseif ($des == 'donHangDaDat') {
         include("main/donhangdadat.php");
+    } elseif ($des == 'lichSuDonHang') {
+        include("main/lichsudonhang.php");
         //vinh
     } elseif ($des == 'danhmucbaiviet') {
         include("main/danhmucbaiviet.php");
